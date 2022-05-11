@@ -38,19 +38,19 @@ export default function Layout({ children }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0 pe-4">
-              <a href="/" className="nav-item nav-link active">
+              <a href={process.env.REACT_APP_BASE_URL} className="nav-item nav-link active">
                 Home
               </a>
-              <a href="/about-us" className="nav-item nav-link">
+              <a href={`${process.env.REACT_APP_BASE_URL}/about-us`} className="nav-item nav-link">
                 About Us
               </a>
-              <a href="/program" className="nav-item nav-link">
+              <a href={`${process.env.REACT_APP_BASE_URL}/program`} className="nav-item nav-link">
                 Program
               </a>
-              <a href="/news" className="nav-item nav-link">
+              <a href={`${process.env.REACT_APP_BASE_URL}/news`} className="nav-item nav-link">
                 News
               </a>
-              <a href="/blog" className="nav-item nav-link">
+              <a href={`${process.env.REACT_APP_BASE_URL}/blog`} className="nav-item nav-link">
                 Blog
               </a>
             </div>
@@ -68,7 +68,7 @@ export default function Layout({ children }) {
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center text-uppercase">
                   <li className="breadcrumb-item">
-                    <a href="/">Home</a>
+                    <a href={process.env.REACT_APP_BASE_URL}>Home</a>
                   </li>
                   <li
                     className="breadcrumb-item text-white active"

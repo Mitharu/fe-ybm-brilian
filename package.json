@@ -20,9 +20,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cp .env.loc .env && react-scripts start",
     "build": "rm -rf build/ && react-scripts build",
-    "build:prod": "rm -rf build/ && react-scripts build && cp .htaccess build/",
+    "build:prod": "cp .env.dev .env && rm -rf build/ && react-scripts build && cp .htaccess build/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
