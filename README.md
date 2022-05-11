@@ -1,10 +1,11 @@
-# FRONTEND_IKAPUNIJA
-Website IKAPUNIJA Frontend Side
+# FRONTEND_YBM_BRILIAN
+Website YBM BRILIAN Frontend Side
 
 ## LIVE
- - [x] staging => https://fervent-lamarr-5fd4fd.netlify.app
+ - [x] staging => https://ybm.janjiku.id/
 
 ## FEATURE
  - [x] React from Create React App
  - [x] Css Styling
+ - [x] React Hooks
 
