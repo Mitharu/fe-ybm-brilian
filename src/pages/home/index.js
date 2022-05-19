@@ -1,89 +1,10 @@
 import React from 'react'
+import CardNews from '../../components/card-news'
+import ThumbnailNews from '../../components/thumbnail-news'
 
 export default function Home() {
   return (
     <React.Fragment>
-      <div className="container-xxl py-5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div
-              class="col-lg-3 text-center"
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
-              <div
-                style={{
-                  width: '100px',
-                  height: '100px',
-                  background: '#F2C94C',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#fff',
-                }}
-              >
-                <h2 className="text-light">10</h2>
-              </div>
-              <p class="animated slideInLeft mb-4 pb-2">Lorem Ipsum</p>
-            </div>
-            <div
-              class="col-lg-3 text-center"
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
-              <div
-                style={{
-                  width: '100px',
-                  height: '100px',
-                  background: '#333333',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#fff',
-                }}
-              >
-                <h2 className="text-light">10</h2>
-              </div>
-              <p class="animated slideInLeft mb-4 pb-2">Lorem Ipsum</p>
-            </div>
-            <div
-              class="col-lg-3 text-center"
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
-              <div
-                style={{
-                  width: '100px',
-                  height: '100px',
-                  background: '#2D9CDB',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#fff',
-                }}
-              >
-                <h2 className="text-light">10</h2>
-              </div>
-              <p class="animated slideInLeft mb-4 pb-2">Lorem Ipsum</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="container-xxl py-5">
         <div class="container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -131,11 +52,11 @@ export default function Home() {
               data-wow-delay="0.1s"
             >
               <div className="service-item rounded p-3">
-              <h2>Ekonomi</h2>
-              <p>
-                Program pendayagunaan zakat berupa bantuan stimulus
-                modal,pendampingan dan managemen keuangan
-              </p>
+                <h2>Ekonomi</h2>
+                <p>
+                  Program pendayagunaan zakat berupa bantuan stimulus
+                  modal,pendampingan dan managemen keuangan
+                </p>
               </div>
             </div>
             <div
@@ -143,11 +64,11 @@ export default function Home() {
               data-wow-delay="0.1s"
             >
               <div className="service-item rounded p-3">
-              <h2>Pendidikan</h2>
-              <p>
-                Program pendayagunaan zakat berupa bantuan beasiswa, pembinaan
-                dan penunjang pendidikan
-              </p>
+                <h2>Pendidikan</h2>
+                <p>
+                  Program pendayagunaan zakat berupa bantuan beasiswa, pembinaan
+                  dan penunjang pendidikan
+                </p>
               </div>
             </div>
             <div
@@ -155,11 +76,80 @@ export default function Home() {
               data-wow-delay="0.1s"
             >
               <div className="service-item rounded p-3">
-              <h2>Social</h2>
-              <p>
-                Program pendayagunaan zakat berupa pemenuhan kebutuhan
-                dasar,spiritual,pembinaan keluarga dan kemanusiaan.
-              </p>
+                <h2>Social</h2>
+                <p>
+                  Program pendayagunaan zakat berupa pemenuhan kebutuhan
+                  dasar,spiritual,pembinaan keluarga dan kemanusiaan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h3 class="mb-5">News</h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-md-8">
+              <div class="row mb-4">
+                <div class="col-lg-12 col-md-12">
+                  <ThumbnailNews 
+                    imgSrc="https://picsum.photos/seed/picsum/200/300"
+                    title="Judul dari news yg baru"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3">
+                  <CardNews
+                    imgSrc="https://picsum.photos/seed/picsum/200/300"
+                    title="Judul dari news yg baru"
+                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
+                  />
+                </div>
+                <div class="col-lg-3">
+                  <CardNews
+                    imgSrc="https://picsum.photos/seed/picsum/200/300"
+                    title="Judul dari news yg baru"
+                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
+                  />
+                </div>
+                <div class="col-lg-3">
+                  <CardNews
+                    imgSrc="https://picsum.photos/seed/picsum/200/300"
+                    title="Judul dari news yg baru"
+                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
+                  />
+                </div>
+                <div class="col-lg-3">
+                  <CardNews
+                    imgSrc="https://picsum.photos/seed/picsum/200/300"
+                    title="Judul dari news yg baru"
+                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 mb-4">
+                  <CardNews
+                    imgSrc="https://picsum.photos/seed/picsum/200/300"
+                    imgHeight="300px"
+                    title="Judul dari news yg baru"
+                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
+                  />
+                </div>
+                <div class="col-lg-12 col-md-12">
+                  <CardNews
+                    imgSrc="https://picsum.photos/seed/picsum/200/300"
+                    imgHeight="300px"
+                    title="Judul dari news yg baru"
+                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
+                  />
+                </div>
               </div>
             </div>
           </div>

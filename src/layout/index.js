@@ -1,5 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import Carousel from './carousel'
+import Achieve from './achievement'
 // import Header from "./header"
 
 export default function Layout({ children }) {
@@ -38,19 +40,34 @@ export default function Layout({ children }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0 pe-4">
-              <a href={process.env.REACT_APP_BASE_URL} className="nav-item nav-link active">
+              <a
+                href={process.env.REACT_APP_BASE_URL}
+                className="nav-item nav-link active"
+              >
                 Home
               </a>
-              <a href={`${process.env.REACT_APP_BASE_URL}/about-us`} className="nav-item nav-link">
+              <a
+                href={`${process.env.REACT_APP_BASE_URL}/about-us`}
+                className="nav-item nav-link"
+              >
                 About Us
               </a>
-              <a href={`${process.env.REACT_APP_BASE_URL}/program`} className="nav-item nav-link">
+              <a
+                href={`${process.env.REACT_APP_BASE_URL}/program`}
+                className="nav-item nav-link"
+              >
                 Program
               </a>
-              <a href={`${process.env.REACT_APP_BASE_URL}/news`} className="nav-item nav-link">
+              <a
+                href={`${process.env.REACT_APP_BASE_URL}/news`}
+                className="nav-item nav-link"
+              >
                 News
               </a>
-              <a href={`${process.env.REACT_APP_BASE_URL}/blog`} className="nav-item nav-link">
+              <a
+                href={`${process.env.REACT_APP_BASE_URL}/blog`}
+                className="nav-item nav-link"
+              >
                 Blog
               </a>
             </div>
@@ -62,8 +79,11 @@ export default function Layout({ children }) {
         {url?.pathname !== '/' ? (
           <div className="container-xxl py-5 bg-dark hero-bread mb-5">
             <div className="container text-center my-5 pt-5 pb-4">
-              <h1 className="display-3 text-white mb-3 animated slideInDown" style={{ textTransform: "capitalize"}}>
-                {url?.pathname.replace(/[/-]/g, " ")}
+              <h1
+                className="display-3 text-white mb-3 animated slideInDown"
+                style={{ textTransform: 'capitalize' }}
+              >
+                {url?.pathname.replace(/[/-]/g, ' ')}
               </h1>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center text-uppercase">
@@ -74,35 +94,41 @@ export default function Layout({ children }) {
                     className="breadcrumb-item text-white active"
                     aria-current="page"
                   >
-                    {url?.pathname.replace(/[/-]/g, " ")}
+                    {url?.pathname.replace(/[/-]/g, ' ')}
                   </li>
                 </ol>
               </nav>
             </div>
           </div>
         ) : (
-          <div className="container-xxl py-5 bg-dark hero-header">
-            <div className="container my-5 py-5">
-              <div className="row align-items-center g-5">
-                <div className="col-lg-6 text-center text-lg-start">
-                  <h1 className="display-3 animated slideInLeft">YBM Brillian</h1>
-                  <p className="animated slideInLeft mb-4 pb-2">
-                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                    Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
-                    sit, sed stet lorem sit clita duo justo magna dolore erat
-                    amet
-                  </p>
-                </div>
-                <div className="col-lg-6 text-center text-lg-end overflow-hidden">
-                  <img
-                    className="img-fluid"
-                    src={require('../assets/image/photo-1.jpg').default}
-                    alt=""
-                  />
+          <React.Fragment>
+            <Carousel />
+            <Achieve />
+            <div className="container-xxl py-5 bg-dark hero-header">
+              <div className="container my-5 py-5">
+                <div className="row align-items-center g-5">
+                  <div className="col-lg-6 text-center text-lg-start">
+                    <h1 className="display-3 animated slideInLeft">
+                      YBM Brillian
+                    </h1>
+                    <p className="animated slideInLeft mb-4 pb-2">
+                      Tempor erat elitr rebum at clita. Diam dolor diam ipsum
+                      sit. Aliqu diam amet diam et eos. Clita erat ipsum et
+                      lorem et sit, sed stet lorem sit clita duo justo magna
+                      dolore erat amet
+                    </p>
+                  </div>
+                  <div className="col-lg-6 text-center text-lg-end overflow-hidden">
+                    <img
+                      className="img-fluid"
+                      src={require('../assets/image/photo-1.jpg').default}
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </React.Fragment>
         )}
       </div>
 
@@ -110,64 +136,96 @@ export default function Layout({ children }) {
 
       {/* Footer */}
       <div
-        className="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+        className="container-fluid text-light footer pt-5 mt-5 wow fadeIn"
         data-wow-delay="0.1s"
+        style={{ background: '#f2f2f2' }}
       >
-        <div className="container py-5">
+        <div className="container">
           <div className="row g-5">
-            <div className="col-lg-4 col-md-4 text-center">
+            <div
+              className="col-lg-4 col-md-4 text-center py-3"
+              style={{ background: '#E0E0E0', margin: 0 }}
+            >
               <img
                 src={require('../assets/image/logo.png').default}
                 alt="logo-ybm"
                 width={150}
               />
-              <p>
+              <p style={{ color: '#000' }}>
                 YBM BRI yang kini bertransformasi menjadi YBM BRILiaN merupakan
                 Lembaga Filantropi Islam yang mengelola dana zakat, infak dan
                 sedekah secara profesional dan sesuai dengan ketentuan syariat
                 Islam.
               </p>
-              <p>
+              <p style={{ color: '#000' }}>
                 Gedung Olahraga BRI Lt.2 Jl. Jenderal Sudirman Kav 44-46 Jakarta
                 Pusat 10210
               </p>
-              <p>customer care 0811 808 412</p>
+              <p style={{ color: '#000' }}>customer care 0811 808 412</p>
             </div>
             <div className="col-lg-8 col-md-8">
               <div className="row">
                 <div className="col-md-3 col-lg-3">
-                  <p>
+                  <p style={{ color: '#000' }}>
                     <strong>Program</strong>
                   </p>
-                  <a href="#a" className="btn btn-link">
+                  <a
+                    href="#a"
+                    className="btn btn-link"
+                    style={{ color: '#828282' }}
+                  >
                     Pendidikan
                   </a>
-                  <a href="#a" className="btn btn-link">
+                  <a
+                    href="#a"
+                    className="btn btn-link"
+                    style={{ color: '#828282' }}
+                  >
                     Sosial
                   </a>
-                  <a href="#a" className="btn btn-link">
+                  <a
+                    href="#a"
+                    className="btn btn-link"
+                    style={{ color: '#828282' }}
+                  >
                     Ekonomi
                   </a>
                 </div>
                 <div className="col-md-3 col-lg-3">
-                  <p>
+                  <p style={{ color: '#000' }}>
                     <strong>Program</strong>
                   </p>
-                  <a href="#a" className="btn btn-link">
+                  <a
+                    href="#a"
+                    className="btn btn-link"
+                    style={{ color: '#828282' }}
+                  >
                     Jadilah Fundraiser
                   </a>
                 </div>
                 <div className="col-md-3 col-lg-3">
-                  <p>
+                  <p style={{ color: '#000' }}>
                     <strong>Tentang Kami</strong>
                   </p>
-                  <a href="#a" className="btn btn-link">
+                  <a
+                    href="#a"
+                    className="btn btn-link"
+                    style={{ color: '#828282' }}
+                  >
                     Lembaga
                   </a>
-                  <a href="#a" className="btn btn-link">
+                  <a
+                    href="#a"
+                    className="btn btn-link"
+                    style={{ color: '#828282' }}
+                  >
                     Berita
                   </a>
-                  <a href="#a" className="btn btn-link">
+                  <a
+                    href="#a"
+                    className="btn btn-link"
+                    style={{ color: '#828282' }}
+                  >
                     Artikel
                   </a>
                 </div>

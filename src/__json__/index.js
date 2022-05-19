@@ -131,6 +131,32 @@ const Data = {
       is_active: true,
     },
   ],
+  news: [
+    {
+      id: 1,
+      image: require('../assets/image/photo-1.jpeg'),
+      title: "Ini Judul dari berita",
+      desc: "Culpa eu eiusmod veniam enim veniam ad qui sint et Lorem sunt. Adipisicing enim mollit sit eiusmod aliquip elit officia sunt nostrud amet ad nisi laboris velit. Sit dolor minim do sint magna ullamco sint dolor incididunt dolor."
+    },
+    {
+      id: 2,
+      image: require('../assets/image/photo-1.jpeg'),
+      title: "Ini Judul dari berita",
+      desc: "Culpa eu eiusmod veniam enim veniam ad qui sint et Lorem sunt. Adipisicing enim mollit sit eiusmod aliquip elit officia sunt nostrud amet ad nisi laboris velit. Sit dolor minim do sint magna ullamco sint dolor incididunt dolor."
+    },
+    {
+      id: 3,
+      image: require('../assets/image/photo-1.jpeg'),
+      title: "Ini Judul dari berita",
+      desc: "Culpa eu eiusmod veniam enim veniam ad qui sint et Lorem sunt. Adipisicing enim mollit sit eiusmod aliquip elit officia sunt nostrud amet ad nisi laboris velit. Sit dolor minim do sint magna ullamco sint dolor incididunt dolor."
+    },
+    {
+      id: 4,
+      image: require('../assets/image/photo-1.jpeg'),
+      title: "Ini Judul dari berita",
+      desc: "Culpa eu eiusmod veniam enim veniam ad qui sint et Lorem sunt. Adipisicing enim mollit sit eiusmod aliquip elit officia sunt nostrud amet ad nisi laboris velit. Sit dolor minim do sint magna ullamco sint dolor incididunt dolor."
+    }
+  ]
 }
 
 export default Data
