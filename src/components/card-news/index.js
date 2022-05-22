@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import ImageWithFallback from '../image-with-fallback'
+import { Link } from 'react-router-dom'
 
 const CardNewsContainer = styled.div`
   width: 100%;
@@ -9,12 +11,7 @@ const CardNewsContainer = styled.div`
   &:hover {
     cursor: pointer;
   }
-`
-
-const CardNewsImg = styled.img`
-  width: 100%;
-  height: ${(props) => props.imgHeight || '200px'};
-  object-fit: cover;
+  color: #828282;
 `
 
 const CardNewsTitle = styled.p`
@@ -43,12 +40,24 @@ const CardNewsDesc = styled.p`
   -webkit-box-orient: vertical;
 `
 
-export default function CardNews({ imgSrc, imgHeight, title, desc }) {
+export default function CardNews({
+  linkTo,
+  imageSrc,
+  imageHeight,
+  title,
+  desc,
+}) {
   return (
-    <CardNewsContainer>
-      <CardNewsImg src={imgSrc} alt="card-img" imgHeight={imgHeight} />
-      <CardNewsTitle>{title}</CardNewsTitle>
-      <CardNewsDesc>{desc}</CardNewsDesc>
-    </CardNewsContainer>
+    <Link to={linkTo}>
+      <CardNewsContainer>
+        <ImageWithFallback
+          src={imageSrc}
+          alt="card-img"
+          imageHeight={imageHeight}
+        />
+        <CardNewsTitle>{title}</CardNewsTitle>
+        <CardNewsDesc>{desc}</CardNewsDesc>
+      </CardNewsContainer>
+    </Link>
   )
 }

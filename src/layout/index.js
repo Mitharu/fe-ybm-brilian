@@ -1,15 +1,18 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams, NavLink } from 'react-router-dom'
 import Carousel from './carousel'
 import Achieve from './achievement'
 // import Header from "./header"
 
 export default function Layout({ children }) {
   const url = useLocation()
+  const params = useParams()
+
+  console.log("eta ==>", url?.pathname === "/");
 
   return (
     <div className="container-xxl bg-white p-0">
-      <div
+      {/* <div
         id="spinner"
         className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
       >
@@ -20,15 +23,14 @@ export default function Layout({ children }) {
         >
           <span className="sr-only">Loading...</span>
         </div>
-      </div>
-
+      </div> */}
       <div className="container-xxl position-relative p-0">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
           <a href="/" className="navbar-brand p-0">
-            <h1 className="text-primary m-0">
+            {/* <h1 className="text-primary m-0">
               <i className="fa fa-hand-holding me-3"></i>YBM Brillian
-            </h1>
-            {/* <img src="img/logo.png" alt="Logo"> */}
+            </h1> */}
+            <img src={require("../assets/image/logo.png").default} alt="Logo" height="100px" />
           </a>
           <button
             className="navbar-toggler"
@@ -40,39 +42,49 @@ export default function Layout({ children }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0 pe-4">
-              <a
-                href={process.env.REACT_APP_BASE_URL}
-                className="nav-item nav-link active"
+              <NavLink
+                to="/"
+                className={`nav-item nav-link ${
+                  url?.pathname === '/' ? '' : ''
+                }`}
               >
                 Home
-              </a>
-              <a
-                href={`${process.env.REACT_APP_BASE_URL}/about-us`}
-                className="nav-item nav-link"
+              </NavLink>
+              <NavLink
+                to="/about-us"
+                className={`nav-item nav-link ${
+                  url?.pathname === '/about-us' ? 'active' : ''
+                }`}
               >
                 About Us
-              </a>
-              <a
-                href={`${process.env.REACT_APP_BASE_URL}/program`}
-                className="nav-item nav-link"
+              </NavLink>
+              <NavLink
+                to="/program"
+                className={`nav-item nav-link ${
+                  url?.pathname === '/program' ? 'active' : ''
+                }`}
               >
                 Program
-              </a>
-              <a
-                href={`${process.env.REACT_APP_BASE_URL}/news`}
-                className="nav-item nav-link"
+              </NavLink>
+              <NavLink
+                to="/news"
+                className={`nav-item nav-link ${
+                  url?.pathname === '/news' ? 'active' : ''
+                }`}
               >
                 News
-              </a>
-              <a
-                href={`${process.env.REACT_APP_BASE_URL}/blog`}
-                className="nav-item nav-link"
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className={`nav-item nav-link ${
+                  url?.pathname === '/blog' ? 'active' : ''
+                }`}
               >
                 Blog
-              </a>
+              </NavLink>
             </div>
             <a href="#a" className="btn btn-primary py-2 px-4">
-              CMS Login
+              CMS Login <i class="fa fa-lock"></i>
             </a>
           </div>
         </nav>
@@ -83,7 +95,7 @@ export default function Layout({ children }) {
                 className="display-3 text-white mb-3 animated slideInDown"
                 style={{ textTransform: 'capitalize' }}
               >
-                {url?.pathname.replace(/[/-]/g, ' ')}
+                {params?.slug === undefined ? url?.pathname.replace(/[/-]/g, ' ') : "News"}
               </h1>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center text-uppercase">

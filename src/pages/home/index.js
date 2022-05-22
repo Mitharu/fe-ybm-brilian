@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CardNews from '../../components/card-news'
 import ThumbnailNews from '../../components/thumbnail-news'
+import { get } from '../../api'
+// import { news } from '../../__json__'
 
 export default function Home() {
+  const [news, setNews] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      // get data news
+      get({
+        endpoint: 'berita',
+      })
+        .then((res) => {
+          if (res?.StatusCode === 200 && res?.Error === false)
+            setNews(res.Data[0]?.berita)
+        })
+        .catch((err) => {
+          console.log('err ->', err)
+        })
+    }
+    fetchData()
+  }, [])
+
   return (
     <React.Fragment>
       <div class="container-xxl py-5">
@@ -95,61 +116,48 @@ export default function Home() {
             <div class="col-lg-8 col-md-8">
               <div class="row mb-4">
                 <div class="col-lg-12 col-md-12">
-                  <ThumbnailNews 
-                    imgSrc="https://picsum.photos/seed/picsum/200/300"
-                    title="Judul dari news yg baru"
-                  />
+                  {news &&
+                    news
+                      .slice(0, 1)
+                      .map((item, idx) => (
+                        <ThumbnailNews
+                          key={String(idx)}
+                          imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
+                          imageHeight="500px"
+                          title={item.name}
+                        />
+                      ))}
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-3">
-                  <CardNews
-                    imgSrc="https://picsum.photos/seed/picsum/200/300"
-                    title="Judul dari news yg baru"
-                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
-                  />
-                </div>
-                <div class="col-lg-3">
-                  <CardNews
-                    imgSrc="https://picsum.photos/seed/picsum/200/300"
-                    title="Judul dari news yg baru"
-                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
-                  />
-                </div>
-                <div class="col-lg-3">
-                  <CardNews
-                    imgSrc="https://picsum.photos/seed/picsum/200/300"
-                    title="Judul dari news yg baru"
-                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
-                  />
-                </div>
-                <div class="col-lg-3">
-                  <CardNews
-                    imgSrc="https://picsum.photos/seed/picsum/200/300"
-                    title="Judul dari news yg baru"
-                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
-                  />
-                </div>
+                {news &&
+                  news.slice(0, 4).map((item, idx) => (
+                    <div class="col-lg-3" key={String(idx)}>
+                      <CardNews
+                        imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
+                        imageHeight="180px"
+                        title={item.name}
+                        desc={item.isi_berita}
+                        linkTo={`/news/${item.id}`}
+                      />
+                    </div>
+                  ))}
               </div>
             </div>
             <div class="col-lg-4 col-md-4">
               <div class="row">
-                <div class="col-lg-12 col-md-12 mb-4">
-                  <CardNews
-                    imgSrc="https://picsum.photos/seed/picsum/200/300"
-                    imgHeight="300px"
-                    title="Judul dari news yg baru"
-                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
-                  />
-                </div>
-                <div class="col-lg-12 col-md-12">
-                  <CardNews
-                    imgSrc="https://picsum.photos/seed/picsum/200/300"
-                    imgHeight="300px"
-                    title="Judul dari news yg baru"
-                    desc="Tempor do consequat aliquip mollit ea elit aliqua irure culpa aliqua dolore aliqua. Fugiat tempor nisi deserunt ut aliqua minim occaecat do mollit sunt cillum occaecat. Exercitation magna cupidatat enim labore do in magna nostrud labore consequat. Sit dolore eiusmod deserunt pariatur id magna."
-                  />
-                </div>
+                {news &&
+                  news.slice(0, 2).map((item, idx) => (
+                    <div class="col-lg-12 col-md-12 mb-4" key={String(idx)}>
+                      <CardNews
+                        imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
+                        imageHeight="300px"
+                        title={item.name}
+                        desc={item.isi_berita}
+                        linkTo={`/news/${item.id}`}
+                      />
+                    </div>
+                  ))}
               </div>
             </div>
           </div>

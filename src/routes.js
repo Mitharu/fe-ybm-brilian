@@ -7,6 +7,7 @@ import ContactUs from "./pages/contact-us"
 import Blog from "./pages/blog"
 import Program from "./pages/program"
 import News from "./pages/news"
+import NewsDetail from "./pages/news-detail"
 
 const Routes = [
   {
@@ -34,6 +35,12 @@ const Routes = [
     path: "/news",
     layout: Layout,
     component: News,
+  },
+  {
+    path: "/news/:slug",
+    exact: true,
+    layout: Layout,
+    component: NewsDetail,
   },
   {
     path: "/program",

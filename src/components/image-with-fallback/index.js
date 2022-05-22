@@ -1,24 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 import { toBase64, shimmerImgLoader } from '../../utils/helpers'
 
-export default function ImageWithFallback({ src, alt }) {
-  const styles = {
-    position: "absolute",
-    inset: "0px",
-    boxSizing: "border-box",
-    padding: "0px",
-    border: "none",
-    margin: "auto",
-    display: "block",
-    width: "0px",
-    height: "0px",
-    minWidth: "100%",
-    maxWidth: "100%",
-    minHeight: "100%",
-    maxHeight: "100%",
-    objectFit: "cover",
-  }
-  const fallBackSrc = require("../../assets/image/image_not_found.png")
+const ImageFb = styled.img`
+  width: 100%;
+  height: ${(props) => props.imageHeight || '200px'};
+  margin: ${(props) => props.margin || '0'};
+  object-fit: cover;
+`
+
+export default function ImageWithFallback({ margin, src, alt, imageHeight }) {
+  const fallBackSrc = require('../../assets/image/image_not_found.png').default
   const [state, setState] = useState({
     imgUrl: null,
     isLoaded: false,
@@ -33,25 +25,19 @@ export default function ImageWithFallback({ src, alt }) {
   useEffect(() => {
     setState((prevState) => ({ ...prevState, imgUrl: src, isLoaded: true }))
   }, [src])
-  // const [imageError, setImageError] = useState(false);
 
   return (
-    <>
-      <img
-        style={styles}
-        src={
-          !state.isLoaded
-            ? `data:image/svg+xml;base64,${toBase64(
-                shimmerImgLoader(400, 400),
-              )}`
-            : state.imgUrl
-        }
-        alt={alt}
-        onLoad={() =>
-          setState((prevState) => ({ ...prevState, isLoaded: true }))
-        }
-        onError={() => changeImage()}
-      />
-    </>
+    <ImageFb
+      src={
+        !state.isLoaded
+          ? `data:image/svg+xml;base64,${toBase64(shimmerImgLoader(400, 400))}`
+          : state.imgUrl
+      }
+      alt={alt}
+      margin={margin}
+      onLoad={() => setState((prevState) => ({ ...prevState, isLoaded: true }))}
+      onError={() => changeImage()}
+      imageHeight={imageHeight}
+    />
   )
 }

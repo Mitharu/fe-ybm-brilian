@@ -1,19 +1,40 @@
 {
   "files": {
-    "main.js": "/static/js/main.6310c0c8.chunk.js",
-    "main.js.map": "/static/js/main.6310c0c8.chunk.js.map",
+    "main.js": "/static/js/main.e3597710.chunk.js",
+    "main.js.map": "/static/js/main.e3597710.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
-    "static/js/2.983bb123.chunk.js": "/static/js/2.983bb123.chunk.js",
-    "static/js/2.983bb123.chunk.js.map": "/static/js/2.983bb123.chunk.js.map",
+    "static/js/2.c66561e6.chunk.js": "/static/js/2.c66561e6.chunk.js",
+    "static/js/2.c66561e6.chunk.js.map": "/static/js/2.c66561e6.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.983bb123.chunk.js.LICENSE.txt": "/static/js/2.983bb123.chunk.js.LICENSE.txt",
+    "static/js/2.c66561e6.chunk.js.LICENSE.txt": "/static/js/2.c66561e6.chunk.js.LICENSE.txt",
+    "static/media/2001.png": "/static/media/2001.96670c90.png",
+    "static/media/2011.png": "/static/media/2011.d7dcb7e4.png",
+    "static/media/2016.png": "/static/media/2016.96670c90.png",
+    "static/media/2017.png": "/static/media/2017.d7dcb7e4.png",
+    "static/media/2021.png": "/static/media/2021.212f3b5f.png",
+    "static/media/bmj.webp": "/static/media/bmj.f31a0a8e.webp",
+    "static/media/chatbiz.webp": "/static/media/chatbiz.342f0b0e.webp",
+    "static/media/digizakat.webp": "/static/media/digizakat.edea71ff.webp",
+    "static/media/dompet-dhuafa.webp": "/static/media/dompet-dhuafa.1364beb8.webp",
+    "static/media/e9pay.webp": "/static/media/e9pay.00a5266f.webp",
+    "static/media/forkomasi.webp": "/static/media/forkomasi.a8ce75f1.webp",
+    "static/media/hidroponik-kita.webp": "/static/media/hidroponik-kita.25a1152d.webp",
+    "static/media/human-inisiative.webp": "/static/media/human-inisiative.f6994df0.webp",
+    "static/media/ipay88.webp": "/static/media/ipay88.96466a40.webp",
+    "static/media/izzaweb.webp": "/static/media/izzaweb.2ab2fcfb.webp",
+    "static/media/kemenag.webp": "/static/media/kemenag.6fb6bd0f.webp",
+    "static/media/kurma-media.webp": "/static/media/kurma-media.9fe51d96.webp",
+    "static/media/logo-foz.webp": "/static/media/logo-foz.b76812d8.webp",
     "static/media/logo.png": "/static/media/logo.fded8b82.png",
-    "static/media/photo-1.jpg": "/static/media/photo-1.f1f50d26.jpg"
+    "static/media/overtune.webp": "/static/media/overtune.cc07afd8.webp",
+    "static/media/photo-1.jpg": "/static/media/photo-1.f1f50d26.jpg",
+    "static/media/pkf.webp": "/static/media/pkf.d075ee77.webp",
+    "static/media/semesta-utama.webp": "/static/media/semesta-utama.30cb90ba.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
-    "static/js/2.983bb123.chunk.js",
-    "static/js/main.6310c0c8.chunk.js"
+    "static/js/2.c66561e6.chunk.js",
+    "static/js/main.e3597710.chunk.js"
   ]
 }

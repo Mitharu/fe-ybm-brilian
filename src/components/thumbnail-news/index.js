@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ImageWithFallback from '../image-with-fallback'
 
 const ThumbnailNewsContainer = styled.div`
   width: 100%;
@@ -8,12 +9,6 @@ const ThumbnailNewsContainer = styled.div`
   &:hover {
     cursor: pointer;
   }
-`
-
-const ThumbnailNewsImg = styled.img`
-  width: 100%;
-  height: ${(props) => props.imgHeight || '500px'};
-  object-fit: cover;
 `
 
 const ThumbnailNewsTitleContainer = styled.div`
@@ -41,10 +36,10 @@ const ThumbnailNewsTitle = styled.p`
   -webkit-box-orient: vertical;
 `
 
-export default function CardNews({ imgSrc, imgHeight, title, desc }) {
+export default function CardNews({ imageSrc, imageHeight, title, desc }) {
   return (
     <ThumbnailNewsContainer>
-      <ThumbnailNewsImg src={imgSrc} alt="card-img" imgHeight={imgHeight} />
+      <ImageWithFallback src={imageSrc} alt="card-img" imageHeight={imageHeight	}/>
       <ThumbnailNewsTitleContainer>
         <ThumbnailNewsTitle>{title}</ThumbnailNewsTitle>
       </ThumbnailNewsTitleContainer>
