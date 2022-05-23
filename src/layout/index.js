@@ -8,8 +8,6 @@ export default function Layout({ children }) {
   const url = useLocation()
   const params = useParams()
 
-  console.log("eta ==>", url?.pathname === "/");
-
   return (
     <div className="container-xxl bg-white p-0">
       {/* <div
@@ -30,7 +28,11 @@ export default function Layout({ children }) {
             {/* <h1 className="text-primary m-0">
               <i className="fa fa-hand-holding me-3"></i>YBM Brillian
             </h1> */}
-            <img src={require("../assets/image/logo.png").default} alt="Logo" height="100px" />
+            <img
+              src={require('../assets/image/logo.png').default}
+              alt="Logo"
+              height="100px"
+            />
           </a>
           <button
             className="navbar-toggler"
@@ -58,14 +60,55 @@ export default function Layout({ children }) {
               >
                 About Us
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 to="/program"
                 className={`nav-item nav-link ${
                   url?.pathname === '/program' ? 'active' : ''
                 }`}
               >
                 Program
-              </NavLink>
+              </NavLink> */}
+              <div class="nav-item dropdown">
+                <a
+                  href="#a"
+                  class={`nav-link dropdown-toggle ${
+                    ['/ekonomi', '/sosial', '/pendidikan'].includes(
+                      url?.pathname,
+                    )
+                      ? 'active'
+                      : ''
+                  }`}
+                  data-bs-toggle="dropdown"
+                >
+                  Program
+                </a>
+                <div class="dropdown-menu m-0">
+                  <a
+                    href="/ekonomi"
+                    class={`dropdown-item ${
+                      url?.pathname === '/ekonomi' ? 'active' : ''
+                    }`}
+                  >
+                    Ekonomi
+                  </a>
+                  <a
+                    href="/sosial"
+                    class={`dropdown-item ${
+                      url?.pathname === '/sosial' ? 'active' : ''
+                    }`}
+                  >
+                    Sosial
+                  </a>
+                  <a
+                    href="/pendidikan"
+                    class={`dropdown-item ${
+                      url?.pathname === '/pendidikan' ? 'active' : ''
+                    }`}
+                  >
+                    Pendidikan
+                  </a>
+                </div>
+              </div>
               <NavLink
                 to="/news"
                 className={`nav-item nav-link ${
@@ -95,7 +138,9 @@ export default function Layout({ children }) {
                 className="display-3 text-white mb-3 animated slideInDown"
                 style={{ textTransform: 'capitalize' }}
               >
-                {params?.slug === undefined ? url?.pathname.replace(/[/-]/g, ' ') : "News"}
+                {params?.slug === undefined
+                  ? url?.pathname.replace(/[/-]/g, ' ')
+                  : 'News'}
               </h1>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center text-uppercase">

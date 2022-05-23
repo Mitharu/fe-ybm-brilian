@@ -169,7 +169,7 @@ export default function AboutUs() {
           <div class="row g-5 mt-3">
             {milestone &&
               milestone.map((item, idx) => (
-                <div key={String(idx)} class="col-lg-3 col-md-3">
+                <div key={String(idx)} class="col-lg-3 col-md-3" style={{ display: "flex", justifyContent: "center" }}>
                   <div
                     style={{
                       backgroundImage: `url(${item.url})`,
@@ -204,7 +204,7 @@ export default function AboutUs() {
           <div class="row g-5">
             {image_mitra &&
               image_mitra.map((item, idx) => (
-                <div key={String(idx)} class="col-lg-3 col-md-3">
+                <div key={String(idx)} class="col-lg-3 col-md-3" style={{ display: "flex", justifyContent: "center" }}>
                   <img src={item.url} alt={item.alt} />
                 </div>
               ))}

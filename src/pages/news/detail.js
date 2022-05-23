@@ -13,6 +13,22 @@ const TitleNews = styled.h2`
   border-radius: 5px;
 `
 
+const TitleSidebar = styled.h5`
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+`
+
 function NewsDetail() {
   const params = useParams()
   const [dataDetail, setDataDetail] = useState(false)
@@ -20,9 +36,6 @@ function NewsDetail() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
-
-  useEffect(() => {
     async function fetchDetailData() {
       // get data news
       get({
@@ -70,6 +83,16 @@ function NewsDetail() {
               <p class="mb-4 pb-2 mt-4">{dataDetail.isi_berita}</p>
             </div>
             <div class="col-lg-3 col-md-3 animated fadeIn">
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+                  <TitleSidebar>
+                    Popular News{' '}
+                    <span>
+                      <i class="fa fa-chevron-right"></i>
+                    </span>
+                  </TitleSidebar>
+                </div>
+              </div>
               <div class="row">
                 {news &&
                   news.map((item, idx) => (

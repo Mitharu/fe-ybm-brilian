@@ -10,6 +10,9 @@ import Blog from './pages/blog'
 import Program from './pages/program'
 import News from './pages/news'
 import NewsDetail from './pages/news/detail'
+import Ekonomi from './pages/ekonomi'
+import Sosial from './pages/sosial'
+import Pendidikan from './pages/pendidikan'
 
 export default function RouterApp() {
   return (
@@ -44,6 +47,21 @@ export default function RouterApp() {
           <Route path="/news" exact>
             <Layout>
               <News />
+            </Layout>
+          </Route>
+          <Route path="/ekonomi" exact>
+            <Layout>
+              <Ekonomi />
+            </Layout>
+          </Route>
+          <Route path="/sosial" exact>
+            <Layout>
+              <Sosial />
+            </Layout>
+          </Route>
+          <Route path="/pendidikan" exact>
+            <Layout>
+              <Pendidikan />
             </Layout>
           </Route>
           <Route path="/news/:slug" exact>
