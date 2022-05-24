@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Achievement() {
   return (
-    <div className="container-xxl py-5">
+    <div className="container-xxl py-5 wow fadeInUp">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-3 text-center box-achieve">

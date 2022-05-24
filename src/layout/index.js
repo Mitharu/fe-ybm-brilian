@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation, useParams, NavLink } from 'react-router-dom'
+import { get } from '../api'
+import { levelBreadcrumb } from '../utils/helpers'
 import Carousel from './carousel'
 import Achieve from './achievement'
 // import Header from "./header"
@@ -7,6 +9,24 @@ import Achieve from './achievement'
 export default function Layout({ children }) {
   const url = useLocation()
   const params = useParams()
+  const [banner, setBanner] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      //get banner
+      get({
+        endpoint: 'banner',
+      })
+        .then((res) => {
+          if (res?.StatusCode === 200 && res?.Error === false)
+            setBanner(res.Data)
+        })
+        .catch((err) => {
+          console.log('err ->', err)
+        })
+    }
+    fetchData()
+  }, [])
 
   return (
     <div className="container-xxl bg-white p-0">
@@ -72,7 +92,7 @@ export default function Layout({ children }) {
                 <a
                   href="#a"
                   class={`nav-link dropdown-toggle ${
-                    ['/ekonomi', '/sosial', '/pendidikan'].includes(
+                    ['/program/ekonomi', '/program/sosial', '/program/pendidikan'].includes(
                       url?.pathname,
                     )
                       ? 'active'
@@ -84,25 +104,25 @@ export default function Layout({ children }) {
                 </a>
                 <div class="dropdown-menu m-0">
                   <a
-                    href="/ekonomi"
+                    href="/program/ekonomi"
                     class={`dropdown-item ${
-                      url?.pathname === '/ekonomi' ? 'active' : ''
+                      url?.pathname === '/program/ekonomi' ? 'active' : ''
                     }`}
                   >
                     Ekonomi
                   </a>
                   <a
-                    href="/sosial"
+                    href="/program/sosial"
                     class={`dropdown-item ${
-                      url?.pathname === '/sosial' ? 'active' : ''
+                      url?.pathname === '/program/sosial' ? 'active' : ''
                     }`}
                   >
                     Sosial
                   </a>
                   <a
-                    href="/pendidikan"
+                    href="/program/pendidikan"
                     class={`dropdown-item ${
-                      url?.pathname === '/pendidikan' ? 'active' : ''
+                      url?.pathname === 'program/pendidikan' ? 'active' : ''
                     }`}
                   >
                     Pendidikan
@@ -147,27 +167,32 @@ export default function Layout({ children }) {
                   <li className="breadcrumb-item">
                     <a href={process.env.REACT_APP_BASE_URL}>Home</a>
                   </li>
-                  <li
-                    className="breadcrumb-item text-white active"
-                    aria-current="page"
-                  >
-                    {url?.pathname.replace(/[/-]/g, ' ')}
-                  </li>
+                  {levelBreadcrumb(url?.pathname).map((item, idx) => (
+                    <li
+                      key={String(idx)}
+                      className={item.class}
+                      aria-current="page"
+                    >
+                      {idx === levelBreadcrumb(url?.pathname).length - 1 ? (
+                        item.text
+                      ) : (
+                        <a href={item.path}>{item.text}</a>
+                      )}
+                    </li>
+                  ))}
                 </ol>
               </nav>
             </div>
           </div>
         ) : (
           <React.Fragment>
-            <Carousel />
+            <Carousel data={banner} />
             <Achieve />
-            <div className="container-xxl py-5 bg-dark hero-header">
+            <div className="container-xxl py-5 bg-dark hero-header wow fadeInUp">
               <div className="container my-5 py-5">
                 <div className="row align-items-center g-5">
                   <div className="col-lg-6 text-center text-lg-start">
-                    <h1 className="display-3 animated slideInLeft">
-                      YBM Brillian
-                    </h1>
+                    <h1 className="display-3">YBM Brillian</h1>
                     <p className="animated slideInLeft mb-4 pb-2">
                       Tempor erat elitr rebum at clita. Diam dolor diam ipsum
                       sit. Aliqu diam amet diam et eos. Clita erat ipsum et

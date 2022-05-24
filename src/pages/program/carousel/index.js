@@ -1,33 +1,49 @@
 import React from 'react'
 import Slider from 'react-slick'
-import ImageWithFallback from '../../components/image-with-fallback'
+import ImageWithFallback from '../../../components/image-with-fallback'
 
 export default function Carousel({ data }) {
   const settings = {
-    dots: true,
+    centerMode: true,
     infinite: true,
+    dots: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
   }
 
   return (
-    <div className="container-xxl py-5 bg-dark hero-header wow fadeInUp">
-      <div className="container my-5 py-5 carousel-home">
+    <div className="container-xxl py-0 bg-dark hero-header wow fadeInUp">
+      <div className="container my-5 py-5 carousel-program">
         <Slider {...settings}>
           {data &&
             data.map((item, idx) => (
               <div key={String(idx)}>
                 <div className="col-md-12 container-carousel">
                   <div className="row">
-                    <div className="col-md-6 carousel-title">
-                      <p className="title">{item.title}</p>
-                      <p className="desc">{item.banner_desc}</p>
-                    </div>
-                    <div className="col-md-6">
+                    <div className="col-lg-12 col-md-12">
                       <ImageWithFallback
                         src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
+                        // src="https://www.gotravelly.com/blog/wp-content/uploads/2019/10/Gunung-Fuji-Jepang-1024x640.jpg"
+                        alt={item.img}
+                        imageHeight="600px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+          {data &&
+            data.map((item, idx) => (
+              <div key={String(idx)}>
+                <div className="col-md-12 container-carousel">
+                  <div className="row">
+                    <div className="col-lg-12 col-md-12">
+                      <ImageWithFallback
+                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
+                        // src="https://www.gotravelly.com/blog/wp-content/uploads/2019/10/Gunung-Fuji-Jepang-1024x640.jpg"
                         alt={item.img}
                         imageHeight="600px"
                       />
@@ -65,7 +81,7 @@ export default function Carousel({ data }) {
               padding: 0 0 0 10px;
             }
 
-            .carousel-home .slick-slider ul.slick-dots li button:before {
+            .carousel-program .slick-slider ul.slick-dots li button:before {
               font-size: 14px;
             }
           `}

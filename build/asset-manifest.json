@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.38a441a2.chunk.js",
-    "main.js.map": "/static/js/main.38a441a2.chunk.js.map",
+    "main.js": "/static/js/main.28b8e4c6.chunk.js",
+    "main.js.map": "/static/js/main.28b8e4c6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
-    "static/js/2.c66561e6.chunk.js": "/static/js/2.c66561e6.chunk.js",
-    "static/js/2.c66561e6.chunk.js.map": "/static/js/2.c66561e6.chunk.js.map",
+    "static/js/2.2f6eefc2.chunk.js": "/static/js/2.2f6eefc2.chunk.js",
+    "static/js/2.2f6eefc2.chunk.js.map": "/static/js/2.2f6eefc2.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.c66561e6.chunk.js.LICENSE.txt": "/static/js/2.c66561e6.chunk.js.LICENSE.txt",
+    "static/js/2.2f6eefc2.chunk.js.LICENSE.txt": "/static/js/2.2f6eefc2.chunk.js.LICENSE.txt",
     "static/media/2001.png": "/static/media/2001.96670c90.png",
     "static/media/2011.png": "/static/media/2011.d7dcb7e4.png",
     "static/media/2016.png": "/static/media/2016.96670c90.png",
@@ -18,6 +18,7 @@
     "static/media/digizakat.webp": "/static/media/digizakat.edea71ff.webp",
     "static/media/dompet-dhuafa.webp": "/static/media/dompet-dhuafa.1364beb8.webp",
     "static/media/e9pay.webp": "/static/media/e9pay.00a5266f.webp",
+    "static/media/ekonomi.png": "/static/media/ekonomi.848c0480.png",
     "static/media/forkomasi.webp": "/static/media/forkomasi.a8ce75f1.webp",
     "static/media/hidroponik-kita.webp": "/static/media/hidroponik-kita.25a1152d.webp",
     "static/media/human-inisiative.webp": "/static/media/human-inisiative.f6994df0.webp",
@@ -28,13 +29,15 @@
     "static/media/logo-foz.webp": "/static/media/logo-foz.b76812d8.webp",
     "static/media/logo.png": "/static/media/logo.fded8b82.png",
     "static/media/overtune.webp": "/static/media/overtune.cc07afd8.webp",
+    "static/media/pendidikan.png": "/static/media/pendidikan.0e8bc19c.png",
     "static/media/photo-1.jpg": "/static/media/photo-1.f1f50d26.jpg",
     "static/media/pkf.webp": "/static/media/pkf.d075ee77.webp",
-    "static/media/semesta-utama.webp": "/static/media/semesta-utama.30cb90ba.webp"
+    "static/media/semesta-utama.webp": "/static/media/semesta-utama.30cb90ba.webp",
+    "static/media/sosial.png": "/static/media/sosial.76de52b4.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
-    "static/js/2.c66561e6.chunk.js",
-    "static/js/main.38a441a2.chunk.js"
+    "static/js/2.2f6eefc2.chunk.js",
+    "static/js/main.28b8e4c6.chunk.js"
   ]
 }

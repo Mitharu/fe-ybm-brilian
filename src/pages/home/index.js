@@ -31,7 +31,7 @@ export default function Home() {
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h3 class="mb-5">About Us</h3>
           </div>
-          <div class="row align-items-center g-5">
+          <div class="row align-items-center g-5 wow fadeInUp">
             <div class="col-lg-6 text-center text-lg-end overflow-hidden">
               <img
                 class="img-fluid"
@@ -85,10 +85,10 @@ export default function Home() {
               data-wow-delay="0.1s"
             >
               <div className="service-item rounded p-3">
-                <h2>Pendidikan</h2>
+                <h2>Sosial</h2>
                 <p>
-                  Program pendayagunaan zakat berupa bantuan beasiswa, pembinaan
-                  dan penunjang pendidikan
+                  Program pendayagunaan zakat berupa pemenuhan kebutuhan
+                  dasar,spiritual,pembinaan keluarga dan kemanusiaan.
                 </p>
               </div>
             </div>
@@ -97,10 +97,10 @@ export default function Home() {
               data-wow-delay="0.1s"
             >
               <div className="service-item rounded p-3">
-                <h2>Social</h2>
+                <h2>Pendidikan</h2>
                 <p>
-                  Program pendayagunaan zakat berupa pemenuhan kebutuhan
-                  dasar,spiritual,pembinaan keluarga dan kemanusiaan.
+                  Program pendayagunaan zakat berupa bantuan beasiswa, pembinaan
+                  dan penunjang pendidikan
                 </p>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function Home() {
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h3 class="mb-5">News</h3>
           </div>
-          <div class="row">
+          <div class="row wow fadeInUp">
             <div class="col-lg-8 col-md-8">
               <div class="row mb-4">
                 <div class="col-lg-12 col-md-12">

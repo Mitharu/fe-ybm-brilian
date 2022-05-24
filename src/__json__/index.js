@@ -170,5 +170,25 @@ module.exports = {
       url: require("../assets/image/milestone/2021.png").default,
       desc: "Dilakukan penyempurnaan struktur lembaga sebagai upaya dalam memperluas kebermanfaat YBM BRI, dan juga dilakukan transformasi lembaga menjadi YBM BRILiaN"
     },
+  ],
+  program: [
+    {
+      path: "/program/ekonomi",
+      urlImage: require("../assets/image/program/ekonomi.png").default,
+      title: "Ekonomi",
+      desc: "Program pendayagunaan zakat berupa bantuan stimulus modal,pendampingan dan managemen keuangan",
+    },
+    {
+      path: "/program/sosial",
+      urlImage: require("../assets/image/program/sosial.png").default,
+      title: "Sosial",
+      desc: "Program pendayagunaan zakat berupa pemenuhan kebutuhan dasar, spiritual, pembinaan keluarga dan kemanusiaan",
+    },
+    {
+      path: "/program/pendidikan",
+      urlImage: require("../assets/image/program/pendidikan.png").default,
+      title: "Pendidikan",
+      desc: "Program pendayagunaan zakat berupa bantuan beasiswa, pembinaan dan penunjang pendidikan",
+    }
   ]
 }
