@@ -29,7 +29,7 @@ export default function Layout({ children }) {
   }, [])
 
   return (
-    <div className="container-xxl bg-white p-0">
+    <div className="bg-white p-0">
       {/* <div
         id="spinner"
         className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
           <span className="sr-only">Loading...</span>
         </div>
       </div> */}
-      <div className="container-xxl position-relative p-0">
+      <div className="position-relative p-0">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
           <a href="/" className="navbar-brand p-0">
             {/* <h1 className="text-primary m-0">
@@ -92,9 +92,11 @@ export default function Layout({ children }) {
                 <a
                   href="#a"
                   class={`nav-link dropdown-toggle ${
-                    ['/program/ekonomi', '/program/sosial', '/program/pendidikan'].includes(
-                      url?.pathname,
-                    )
+                    [
+                      '/program/ekonomi',
+                      '/program/sosial',
+                      '/program/pendidikan',
+                    ].includes(url?.pathname)
                       ? 'active'
                       : ''
                   }`}
@@ -152,8 +154,8 @@ export default function Layout({ children }) {
           </div>
         </nav>
         {url?.pathname !== '/' ? (
-          <div className="container-xxl py-5 bg-dark hero-bread mb-5">
-            <div className="container text-center my-5 pt-5 pb-4">
+          <div className="py-5 bg-dark hero-bread mb-5">
+            <div className="text-center pt-5 pb-4">
               <h1
                 className="display-3 text-white mb-3 animated slideInDown"
                 style={{ textTransform: 'capitalize' }}
@@ -188,24 +190,35 @@ export default function Layout({ children }) {
           <React.Fragment>
             <Carousel data={banner} />
             <Achieve />
-            <div className="container-xxl py-5 bg-dark hero-header wow fadeInUp">
-              <div className="container my-5 py-5">
-                <div className="row align-items-center g-5">
-                  <div className="col-lg-6 text-center text-lg-start">
-                    <h1 className="display-3">YBM Brillian</h1>
-                    <p className="animated slideInLeft mb-4 pb-2">
-                      Tempor erat elitr rebum at clita. Diam dolor diam ipsum
-                      sit. Aliqu diam amet diam et eos. Clita erat ipsum et
-                      lorem et sit, sed stet lorem sit clita duo justo magna
-                      dolore erat amet
-                    </p>
-                  </div>
+            <div className="bg-dark hero-header wow fadeInUp">
+              <div>
+                <div className="row align-items-center g-5" style={{ marginRight: 0, marginLeft: 0 }}>
                   <div className="col-lg-6 text-center text-lg-end overflow-hidden">
                     <img
                       className="img-fluid"
-                      src={require('../assets/image/photo-1.jpg').default}
+                      src={require('../assets/image/sumbangan.png').default}
                       alt=""
                     />
+                  </div>
+                  <div className="col-lg-6 text-center text-lg-start">
+                    <h1 className="display-3" style={{ color: '#00569C' }}>
+                      Highlight About Us tentang YBM Brillian
+                    </h1>
+                    <p className="animated slideInLeft mb-4 pb-2">
+                      Laborum ad mollit dolore veniam. Elit quis laborum commodo
+                      occaecat. Aute amet voluptate excepteur aute nisi laboris.
+                      Est do commodo dolor magna elit. Laboris voluptate ea
+                      deserunt velit tempor do sint tempor sit Lorem ut
+                      consectetur id enim. Esse nisi est culpa ex id magna est
+                      ut proident anim adipisicing sint sint ea.
+                      Laborum ad mollit dolore veniam. Elit quis laborum commodo
+                      occaecat. Aute amet voluptate excepteur aute nisi laboris.
+                      Est do commodo dolor magna elit. Laboris voluptate ea
+                      deserunt velit tempor do sint tempor sit Lorem ut
+                      consectetur id enim. Esse nisi est culpa ex id magna est
+                      ut proident anim adipisicing sint sint ea.
+                    </p>
+                    <button class="btn btn-primary">Lihat lebih lanjut</button>
                   </div>
                 </div>
               </div>
@@ -222,8 +235,8 @@ export default function Layout({ children }) {
         data-wow-delay="0.1s"
         style={{ background: '#f2f2f2' }}
       >
-        <div className="container">
-          <div className="row g-5">
+        <div>
+          <div className="row g-5" style={{ marginRight: 0, marginLeft: 0 }}>
             <div
               className="col-lg-4 col-md-4 text-center py-3"
               style={{ background: '#E0E0E0', margin: 0 }}

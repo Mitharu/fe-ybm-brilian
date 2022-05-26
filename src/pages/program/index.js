@@ -37,7 +37,7 @@ export default function Program() {
                   <div className="service-item rounded p-3">
                     <div class="row">
                       <div class="col-lg-5 col-md-5">
-                        <ImageWithFallback  
+                        <ImageWithFallback
                           src={item.urlImage}
                           alt={item.urlImage}
                           imageHeight="200px"

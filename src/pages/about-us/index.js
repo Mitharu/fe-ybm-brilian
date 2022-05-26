@@ -22,14 +22,14 @@ const TitleAbout = styled.h2`
   }
 `
 
-const TitleVision = styled.h2`
-  background: ${(props) => props.color};
-  color: #fff;
-  font-weight: 400;
-  display: inline;
-  padding: 0 5px;
-  border-radius: 5px;
-`
+// const TitleVision = styled.h2`
+//   background: ${(props) => props.color};
+//   color: #fff;
+//   font-weight: 400;
+//   display: inline;
+//   padding: 0 5px;
+//   border-radius: 5px;
+// `
 
 export default function AboutUs() {
   return (
@@ -75,47 +75,51 @@ export default function AboutUs() {
       </div>
       <div
         class="container-xxl py-5 animated slideInLeft"
-        style={{ backgroundColor: '#f2f2f2' }}
+        style={{ backgroundColor: '#F26624' }}
       >
         <div class="container">
           <div class="row g-5">
             <div class="col-lg-6">
-              <TitleVision color="#EB5757">
-                Visi <i class="fa-solid fa-hand-holding-hand"></i>
-              </TitleVision>
-              <p class="mb-4 pb-2 mt-4">
+              <h3 class="text-light">Visi</h3>
+              <p class="mb-4 pb-2 mt-4 text-light">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                 Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
                 sed stet lorem sit clita duo justo magna dolore erat amet
               </p>
             </div>
             <div class="col-lg-6">
-              <TitleVision color="#2F80ED">Misi</TitleVision>
-              <p class="mb-4 pb-2 mt-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
-              </p>
-              <p>
-                Commodo voluptate occaecat sit commodo et cupidatat est dolore
-                excepteur. Elit fugiat qui Lorem qui nostrud pariatur proident
-                sit proident. Quis ut labore et occaecat esse excepteur
-                adipisicing duis eiusmod ea cupidatat laboris occaecat deserunt.
-                Nostrud laboris ut ullamco consectetur exercitation. Cupidatat
-                pariatur tempor consectetur fugiat esse ut eiusmod consequat do
-                enim elit non et. Consectetur esse velit sunt eu voluptate
-                officia excepteur esse. Cupidatat amet esse nisi minim enim
-                mollit reprehenderit consectetur.
-              </p>
+              <h3 class="text-light">Visi</h3>
+              <ul style={{ color: '#fff' }}>
+                <li>
+                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+                  sed stet lorem sit clita duo justo magna dolore erat amet
+                </li>
+                <li>
+                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+                  sed stet lorem sit clita duo justo magna dolore erat amet
+                </li>
+                <li>
+                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+                  sed stet lorem sit clita duo justo magna dolore erat amet
+                </li>
+                <li>
+                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+                  sed stet lorem sit clita duo justo magna dolore erat amet
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="container-xxl py-5 animated slideInRight">
         <div class="container">
-          <TitleAbout margin="0">
+          {/* <TitleAbout margin="0">
             6 Nilai <span>YBM Brillian</span>
-          </TitleAbout>
+          </TitleAbout> */}
           <div class="row g-5 mt-2">
             {nilai_nilai &&
               nilai_nilai.map((item, idx) => (
@@ -128,30 +132,8 @@ export default function AboutUs() {
                     flexDirection: 'column',
                   }}
                 >
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      width: '100px',
-                      height: '100px',
-                      backgroundColor: item.bgColor,
-                      borderRadius: '50%',
-                    }}
-                  >
-                    <i class={`${item.icon}`} style={{ color: '#fff' }}></i>
-                  </div>
-                  <p
-                    style={{
-                      margin: '10px 0',
-                      padding: 0,
-                      fontSize: '18px',
-                      fontWeight: '600',
-                      color: '#000',
-                    }}
-                  >
-                    {item.title}
-                  </p>
+                  <img src={item.img} alt={`img-nilai-${idx}`} />
+                  <h3 style={{ color: '#F26624' }}>{item.title}</h3>
                   <p style={{ margin: 0, padding: 0 }}>{item.desc}</p>
                 </div>
               ))}
@@ -169,7 +151,11 @@ export default function AboutUs() {
           <div class="row g-5 mt-3">
             {milestone &&
               milestone.map((item, idx) => (
-                <div key={String(idx)} class="col-lg-3 col-md-3" style={{ display: "flex", justifyContent: "center" }}>
+                <div
+                  key={String(idx)}
+                  class="col-lg-3 col-md-3"
+                  style={{ display: 'flex', justifyContent: 'center' }}
+                >
                   <div
                     style={{
                       backgroundImage: `url(${item.url})`,
@@ -183,7 +169,13 @@ export default function AboutUs() {
                     }}
                   >
                     <h2 style={{ padding: '10px 10px 0 10px' }}>{item.year}</h2>
-                    <p style={{ textAlign: 'justify', padding: '0 10px', lineHeight: "1.2" }}>
+                    <p
+                      style={{
+                        textAlign: 'justify',
+                        padding: '0 10px',
+                        lineHeight: '1.2',
+                      }}
+                    >
                       {item.desc}
                     </p>
                   </div>
@@ -204,7 +196,11 @@ export default function AboutUs() {
           <div class="row g-5">
             {image_mitra &&
               image_mitra.map((item, idx) => (
-                <div key={String(idx)} class="col-lg-3 col-md-3" style={{ display: "flex", justifyContent: "center" }}>
+                <div
+                  key={String(idx)}
+                  class="col-lg-3 col-md-3"
+                  style={{ display: 'flex', justifyContent: 'center' }}
+                >
                   <img src={item.url} alt={item.alt} />
                 </div>
               ))}

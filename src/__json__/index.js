@@ -93,37 +93,37 @@ module.exports = {
   ],
   nilai_nilai: [
     { 
-      icon: "fa fa-check fa-2x",
+      img: require("../assets/image/nilai/verified.svg").default,
       title: "Integritas",
       desc: "Bertindak sesuai dengan koridor peraturan dan etika organisasi serta agama islam",
       bgColor: "#F2C94C",
     },
     { 
-      icon: "fa fa-handshake fa-2x",
+      img: require("../assets/image/nilai/salaman.svg").default,
       title: "Kolaborasi",
       desc: "Membangun sinergi untuk mencapai tujuan bersama",
       bgColor: "#333333",
     },
     { 
-      icon: "fa fa-user-tie fa-2x",
+      img: require("../assets/image/nilai/tie.svg").default,
       title: "Profesional",
       desc: "Menjalankan profesi secara benar dan melakukannya menurut etika",
       bgColor: "#2D9CDB",
     },
     { 
-      icon: "fa fa-medal fa-2x",
+      img: require("../assets/image/nilai/medali.svg").default,
       title: "Inspiratif",
       desc: "Berupaya menjadi inspirasi dan memberi pengaruh untuk menjadi lebih baik",
       bgColor: "#EB5757",
     },
     { 
-      icon: "fa fa-balance-scale fa-2x",
+      img: require("../assets/image/nilai/balance.svg").default,
       title: "Resiliensi",
       desc: "Kemampuan untuk beradaptasi dan tetap teguh dalam situasi sulit",
       bgColor: "#56CCF2",
     },
     { 
-      icon: "fa fa-users fa-2x",
+      img: require("../assets/image/nilai/leader.svg").default,
       title: "Kepemimpinan",
       desc: "Mempengaruhi, memotivasi, dan menggerakkan orang lain sehingga bersedia mengikuti arahannya untuk mencapai tujuan bersama",
       bgColor: "#F2994A",

@@ -1,42 +1,38 @@
 import React from 'react'
-import Slider from 'react-slick'
-import ImageWithFallback from '../../components/image-with-fallback'
+// import ImageWithFallback from "../../components/image-with-fallback"
 
 export default function Carousel({ data }) {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  }
-
   return (
-    <div className="container-xxl py-5 bg-dark hero-header wow fadeInUp">
-      <div className="container my-5 py-5 carousel-home">
-        <Slider {...settings}>
-          {data &&
-            data.map((item, idx) => (
-              <div key={String(idx)}>
-                <div className="col-md-12 container-carousel">
-                  <div className="row">
-                    <div className="col-md-6 carousel-title">
-                      <p className="title">{item.title}</p>
-                      <p className="desc">{item.banner_desc}</p>
-                    </div>
-                    <div className="col-md-6">
-                      <ImageWithFallback
-                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
-                        alt={item.img}
-                        imageHeight="600px"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-        </Slider>
+    <div className="py-5 bg-dark hero-header wow fadeInUp">
+      <div
+        className="row mt-5"
+        style={{
+          backgroundImage: `url(${
+            require('../../assets/image/main-carousel.png').default
+          })`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          height: '1000px',
+          width: '100%',
+          boxSizing: 'border-box',
+          marginRight: 0,
+          marginLeft: 0,
+        }}
+      >
+        <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center list-group">
+          <h1 style={{ fontSize: '56px', margin: 0, textAlign: 'center', color: "#fff" }}>
+            Tetaplah asik dalam berbuat baik
+          </h1>
+          <p style={{ color: "#fff", textAlign: "center" }}>Yuk berbuat baik supaya kerjaan lancar dan hidup makin berkah</p>
+        </div>
+        <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center">
+          <img 
+            className="img-carousel"
+            src={require("../../assets/image/volunter.png").default}
+            alt="volunter"
+          />
+        </div>
       </div>
       <style>
         {`
@@ -44,30 +40,33 @@ export default function Carousel({ data }) {
               background: #f2f2f2;
             }
 
-            .carousel-title {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              flex-direction: column;
+            @media(min-width: 320px) {
+              .img-carousel {
+                width: 0px;
+                margin-top: -250px;
+              }
             }
 
-            .carousel-title .title {
-              background: #EB5757;
-              color: #fff;
-              padding: 5px;
-              border-radius: 5px;
-              font-size: 24px;
-              font-weight: 400;
+            @media(min-width: 375px) {
+              .img-carousel {
+                width: 300px;
+                margin-top: -250px;
+              }
             }
 
-            .carousel-title .desc {
-              margin: 0;
-              padding: 0 0 0 10px;
+            @media(min-width: 425px) {
+              .img-carousel {
+                width: 350px;
+                margin-top: -250px;
+              }
             }
 
-            .carousel-home .slick-slider ul.slick-dots li button:before {
-              font-size: 14px;
+            @media(min-width: 1024px) {
+              .img-carousel {
+                width: 550px;
+              }
             }
+
           `}
       </style>
     </div>

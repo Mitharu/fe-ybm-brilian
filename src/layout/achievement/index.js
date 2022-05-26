@@ -6,30 +6,57 @@ export default function Achievement() {
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-3 text-center box-achieve">
-            <div style={{ background: '#F2C94C' }} className="content">
-              <h2 className="text-light">10</h2>
+            <div>
+              <img
+                src={
+                  require('../../assets/image/angkapenting/penerima.svg')
+                    .default
+                }
+                alt="penerima-manfaat"
+              />
             </div>
-            <p class="animated slideInLeft mb-4 pb-2" style={{ fontSize: "20px", fontWeight: "400"}}>
-              Total <br />
-              <span style={{ background: "#EB5757", padding: "0 5px", color: "#fff", borderRadius: "5px" }}>Donasi <i class="fa fa-coins"></i></span>
+            <p
+              class="animated slideInLeft mb-4 pb-2"
+              style={{ fontSize: '20px', fontWeight: '400' }}
+            >
+              <h2 style={{ color: '#F26624' }}>930.123</h2>
+              <span style={{ fontSize: '16px' }}>Penerima manfaat</span>
             </p>
           </div>
           <div class="col-lg-3 text-center box-achieve">
-            <div style={{ background: '#333333' }} className="content">
-              <h2 className="text-light">10</h2>
+            <div>
+              <img
+                src={
+                  require('../../assets/image/angkapenting/uang.svg')
+                    .default
+                }
+                alt="penerima-manfaat"
+              />
             </div>
-            <p class="animated slideInLeft mb-4 pb-2" style={{ fontSize: "20px", fontWeight: "400"}}>
-              Penerima <br />
-              <span style={{ background: "#EB5757", padding: "0 5px", color: "#fff", borderRadius: "5px" }}>Manfaat <i class="fa fa-hand-holding-heart"></i></span>
+            <p
+              class="animated slideInLeft mb-4 pb-2"
+              style={{ fontSize: '20px', fontWeight: '400' }}
+            >
+              <h2 style={{ color: '#F26624' }}>Rp 930.000.000</h2>
+              <span style={{ fontSize: '16px' }}>Total donasi</span>
             </p>
           </div>
           <div class="col-lg-3 text-center box-achieve">
-            <div style={{ background: '#2D9CDB' }} className="content">
-              <h2 className="text-light">10</h2>
+            <div>
+              <img
+                src={
+                  require('../../assets/image/angkapenting/donatur.svg')
+                    .default
+                }
+                alt="penerima-manfaat"
+              />
             </div>
-            <p class="animated slideInLeft mb-4 pb-2" style={{ fontSize: "20px", fontWeight: "400"}}>
-              Jumlah <br />
-              <span style={{ background: "#EB5757", padding: "0 5px", color: "#fff", borderRadius: "5px" }}>Donatur <i class="fa fa-users"></i></span>
+            <p
+              class="animated slideInLeft mb-4 pb-2"
+              style={{ fontSize: '20px', fontWeight: '400' }}
+            >
+              <h2 style={{ color: '#F26624' }}>122.982</h2>
+              <span style={{ fontSize: '16px' }}>Jumlah donatur</span>
             </p>
           </div>
         </div>

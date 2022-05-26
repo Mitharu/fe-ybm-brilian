@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom'
 const CardNewsContainer = styled.div`
   width: 100%;
   height: auto;
-  padding: 10px;
-  background: #f6f6f6;
+  border: 1px solid #E0E0E0;
   &:hover {
     cursor: pointer;
   }
@@ -16,22 +15,23 @@ const CardNewsContainer = styled.div`
 
 const CardNewsTitle = styled.p`
   font-size: 18px;
+  line-height: ;
   margin: 5px 0;
-  padding: 0;
-  font-weight: 600;
+  padding: 10px;
+  font-weight: 400;
   color: #000;
   word-break: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3 ;
   -webkit-box-orient: vertical;
 `
 
-const CardNewsDesc = styled.p`
+const CardNewsDate = styled.p`
   font-size: 14px;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   word-break: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -56,7 +56,7 @@ export default function CardNews({
           imageHeight={imageHeight}
         />
         <CardNewsTitle>{title}</CardNewsTitle>
-        <CardNewsDesc>{desc}</CardNewsDesc>
+        <CardNewsDate>{desc}</CardNewsDate>
       </CardNewsContainer>
     </Link>
   )
