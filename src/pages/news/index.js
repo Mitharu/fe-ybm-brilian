@@ -8,6 +8,7 @@ export default function News() {
   const [news, setNews] = useState([])
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     async function fetchData() {
       // get data news
       get({

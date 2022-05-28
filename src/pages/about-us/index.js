@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { image_mitra, nilai_nilai, milestone } from '../../__json__'
 
@@ -33,6 +33,10 @@ const TitleVision = styled.h3`
 `
 
 export default function AboutUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <React.Fragment>
       <div class="container-xxl">

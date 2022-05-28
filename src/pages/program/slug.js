@@ -8,6 +8,7 @@ export default function Slug() {
   const [banner, setBanner] = useState([])
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     async function fetchData() {
       //get banner
       get({
