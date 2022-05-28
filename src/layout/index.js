@@ -80,6 +80,14 @@ export default function Layout({ children }) {
               >
                 About Us
               </NavLink>
+              <NavLink
+                to="/contact-us"
+                className={`nav-item nav-link ${
+                  url?.pathname === '/contact-us' ? 'active' : ''
+                }`}
+              >
+                Contact Us
+              </NavLink>
               {/* <NavLink
                 to="/program"
                 className={`nav-item nav-link ${
@@ -139,17 +147,17 @@ export default function Layout({ children }) {
               >
                 News
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 to="/blog"
                 className={`nav-item nav-link ${
                   url?.pathname === '/blog' ? 'active' : ''
                 }`}
               >
                 Blog
-              </NavLink>
+              </NavLink> */}
             </div>
-            <a href="#a" className="btn btn-primary py-2 px-4">
-              CMS Login <i class="fa fa-lock"></i>
+            <a href={process.env.REACT_APP_CMS_URL} className="nav-item nav-link">
+              CMS LOGIN <i class="fa fa-lock"></i>
             </a>
           </div>
         </nav>
@@ -162,7 +170,7 @@ export default function Layout({ children }) {
               >
                 {params?.slug === undefined
                   ? url?.pathname.replace(/[/-]/g, ' ')
-                  : 'News'}
+                  : params?.slug}
               </h1>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center text-uppercase">
@@ -231,12 +239,12 @@ export default function Layout({ children }) {
 
       {/* Footer */}
       <div
-        className="container-fluid text-light footer pt-5 mt-5 wow fadeIn"
+        className="container-fluid text-light footer mt-5 wow fadeIn"
         data-wow-delay="0.1s"
         style={{ background: '#f2f2f2' }}
       >
         <div>
-          <div className="row g-5" style={{ marginRight: 0, marginLeft: 0 }}>
+          <div className="row g-5" style={{ marginRight: 0 }}>
             <div
               className="col-lg-4 col-md-4 text-center py-3"
               style={{ background: '#E0E0E0', margin: 0 }}

@@ -25,6 +25,7 @@ export default function Carousel({ data }) {
             Tetaplah asik dalam berbuat baik
           </h1>
           <p style={{ color: "#fff", textAlign: "center" }}>Yuk berbuat baik supaya kerjaan lancar dan hidup makin berkah</p>
+          <a className="btn-donation" href="#afaf">Ayo Donasi!</a>
         </div>
         <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center">
           <img 
@@ -38,6 +39,26 @@ export default function Carousel({ data }) {
         {`
             .container-carousel {
               background: #f2f2f2;
+            }
+
+            .btn-donation {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-image: url(${require("../../assets/image/btn-donation.svg").default});
+              background-position:;
+              background-repeat: no-repeat;
+              background-size: contain;
+              width: 170px;
+              height: 60px;
+              font-size: 16px;
+              font-weight: 400;
+              color: #fff;
+            }
+
+            .btn-donation:hover {
+              color: #fff;
+              font-weight: 600;
             }
 
             @media(min-width: 320px) {

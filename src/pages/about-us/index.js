@@ -3,48 +3,45 @@ import styled from 'styled-components'
 import { image_mitra, nilai_nilai, milestone } from '../../__json__'
 
 const TitleAbout = styled.h2`
-  position: relative;
-  background: #f2c94c;
-  color: #fff;
+  color: #00569c;
   display: inline;
   padding: 0 5px;
-  margin: ${(props) => props.margin || '0 0 0 70px'};
   border-radius: 5px;
   span {
-    color: #2d9cdb;
-  }
-  img {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: -80px;
-    margin: auto 0;
+    color: #f26624;
   }
 `
 
-// const TitleVision = styled.h2`
-//   background: ${(props) => props.color};
-//   color: #fff;
-//   font-weight: 400;
-//   display: inline;
-//   padding: 0 5px;
-//   border-radius: 5px;
-// `
+const TitleVision = styled.h3`
+  display: inline;
+  position: relative;
+  color: #fff;
+  &:before {
+    background-image: url(${(props) => props.image});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+`
 
 export default function AboutUs() {
   return (
     <React.Fragment>
-      <div class="container-xxl py-5">
+      <div class="container-xxl">
         <div class="container">
           <div class="row align-items-center g-5">
             <div class="col-lg-6 text-center text-lg-start animated slideInRight">
               <TitleAbout>
-                <img
-                  src={require('../../assets/image/logo.png').default}
-                  alt="logo-ybm"
-                  width={80}
-                />
-                About <span>YBM Brillian</span>
+                Yayasan Baitul Mal <br />
+                <span>BRILiaN</span>
               </TitleAbout>
               <p class="mb-4 pb-2 mt-4">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
@@ -66,7 +63,7 @@ export default function AboutUs() {
             <div class="col-lg-6 text-center text-lg-end overflow-hidden animated fadeIn">
               <img
                 class="img-fluid"
-                src={require('../../assets/image/photo-1.jpg').default}
+                src={require('../../assets/image/sumbangan.png').default}
                 alt=""
               />
             </div>
@@ -74,13 +71,17 @@ export default function AboutUs() {
         </div>
       </div>
       <div
-        class="container-xxl py-5 animated slideInLeft"
+        class="container-xxl py-5 animated slideInLeft visi-misi-box"
         style={{ backgroundColor: '#F26624' }}
       >
         <div class="container">
           <div class="row g-5">
             <div class="col-lg-6">
-              <h3 class="text-light">Visi</h3>
+              <TitleVision
+                image={require('../../assets/image/crosshair.svg').default}
+              >
+                Visi
+              </TitleVision>
               <p class="mb-4 pb-2 mt-4 text-light">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                 Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
@@ -88,8 +89,12 @@ export default function AboutUs() {
               </p>
             </div>
             <div class="col-lg-6">
-              <h3 class="text-light">Visi</h3>
-              <ul style={{ color: '#fff' }}>
+              <TitleVision
+                image={require('../../assets/image/rocket.svg').default}
+              >
+                Misi
+              </TitleVision>
+              <ul style={{ color: '#fff', margin: '15px 0' }}>
                 <li>
                   Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                   Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
@@ -118,8 +123,8 @@ export default function AboutUs() {
       <div class="container-xxl py-5 animated slideInRight">
         <div class="container">
           {/* <TitleAbout margin="0">
-            6 Nilai <span>YBM Brillian</span>
-          </TitleAbout> */}
+              6 Nilai <span>YBM Brillian</span>
+            </TitleAbout> */}
           <div class="row g-5 mt-2">
             {nilai_nilai &&
               nilai_nilai.map((item, idx) => (
@@ -207,6 +212,31 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+      <style>
+        {`
+          .visi-misi-box {
+            position: relative;
+          }
+
+          .visi-misi-box::before {
+            background-image: url(${
+              require('../../assets/image/rocket.svg').default
+            });
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: '';
+            position: absolute;
+            bottom: -120px;
+            left: 80px;
+            width: 350px;
+            height: 350px;
+            z-index: 1;
+            opacity: 0.1;
+            transform: rotate(60deg);
+          }
+        `}
+      </style>
     </React.Fragment>
   )
 }
