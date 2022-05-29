@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.f7c6eb82.chunk.js",
-    "main.js.map": "/static/js/main.f7c6eb82.chunk.js.map",
+    "main.js": "/static/js/main.438805e6.chunk.js",
+    "main.js.map": "/static/js/main.438805e6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
-    "static/js/2.a08d7ae1.chunk.js": "/static/js/2.a08d7ae1.chunk.js",
-    "static/js/2.a08d7ae1.chunk.js.map": "/static/js/2.a08d7ae1.chunk.js.map",
+    "static/js/2.537f2adb.chunk.js": "/static/js/2.537f2adb.chunk.js",
+    "static/js/2.537f2adb.chunk.js.map": "/static/js/2.537f2adb.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.a08d7ae1.chunk.js.LICENSE.txt": "/static/js/2.a08d7ae1.chunk.js.LICENSE.txt",
+    "static/js/2.537f2adb.chunk.js.LICENSE.txt": "/static/js/2.537f2adb.chunk.js.LICENSE.txt",
     "static/media/2001.png": "/static/media/2001.96670c90.png",
     "static/media/2011.png": "/static/media/2011.d7dcb7e4.png",
     "static/media/2016.png": "/static/media/2016.96670c90.png",
@@ -44,6 +44,7 @@
     "static/media/semesta-utama.webp": "/static/media/semesta-utama.30cb90ba.webp",
     "static/media/sosial.png": "/static/media/sosial.529fc3b0.png",
     "static/media/sumbangan.png": "/static/media/sumbangan.34712ec7.png",
+    "static/media/surat.svg": "/static/media/surat.f6145dfd.svg",
     "static/media/tie.svg": "/static/media/tie.f7220a74.svg",
     "static/media/uang.svg": "/static/media/uang.9196f51d.svg",
     "static/media/verified.svg": "/static/media/verified.44869ee9.svg",
@@ -51,7 +52,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
-    "static/js/2.a08d7ae1.chunk.js",
-    "static/js/main.f7c6eb82.chunk.js"
+    "static/js/2.537f2adb.chunk.js",
+    "static/js/main.438805e6.chunk.js"
   ]
 }
