@@ -7,6 +7,10 @@
     --grey: #F2F2F2;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .ff-secondary {
     font-family: 'Pacifico', cursive;
 }
