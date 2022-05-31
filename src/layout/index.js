@@ -156,7 +156,7 @@ export default function Layout({ children }) {
                 Blog
               </NavLink> */}
             </div>
-            <a href={process.env.REACT_APP_CMS_URL} className="nav-item nav-link">
+            <a href={process.env.REACT_APP_CMS_URL} className="btn btn-primary">
               CMS LOGIN <i class="fa fa-lock"></i>
             </a>
           </div>
@@ -200,7 +200,10 @@ export default function Layout({ children }) {
             <Achieve />
             <div className="bg-dark hero-header wow fadeInUp">
               <div>
-                <div className="row align-items-center g-5" style={{ marginRight: 0, marginLeft: 0 }}>
+                <div
+                  className="row align-items-center g-5"
+                  style={{ marginRight: 0, marginLeft: 0 }}
+                >
                   <div className="col-lg-6 text-center text-lg-end overflow-hidden">
                     <img
                       className="img-fluid"
@@ -213,18 +216,14 @@ export default function Layout({ children }) {
                       Highlight About Us tentang YBM Brillian
                     </h1>
                     <p className="animated slideInLeft mb-4 pb-2">
-                      Laborum ad mollit dolore veniam. Elit quis laborum commodo
-                      occaecat. Aute amet voluptate excepteur aute nisi laboris.
-                      Est do commodo dolor magna elit. Laboris voluptate ea
-                      deserunt velit tempor do sint tempor sit Lorem ut
-                      consectetur id enim. Esse nisi est culpa ex id magna est
-                      ut proident anim adipisicing sint sint ea.
-                      Laborum ad mollit dolore veniam. Elit quis laborum commodo
-                      occaecat. Aute amet voluptate excepteur aute nisi laboris.
-                      Est do commodo dolor magna elit. Laboris voluptate ea
-                      deserunt velit tempor do sint tempor sit Lorem ut
-                      consectetur id enim. Esse nisi est culpa ex id magna est
-                      ut proident anim adipisicing sint sint ea.
+                      YBM BRILiaN merupakan Lembaga Filantropi Islam pengelola
+                      Dana Zakat, Infak, Sedekah, dan Wakaf yang dilaksanakan
+                      secara professional, sesuai dengan aturan dan ketentuan
+                      dalam syariat islam. YBM BRILiaN berkomitmen meningkatkan
+                      kualitas hidup dan mobilitas vertikal keluarga dhuafa
+                      melalui serangkaian program Pendidikan inklusif,
+                      pemberdayaan ekonomi, serta program sosial kemanusiaan
+                      sehingga terwujud masyarakat berdaya.
                     </p>
                     <button class="btn btn-primary">Lihat lebih lanjut</button>
                   </div>
@@ -239,99 +238,101 @@ export default function Layout({ children }) {
 
       {/* Footer */}
       <div
-        className="container-fluid text-light footer mt-5 wow fadeIn"
+        class="text-primary footer wow fadeIn"
         data-wow-delay="0.1s"
-        style={{ background: '#f2f2f2' }}
+        style={{
+          background: '#f2f2f2',
+        }}
       >
-        <div>
-          <div className="row g-5" style={{ marginRight: 0 }}>
-            <div
-              className="col-lg-4 col-md-4 text-center py-3"
-              style={{ background: '#E0E0E0', margin: 0 }}
-            >
-              <img
-                src={require('../assets/image/logo.png').default}
-                alt="logo-ybm"
-                width={150}
-              />
-              <p style={{ color: '#000' }}>
-                YBM BRI yang kini bertransformasi menjadi YBM BRILiaN merupakan
-                Lembaga Filantropi Islam yang mengelola dana zakat, infak dan
-                sedekah secara profesional dan sesuai dengan ketentuan syariat
-                Islam.
-              </p>
-              <p style={{ color: '#000' }}>
-                Gedung Olahraga BRI Lt.2 Jl. Jenderal Sudirman Kav 44-46 Jakarta
-                Pusat 10210
-              </p>
-              <p style={{ color: '#000' }}>customer care 0811 808 412</p>
-            </div>
-            <div className="col-lg-8 col-md-8">
-              <div className="row">
-                <div className="col-md-3 col-lg-3">
-                  <p style={{ color: '#000' }}>
-                    <strong>Program</strong>
-                  </p>
-                  <a
-                    href="#a"
-                    className="btn btn-link"
-                    style={{ color: '#828282' }}
-                  >
-                    Pendidikan
-                  </a>
-                  <a
-                    href="#a"
-                    className="btn btn-link"
-                    style={{ color: '#828282' }}
-                  >
-                    Sosial
-                  </a>
-                  <a
-                    href="#a"
-                    className="btn btn-link"
-                    style={{ color: '#828282' }}
-                  >
-                    Ekonomi
-                  </a>
-                </div>
-                <div className="col-md-3 col-lg-3">
-                  <p style={{ color: '#000' }}>
-                    <strong>Program</strong>
-                  </p>
-                  <a
-                    href="#a"
-                    className="btn btn-link"
-                    style={{ color: '#828282' }}
-                  >
-                    Jadilah Fundraiser
-                  </a>
-                </div>
-                <div className="col-md-3 col-lg-3">
-                  <p style={{ color: '#000' }}>
-                    <strong>Tentang Kami</strong>
-                  </p>
-                  <a
-                    href="#a"
-                    className="btn btn-link"
-                    style={{ color: '#828282' }}
-                  >
-                    Lembaga
-                  </a>
-                  <a
-                    href="#a"
-                    className="btn btn-link"
-                    style={{ color: '#828282' }}
-                  >
-                    Berita
-                  </a>
-                  <a
-                    href="#a"
-                    className="btn btn-link"
-                    style={{ color: '#828282' }}
-                  >
-                    Artikel
-                  </a>
-                </div>
+        <div class="row" style={{ marginRight: 0, marginLeft: 0 }}>
+          <div
+            class="col-lg-4 text-center"
+            style={{
+              background: '#E0E0E0',
+            }}
+          >
+            <img
+              src={require('../assets/image/logo.png').default}
+              alt="logo-ybm"
+              width={150}
+            />
+            <p style={{ color: '#000' }}>
+              YBM BRI yang kini bertransformasi menjadi YBM BRILiaN merupakan
+              Lembaga Filantropi Islam yang mengelola dana zakat, infak dan
+              sedekah secara profesional dan sesuai dengan ketentuan syariat
+              Islam.
+            </p>
+            <p style={{ color: '#000' }}>
+              Gedung Olahraga BRI Lt.2 Jl. Jenderal Sudirman Kav 44-46 Jakarta
+              Pusat 10210
+            </p>
+            <p style={{ color: '#000' }}>customer care 0811 808 412</p>
+          </div>
+          <div class="col-lg-8">
+            <div className="row py-2">
+              <div className="col-md-3 col-lg-3">
+                <p style={{ color: '#000' }}>
+                  <strong>Program</strong>
+                </p>
+                <a
+                  href="#a"
+                  className="btn btn-link"
+                  style={{ color: '#828282' }}
+                >
+                  Pendidikan
+                </a>
+                <a
+                  href="#a"
+                  className="btn btn-link"
+                  style={{ color: '#828282' }}
+                >
+                  Sosial
+                </a>
+                <a
+                  href="#a"
+                  className="btn btn-link"
+                  style={{ color: '#828282' }}
+                >
+                  Ekonomi
+                </a>
+              </div>
+              <div className="col-md-3 col-lg-3">
+                <p style={{ color: '#000' }}>
+                  <strong>Program</strong>
+                </p>
+                <a
+                  href="#a"
+                  className="btn btn-link"
+                  style={{ color: '#828282' }}
+                >
+                  Jadilah Fundraiser
+                </a>
+              </div>
+              <div className="col-md-3 col-lg-3">
+                <p style={{ color: '#000' }}>
+                  <strong>Tentang Kami</strong>
+                </p>
+                <a
+                  href="#a"
+                  className="btn btn-link"
+                  style={{ color: '#828282' }}
+                >
+                  Lembaga
+                </a>
+                <a
+                  href="#a"
+                  className="btn btn-link"
+                  style={{ color: '#828282' }}
+                >
+                  Berita
+                </a>
+                <a
+                  href="#a"
+                  className="btn btn-link"
+                  style={{ color: '#828282' }}
+                >
+                  Artikel
+                </a>
               </div>
             </div>
           </div>

@@ -93,12 +93,12 @@
     font-weight: 500;
     outline: none;
     transition: .5s;
-    color: var(--blue);
+    color: var(--light);
 }
 
 .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 20px 0;
-    color: var(--light);
+    /* color: var(--light); */
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,

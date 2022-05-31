@@ -54,7 +54,7 @@ export default function News() {
                         imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                         imageHeight="180px"
                         title={item.name}
-                        desc={item.isi_berita}
+                        desc={`8 April 2022`}
                         linkTo={`/news/${item.id}`}
                       />
                     </div>
@@ -70,7 +70,7 @@ export default function News() {
                         imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                         imageHeight="300px"
                         title={item.name}
-                        desc={item.isi_berita}
+                        desc={`8 April 2022`}
                         linkTo={`/news/${item.id}`}
                       />
                     </div>

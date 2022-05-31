@@ -190,5 +190,31 @@ module.exports = {
       title: "Pendidikan",
       desc: "Program pendayagunaan zakat berupa bantuan beasiswa, pembinaan dan penunjang pendidikan",
     }
+  ],
+  penghargaan: [
+    {
+      urlImage: require("../assets/image/penghargaan/trophy.svg").default,
+      title: "IFI's Award",
+      year: "2021",
+      desc: "Institute Fundraising Indonesia memberikan penghargaan kepada YBM BRILiaN sebagai Fundraising Zakat Berbasis Perusahaan Terbaik.",
+    },
+    {
+      urlImage: require("../assets/image/penghargaan/trophy.svg").default,
+      title: "IFI's Award",
+      year: "2021",
+      desc: "Institute Fundraising Indonesia memberikan penghargaan kepada YBM BRILiaN sebagai Lembaga Pendukung Gerakan Fundraising.",
+    },
+    {
+      urlImage: require("../assets/image/penghargaan/trophy.svg").default,
+      title: "IPB's Award",
+      year: "2021",
+      desc: "YBM BRILiaN meraih penghargaan Tribute to IPB's Scholarship Contributors: A Caring Support for Developing Agile Learners.",
+    },
+    {
+      urlImage: require("../assets/image/penghargaan/trophy.svg").default,
+      title: "IPB's Award",
+      year: "2021",
+      desc: "YBM BRILiaN meraih penghargaan Tribute to IPB's Scholarship Contributors: A Caring Support for Developing Agile Learners.",
+    },
   ]
 }

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.f7c6eb82.chunk.js",
-    "main.js.map": "/static/js/main.f7c6eb82.chunk.js.map",
+    "main.js": "/static/js/main.11a4732c.chunk.js",
+    "main.js.map": "/static/js/main.11a4732c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
-    "static/js/2.a08d7ae1.chunk.js": "/static/js/2.a08d7ae1.chunk.js",
-    "static/js/2.a08d7ae1.chunk.js.map": "/static/js/2.a08d7ae1.chunk.js.map",
+    "static/js/2.54f0bd31.chunk.js": "/static/js/2.54f0bd31.chunk.js",
+    "static/js/2.54f0bd31.chunk.js.map": "/static/js/2.54f0bd31.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.a08d7ae1.chunk.js.LICENSE.txt": "/static/js/2.a08d7ae1.chunk.js.LICENSE.txt",
+    "static/js/2.54f0bd31.chunk.js.LICENSE.txt": "/static/js/2.54f0bd31.chunk.js.LICENSE.txt",
     "static/media/2001.png": "/static/media/2001.96670c90.png",
     "static/media/2011.png": "/static/media/2011.d7dcb7e4.png",
     "static/media/2016.png": "/static/media/2016.96670c90.png",
@@ -33,7 +33,7 @@
     "static/media/leader.svg": "/static/media/leader.0efffb3b.svg",
     "static/media/logo-foz.webp": "/static/media/logo-foz.b76812d8.webp",
     "static/media/logo.png": "/static/media/logo.fded8b82.png",
-    "static/media/main-carousel.png": "/static/media/main-carousel.c518c616.png",
+    "static/media/main-banner.svg": "/static/media/main-banner.c981433e.svg",
     "static/media/medali.svg": "/static/media/medali.57d52b46.svg",
     "static/media/overtune.webp": "/static/media/overtune.cc07afd8.webp",
     "static/media/pendidikan.png": "/static/media/pendidikan.a9f4c472.png",
@@ -45,13 +45,14 @@
     "static/media/sosial.png": "/static/media/sosial.529fc3b0.png",
     "static/media/sumbangan.png": "/static/media/sumbangan.34712ec7.png",
     "static/media/tie.svg": "/static/media/tie.f7220a74.svg",
+    "static/media/trophy.svg": "/static/media/trophy.0b9f2889.svg",
     "static/media/uang.svg": "/static/media/uang.9196f51d.svg",
     "static/media/verified.svg": "/static/media/verified.44869ee9.svg",
     "static/media/volunter.png": "/static/media/volunter.7a9fced6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
-    "static/js/2.a08d7ae1.chunk.js",
-    "static/js/main.f7c6eb82.chunk.js"
+    "static/js/2.54f0bd31.chunk.js",
+    "static/js/main.11a4732c.chunk.js"
   ]
 }

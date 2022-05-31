@@ -101,7 +101,7 @@ function NewsDetail() {
                         imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                         imageHeight="240px"
                         title={item.name}
-                        desc={item.isi_berita}
+                        desc={`8 April 2022`}
                         linkTo={`/news/${item.id}`}
                       />
                     </div>

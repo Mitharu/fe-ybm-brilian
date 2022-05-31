@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { image_mitra, nilai_nilai, milestone } from '../../__json__'
+import Carousel from './carousel'
+import { mobileVersion } from '../../utils/helpers'
+import {
+  image_mitra,
+  nilai_nilai,
+  milestone,
+  penghargaan,
+} from '../../__json__'
 
 const TitleAbout = styled.h2`
   color: #00569c;
@@ -33,40 +40,41 @@ const TitleVision = styled.h3`
 `
 
 export default function AboutUs() {
+  const { dynamicWidth } = mobileVersion()
+  const isMobile = dynamicWidth <= 425 ? true : false
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  console.log(isMobile)
 
   return (
     <React.Fragment>
       <div class="container-xxl">
         <div class="container">
-          <div class="row align-items-center g-5">
+          <div
+            class="row align-items-center g-5"
+            style={{ marginRight: 0, marginLeft: 0 }}
+          >
             <div class="col-lg-6 text-center text-lg-start animated slideInRight">
               <TitleAbout>
                 Yayasan Baitul Mal <br />
                 <span>BRILiaN</span>
               </TitleAbout>
               <p class="mb-4 pb-2 mt-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
-              </p>
-              <p>
-                Commodo voluptate occaecat sit commodo et cupidatat est dolore
-                excepteur. Elit fugiat qui Lorem qui nostrud pariatur proident
-                sit proident. Quis ut labore et occaecat esse excepteur
-                adipisicing duis eiusmod ea cupidatat laboris occaecat deserunt.
-                Nostrud laboris ut ullamco consectetur exercitation. Cupidatat
-                pariatur tempor consectetur fugiat esse ut eiusmod consequat do
-                enim elit non et. Consectetur esse velit sunt eu voluptate
-                officia excepteur esse. Cupidatat amet esse nisi minim enim
-                mollit reprehenderit consectetur.
+                YBM BRILiaN merupakan Lembaga Filantropi Islam pengelola Dana
+                Zakat, Infak, Sedekah, dan Wakaf yang dilaksanakan secara
+                professional, sesuai dengan aturan dan ketentuan dalam syariat
+                islam. YBM BRILiaN berkomitmen meningkatkan kualitas hidup dan
+                mobilitas vertikal keluarga dhuafa melalui serangkaian program
+                Pendidikan inklusif, pemberdayaan ekonomi, serta program sosial
+                kemanusiaan sehingga terwujud masyarakat berdaya.
               </p>
             </div>
             <div class="col-lg-6 text-center text-lg-end overflow-hidden animated fadeIn">
               <img
-                class="img-fluid"
+                className="img-about-desc"
                 src={require('../../assets/image/sumbangan.png').default}
                 alt=""
               />
@@ -79,7 +87,7 @@ export default function AboutUs() {
         style={{ backgroundColor: '#F26624' }}
       >
         <div class="container">
-          <div class="row g-5">
+          <div class="row g-5" style={{ marginRight: 0, marginLeft: 0 }}>
             <div class="col-lg-6">
               <TitleVision
                 image={require('../../assets/image/crosshair.svg').default}
@@ -126,13 +134,14 @@ export default function AboutUs() {
       </div>
       <div class="container-xxl py-5 animated slideInRight">
         <div class="container">
-          {/* <TitleAbout margin="0">
-              6 Nilai <span>YBM Brillian</span>
-            </TitleAbout> */}
-          <div class="row g-5 mt-2">
+          <TitleAbout margin="0">
+            6 Nilai <span>YBM Brillian</span>
+          </TitleAbout>
+          <div class="row g-5 mt-2" style={{ marginRight: 0, marginLeft: 0 }}>
             {nilai_nilai &&
               nilai_nilai.map((item, idx) => (
                 <div
+                  key={String(idx)}
                   class="col-lg-4 col-md-4"
                   style={{
                     display: 'flex',
@@ -149,6 +158,9 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+      <div class="container-xxl">
+        <Carousel data={penghargaan} isMobile={isMobile} />
+      </div>
       <div
         class="container-xxl py-5 animated slideInRight"
         style={{ backgroundColor: '#f2f2f2' }}
@@ -157,7 +169,7 @@ export default function AboutUs() {
           <TitleAbout margin="0">
             Milestone <span>YBM Brillian</span>
           </TitleAbout>
-          <div class="row g-5 mt-3">
+          <div class="row g-5 mt-3" style={{ marginRight: 0, marginLeft: 0 }}>
             {milestone &&
               milestone.map((item, idx) => (
                 <div
@@ -202,7 +214,7 @@ export default function AboutUs() {
             Beberapa mitra yang ikut mendukung dalam upaya dedikasi penyaluran
             zakat, infak, sedekah dan wakaf.
           </p>
-          <div class="row g-5">
+          <div class="row g-5" style={{ marginRight: 0, marginLeft: 0 }}>
             {image_mitra &&
               image_mitra.map((item, idx) => (
                 <div
@@ -218,28 +230,40 @@ export default function AboutUs() {
       </div>
       <style>
         {`
-          .visi-misi-box {
-            position: relative;
-          }
+            .visi-misi-box {
+              position: relative;
+              width: 100%;
+              box-sizing: border-box;
+            }
 
-          .visi-misi-box::before {
-            background-image: url(${
-              require('../../assets/image/rocket.svg').default
-            });
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            content: '';
-            position: absolute;
-            bottom: -120px;
-            left: 80px;
-            width: 350px;
-            height: 350px;
-            z-index: 1;
-            opacity: 0.1;
-            transform: rotate(60deg);
-          }
-        `}
+            .img-about-desc {
+              width: 250px;
+            }
+
+            @media(min-width: 1024px) {
+              .img-about-desc {
+                width: 500px;
+              }
+
+              .visi-misi-box::before {
+                background-image: url(${
+                  require('../../assets/image/rocket.svg').default
+                });
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: '';
+                position: absolute;
+                bottom: -120px;
+                left: 80px;
+                width: 350px;
+                height: 350px;
+                z-index: 1;
+                opacity: 0.1;
+                transform: rotate(60deg);
+              }
+            }
+          `}
       </style>
     </React.Fragment>
   )

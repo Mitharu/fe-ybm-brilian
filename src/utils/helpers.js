@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useEffect, useState } from 'react'
+
 /* eslint-disable array-callback-return */
 export const shimmerImgLoader = (w, h) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -34,4 +37,27 @@ export const levelBreadcrumb = (params) => {
     })
   })
   return arr
+}
+
+export const mobileVersion = () => {
+  const [screenSize, getDimension] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight,
+  })
+  const setDimension = () => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight,
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', setDimension)
+
+    return () => {
+      window.removeEventListener('resize', setDimension)
+    }
+  }, [screenSize])
+
+  return { ...screenSize }
 }
