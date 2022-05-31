@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.11a4732c.chunk.js",
-    "main.js.map": "/static/js/main.11a4732c.chunk.js.map",
+    "main.js": "/static/js/main.ae8bf519.chunk.js",
+    "main.js.map": "/static/js/main.ae8bf519.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
     "static/js/2.54f0bd31.chunk.js": "/static/js/2.54f0bd31.chunk.js",
@@ -44,6 +44,7 @@
     "static/media/semesta-utama.webp": "/static/media/semesta-utama.30cb90ba.webp",
     "static/media/sosial.png": "/static/media/sosial.529fc3b0.png",
     "static/media/sumbangan.png": "/static/media/sumbangan.34712ec7.png",
+    "static/media/surat.svg": "/static/media/surat.f6145dfd.svg",
     "static/media/tie.svg": "/static/media/tie.f7220a74.svg",
     "static/media/trophy.svg": "/static/media/trophy.0b9f2889.svg",
     "static/media/uang.svg": "/static/media/uang.9196f51d.svg",
@@ -53,6 +54,6 @@
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
     "static/js/2.54f0bd31.chunk.js",
-    "static/js/main.11a4732c.chunk.js"
+    "static/js/main.ae8bf519.chunk.js"
   ]
 }
