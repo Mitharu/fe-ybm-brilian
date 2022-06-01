@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.4ef17610.chunk.js",
-    "main.js.map": "/static/js/main.4ef17610.chunk.js.map",
+    "main.js": "/static/js/main.86af7367.chunk.js",
+    "main.js.map": "/static/js/main.86af7367.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
     "static/js/2.85d0334d.chunk.js": "/static/js/2.85d0334d.chunk.js",
@@ -23,6 +23,7 @@
     "static/media/donatur.svg": "/static/media/donatur.a8bfca5d.svg",
     "static/media/e9pay.webp": "/static/media/e9pay.00a5266f.webp",
     "static/media/ekonomi.png": "/static/media/ekonomi.e6f122fb.png",
+    "static/media/filosofi-logo.svg": "/static/media/filosofi-logo.46c0d0de.svg",
     "static/media/forkomasi.webp": "/static/media/forkomasi.a8ce75f1.webp",
     "static/media/hidroponik-kita.webp": "/static/media/hidroponik-kita.25a1152d.webp",
     "static/media/human-inisiative.webp": "/static/media/human-inisiative.f6994df0.webp",
@@ -56,6 +57,6 @@
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
     "static/js/2.85d0334d.chunk.js",
-    "static/js/main.4ef17610.chunk.js"
+    "static/js/main.86af7367.chunk.js"
   ]
 }

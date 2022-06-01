@@ -162,15 +162,14 @@ export default function AboutUs() {
         </TitleAbout>
         <Carousel data={penghargaan} isMobile={isMobile} />
       </div>
-      <div class="container-xxl">
-        <TitleAbout margin="0" align="center">
-          Organization
-        </TitleAbout>
-        <Organization />
+      <div className="container-filosofi-logo">
+        <img 
+          src={require("../../assets/image/filosofi-logo.svg").default}
+          alt="filosofi-logo"
+        />
       </div>
       <div
         class="container-xxl py-5 animated slideInRight"
-        style={{ backgroundColor: '#f2f2f2' }}
       >
         <div class="container">
           <TitleAbout margin="0" align="center">
@@ -212,6 +211,12 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+      <div class="container-xxl">
+        <TitleAbout margin="0" align="center">
+          Organization
+        </TitleAbout>
+        <Organization />
+      </div>
       <div class="container-xxl py-5 animated slideInRight">
         <div class="container">
           <TitleAbout margin="0" align="center">
@@ -245,6 +250,10 @@ export default function AboutUs() {
 
           .img-about-desc {
             width: 250px;
+          }
+
+          .container-filosofi-logo img {
+            width: 100%;
           }
 
           @media(min-width: 1024px) {
