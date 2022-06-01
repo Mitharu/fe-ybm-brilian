@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Carousel from './carousel'
+import Organization from './organization'
 import { mobileVersion } from '../../utils/helpers'
 import {
   image_mitra,
@@ -11,12 +12,13 @@ import {
 
 const TitleAbout = styled.h2`
   color: #00569c;
-  display: inline;
+  // display: inline;
   padding: 0 5px;
   border-radius: 5px;
   span {
     color: #f26624;
   }
+  text-align: ${(props) => props.align || 'left'};
 `
 
 const TitleVision = styled.h3`
@@ -46,8 +48,6 @@ export default function AboutUs() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-  console.log(isMobile)
 
   return (
     <React.Fragment>
@@ -95,9 +95,8 @@ export default function AboutUs() {
                 Visi
               </TitleVision>
               <p class="mb-4 pb-2 mt-4 text-light">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
+                Terwujudnya masyarakat berdaya melalui pengelolaan filantropi
+                islam yang adaptif, inspiratif, dan berkarakter
               </p>
             </div>
             <div class="col-lg-6">
@@ -108,24 +107,23 @@ export default function AboutUs() {
               </TitleVision>
               <ul style={{ color: '#fff', margin: '15px 0' }}>
                 <li>
-                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                  sed stet lorem sit clita duo justo magna dolore erat amet
+                  Mewujudkan transformasi organisasi melalui penguatan SDM dan
+                  sistem yang unggul, agile, inovatif, dan berbasis teknologi
+                  informasi.
                 </li>
                 <li>
-                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                  sed stet lorem sit clita duo justo magna dolore erat amet
+                  Mewujudkan layanan prima dalam rangka intermediasi peran
+                  muzaki dan mustahik melalui penghimpunan dan pemanfaatan
+                  filantropi Islam di lingkungan BRI dan masyarakat pada umumnya
                 </li>
                 <li>
-                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                  sed stet lorem sit clita duo justo magna dolore erat amet
+                  Menyelenggarakan program pemberdayaan yang sinergis,
+                  berdampak, berorientasi pada kemandirian dan partisipasi guna
+                  mewujudkan masyarakat berdaya
                 </li>
                 <li>
-                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                  sed stet lorem sit clita duo justo magna dolore erat amet
+                  Memajukan kesejahteraan umum dan mencerdaskan kehidupan bangsa
+                  melalui terwujudnya peradaban zakat
                 </li>
               </ul>
             </div>
@@ -134,7 +132,7 @@ export default function AboutUs() {
       </div>
       <div class="container-xxl py-5 animated slideInRight">
         <div class="container">
-          <TitleAbout margin="0">
+          <TitleAbout margin="0" align="center">
             6 Nilai <span>YBM Brillian</span>
           </TitleAbout>
           <div class="row g-5 mt-2" style={{ marginRight: 0, marginLeft: 0 }}>
@@ -159,14 +157,23 @@ export default function AboutUs() {
         </div>
       </div>
       <div class="container-xxl">
+        <TitleAbout margin="0" align="center">
+          Penghargaan
+        </TitleAbout>
         <Carousel data={penghargaan} isMobile={isMobile} />
+      </div>
+      <div class="container-xxl">
+        <TitleAbout margin="0" align="center">
+          Organization
+        </TitleAbout>
+        <Organization />
       </div>
       <div
         class="container-xxl py-5 animated slideInRight"
         style={{ backgroundColor: '#f2f2f2' }}
       >
         <div class="container">
-          <TitleAbout margin="0">
+          <TitleAbout margin="0" align="center">
             Milestone <span>YBM Brillian</span>
           </TitleAbout>
           <div class="row g-5 mt-3" style={{ marginRight: 0, marginLeft: 0 }}>
@@ -207,7 +214,7 @@ export default function AboutUs() {
       </div>
       <div class="container-xxl py-5 animated slideInRight">
         <div class="container">
-          <TitleAbout margin="0">
+          <TitleAbout margin="0" align="center">
             Mitra <span>YBM Brillian</span>
           </TitleAbout>
           <p class="mb-4 pb-2 mt-4">
@@ -230,40 +237,40 @@ export default function AboutUs() {
       </div>
       <style>
         {`
-            .visi-misi-box {
-              position: relative;
-              width: 100%;
-              box-sizing: border-box;
-            }
+          .visi-misi-box {
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+          }
 
+          .img-about-desc {
+            width: 250px;
+          }
+
+          @media(min-width: 1024px) {
             .img-about-desc {
-              width: 250px;
+              width: 500px;
             }
 
-            @media(min-width: 1024px) {
-              .img-about-desc {
-                width: 500px;
-              }
-
-              .visi-misi-box::before {
-                background-image: url(${
-                  require('../../assets/image/rocket.svg').default
-                });
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                content: '';
-                position: absolute;
-                bottom: -120px;
-                left: 80px;
-                width: 350px;
-                height: 350px;
-                z-index: 1;
-                opacity: 0.1;
-                transform: rotate(60deg);
-              }
+            .visi-misi-box::before {
+              background-image: url(${
+                require('../../assets/image/rocket.svg').default
+              });
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              content: '';
+              position: absolute;
+              bottom: -120px;
+              left: 80px;
+              width: 350px;
+              height: 350px;
+              z-index: 1;
+              opacity: 0.1;
+              transform: rotate(60deg);
             }
-          `}
+          }
+        `}
       </style>
     </React.Fragment>
   )

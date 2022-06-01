@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.ae8bf519.chunk.js",
-    "main.js.map": "/static/js/main.ae8bf519.chunk.js.map",
+    "main.js": "/static/js/main.4ef17610.chunk.js",
+    "main.js.map": "/static/js/main.4ef17610.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
-    "static/js/2.54f0bd31.chunk.js": "/static/js/2.54f0bd31.chunk.js",
-    "static/js/2.54f0bd31.chunk.js.map": "/static/js/2.54f0bd31.chunk.js.map",
+    "static/js/2.85d0334d.chunk.js": "/static/js/2.85d0334d.chunk.js",
+    "static/js/2.85d0334d.chunk.js.map": "/static/js/2.85d0334d.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.54f0bd31.chunk.js.LICENSE.txt": "/static/js/2.54f0bd31.chunk.js.LICENSE.txt",
+    "static/js/2.85d0334d.chunk.js.LICENSE.txt": "/static/js/2.85d0334d.chunk.js.LICENSE.txt",
     "static/media/2001.png": "/static/media/2001.96670c90.png",
     "static/media/2011.png": "/static/media/2011.d7dcb7e4.png",
     "static/media/2016.png": "/static/media/2016.96670c90.png",
@@ -35,6 +35,8 @@
     "static/media/logo.png": "/static/media/logo.fded8b82.png",
     "static/media/main-banner.svg": "/static/media/main-banner.c981433e.svg",
     "static/media/medali.svg": "/static/media/medali.57d52b46.svg",
+    "static/media/org-1.png": "/static/media/org-1.28cb36e7.png",
+    "static/media/org-2.png": "/static/media/org-2.13e34214.png",
     "static/media/overtune.webp": "/static/media/overtune.cc07afd8.webp",
     "static/media/pendidikan.png": "/static/media/pendidikan.a9f4c472.png",
     "static/media/penerima.svg": "/static/media/penerima.b9239ed2.svg",
@@ -53,7 +55,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
-    "static/js/2.54f0bd31.chunk.js",
-    "static/js/main.ae8bf519.chunk.js"
+    "static/js/2.85d0334d.chunk.js",
+    "static/js/main.4ef17610.chunk.js"
   ]
 }

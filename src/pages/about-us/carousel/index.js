@@ -13,7 +13,7 @@ export default function Carousel({ data, isMobile }) {
 
   return (
     <div className="py-5 bg-dark hero-header wow fadeInUp">
-      <div className="mt-5 carousel-about-us">
+      <div className="carousel-about-us">
         <Slider {...settings}>
           {data &&
             data.map((item, idx) => (
