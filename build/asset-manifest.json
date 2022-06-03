@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.86af7367.chunk.js",
-    "main.js.map": "/static/js/main.86af7367.chunk.js.map",
+    "main.js": "/static/js/main.9cd8b978.chunk.js",
+    "main.js.map": "/static/js/main.9cd8b978.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
-    "static/js/2.85d0334d.chunk.js": "/static/js/2.85d0334d.chunk.js",
-    "static/js/2.85d0334d.chunk.js.map": "/static/js/2.85d0334d.chunk.js.map",
+    "static/js/2.2a6e2107.chunk.js": "/static/js/2.2a6e2107.chunk.js",
+    "static/js/2.2a6e2107.chunk.js.map": "/static/js/2.2a6e2107.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.85d0334d.chunk.js.LICENSE.txt": "/static/js/2.85d0334d.chunk.js.LICENSE.txt",
+    "static/js/2.2a6e2107.chunk.js.LICENSE.txt": "/static/js/2.2a6e2107.chunk.js.LICENSE.txt",
     "static/media/2001.png": "/static/media/2001.96670c90.png",
     "static/media/2011.png": "/static/media/2011.d7dcb7e4.png",
     "static/media/2016.png": "/static/media/2016.96670c90.png",
@@ -42,6 +42,7 @@
     "static/media/pendidikan.png": "/static/media/pendidikan.a9f4c472.png",
     "static/media/penerima.svg": "/static/media/penerima.b9239ed2.svg",
     "static/media/pkf.webp": "/static/media/pkf.d075ee77.webp",
+    "static/media/program-icon.svg": "/static/media/program-icon.f0b5fe60.svg",
     "static/media/rocket.svg": "/static/media/rocket.9ebc9376.svg",
     "static/media/salaman.svg": "/static/media/salaman.b38eb2ee.svg",
     "static/media/semesta-utama.webp": "/static/media/semesta-utama.30cb90ba.webp",
@@ -56,7 +57,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
-    "static/js/2.85d0334d.chunk.js",
-    "static/js/main.86af7367.chunk.js"
+    "static/js/2.2a6e2107.chunk.js",
+    "static/js/main.9cd8b978.chunk.js"
   ]
 }
