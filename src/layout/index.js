@@ -326,21 +326,21 @@ export default function Layout({ children }) {
                   <strong>Program</strong>
                 </p>
                 <a
-                  href="#a"
+                  href="/program/pendidikan"
                   className="btn btn-link"
                   style={{ color: '#828282' }}
                 >
                   Pendidikan
                 </a>
                 <a
-                  href="#a"
+                  href="/program/social"
                   className="btn btn-link"
                   style={{ color: '#828282' }}
                 >
                   Sosial
                 </a>
                 <a
-                  href="#a"
+                  href="/program/ekonomi"
                   className="btn btn-link"
                   style={{ color: '#828282' }}
                 >
