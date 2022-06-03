@@ -42,6 +42,7 @@ export default function News() {
                           imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                           imageHeight="500px"
                           title={item.name}
+                          linkTo={`/news/${item.id}`}
                         />
                       ))}
                 </div>
@@ -54,7 +55,7 @@ export default function News() {
                         imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                         imageHeight="180px"
                         title={item.name}
-                        desc={`8 April 2022`}
+                        desc={item.created_at}
                         linkTo={`/news/${item.id}`}
                       />
                     </div>
@@ -70,7 +71,7 @@ export default function News() {
                         imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                         imageHeight="300px"
                         title={item.name}
-                        desc={`8 April 2022`}
+                        desc={item.created_at}
                         linkTo={`/news/${item.id}`}
                       />
                     </div>
@@ -80,6 +81,15 @@ export default function News() {
           </div>
         </div>
       </div>
+      {/* <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4" dangerouslysetinnerhtml={{ __html: }}>
+              
+            </div>
+          </div>
+        </div>
+      </div> */}
     </React.Fragment>
   )
 }

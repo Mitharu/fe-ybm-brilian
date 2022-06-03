@@ -6,8 +6,7 @@ import ImageWithFallback from '../../components/image-with-fallback'
 import { detail, get } from '../../api'
 
 const TitleNews = styled.h2`
-  background: #f2c94c;
-  color: #fff;
+  color: #000;
   display: inline;
   padding: 0 5px;
   border-radius: 5px;
@@ -76,11 +75,14 @@ function NewsDetail() {
             <div class="col-lg-9 col-md-9 text-center text-lg-start animated slideInRight">
               <TitleNews>{dataDetail.name}</TitleNews>
               <ImageWithFallback
-                margin="10px 0"
+                margin="20px 0 10px 0"
                 src={`${process.env.REACT_APP_IMAGE_BERITA}/${dataDetail.img}`}
                 imageHeight="500px"
               />
-              <p class="mb-4 pb-2 mt-4">{dataDetail.isi_berita}</p>
+              <div
+                dangerouslySetInnerHTML={{ __html: dataDetail.isi_berita }}
+                className="mb-4 pb-2 mt-4 text-berita"
+              />
             </div>
             <div class="col-lg-3 col-md-3 animated fadeIn">
               <div class="row">
@@ -111,6 +113,16 @@ function NewsDetail() {
           </div>
         </div>
       </div>
+      <style>
+        {`
+          .text-berita > p a {
+            color: #00569C !important;
+          }
+          .text-berita > p a:hover {
+            text-decoration: underline;
+          }
+        `}
+      </style>
     </React.Fragment>
   )
 }

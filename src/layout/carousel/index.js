@@ -1,11 +1,21 @@
 import React from 'react'
+import Slider from 'react-slick'
 // import ImageWithFallback from "../../components/image-with-fallback"
 
 export default function Carousel({ data }) {
+  const settings = {
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  }
+
   return (
     <div className="py-5 bg-dark hero-header wow fadeIn">
       <div
-        className="row"
+        className="container carousel-homepage"
         style={{
           backgroundImage: `url(${
             require('../../assets/image/main-banner.svg').default
@@ -15,26 +25,94 @@ export default function Carousel({ data }) {
           backgroundSize: 'cover',
           height: '900px',
           width: '100%',
+          maxWidth: '100%',
           boxSizing: 'border-box',
-          marginTop: "-50px",
-          marginRight: 0,
-          marginLeft: 0,
+          marginTop: '-50px',
+          // marginRight: 0,
+          // marginLeft: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
-        <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center list-group animated fadeInLeft">
-          <h1 style={{ fontSize: '56px', margin: 0, textAlign: 'center', color: "#fff" }}>
-            Tetaplah asik dalam berbuat baik
-          </h1>
-          <p style={{ color: "#fff", textAlign: "center" }}>Yuk berbuat baik supaya kerjaan lancar dan hidup makin berkah</p>
-          <a className="btn-donation" href="#afaf">Ayo Donasi!</a>
-        </div>
-        <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center animated fadeInRight">
-          <img 
-            className="img-carousel"
-            src={require("../../assets/image/volunter.png").default}
-            alt="volunter"
-          />
-        </div>
+        <Slider
+          {...settings}
+          style={{ width: '100%', boxSizing: 'border-box' }}
+        >
+          <div>
+            <div className="col-md-12 col-lg-12">
+              <div
+                className="row"
+                style={{ marginRight: 0, marginLeft: 0, height: '700px' }}
+              >
+                <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center list-group wow fadeInLeft">
+                  <h1
+                    style={{
+                      fontSize: '56px',
+                      margin: 0,
+                      textAlign: 'center',
+                      color: '#fff',
+                    }}
+                  >
+                    Tetaplah asik dalam berbuat baik
+                  </h1>
+                  <p style={{ color: '#fff', textAlign: 'center' }}>
+                    Yuk berbuat baik supaya kerjaan lancar dan hidup makin
+                    berkah
+                  </p>
+                  <a
+                    className="btn-donation"
+                    href={process.env.REACT_APP_DONASI_URL}
+                  >
+                    Ayo Donasi!
+                  </a>
+                </div>
+                <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center wow fadeInRight">
+                  <img
+                    className="img-carousel"
+                    src={require('../../assets/image/volunter.png').default}
+                    alt="volunter"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          {data &&
+            data.map((item, idx) => (
+              <div key={String(idx)}>
+                <div className="col-md-12 col-lg-12">
+                  <div
+                    className="row"
+                    style={{ marginRight: 0, marginLeft: 0, height: '500px' }}
+                  >
+                    <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center">
+                      <p
+                        style={{
+                          background: '#F26624',
+                          fontSize: '24px',
+                          padding: '5px 10px',
+                          margin: 0,
+                          textAlign: 'center',
+                          color: '#fff',
+                          borderRadius: '10px',
+                        }}
+                      >
+                        {item.title}
+                      </p>
+                    </div>
+                    <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center">
+                      <img
+                        className="img-carousel mt-5"
+                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
+                        alt="volunter"
+                        width="600"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+        </Slider>
       </div>
       <style>
         {`
@@ -46,7 +124,9 @@ export default function Carousel({ data }) {
               display: flex;
               align-items: center;
               justify-content: center;
-              background-image: url(${require("../../assets/image/btn-donation.svg").default});
+              background-image: url(${
+                require('../../assets/image/btn-donation.svg').default
+              });
               background-position:;
               background-repeat: no-repeat;
               background-size: contain;
@@ -60,6 +140,54 @@ export default function Carousel({ data }) {
             .btn-donation:hover {
               color: #fff;
               font-weight: 600;
+            }
+
+            .carousel-homepage .slick-slider button.slick-prev {
+              background: rgba(255, 255, 255, 0.3) !important;
+              box-shadow: 0px 3px 10px rgba(145, 158, 171, 0.1);
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              z-index: 1;
+              left: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .carousel-homepage .slick-slider button.slick-prev:before {
+              content: "";
+              border: solid #00569c;
+              border-width: 0 2px 2px 0;
+              display: inline-block;
+              padding: 5px;
+              margin-left: 6px;
+              transform: rotate(135deg);
+              -webkit-transform: rotate(135deg);
+            }
+
+            .carousel-homepage .slick-slider button.slick-next {
+              background: rgba(255, 255, 255, 0.3) !important;
+              box-shadow: 0px 3px 10px rgba(145, 158, 171, 0.1);
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              z-index: 1;
+              right: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .carousel-homepage .slick-slider button.slick-next:before {
+              content: "";
+              border: solid #00569c;
+              border-width: 0 2px 2px 0;
+              display: inline-block;
+              padding: 5px;
+              margin-right: 6px;
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
             }
 
             @media(min-width: 320px) {

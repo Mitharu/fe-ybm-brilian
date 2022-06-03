@@ -35,21 +35,27 @@ export default function Home() {
           <div class="row align-items-center justify-content-center">
             {program &&
               program.map((item, idx) => (
-                <div
-                  key={String(idx)}
-                  class="col-lg-3 text-center m-2 wow fadeInUp"
-                  data-wow-delay="0.1s"
+                <a
+                  href={item.path}
+                  class="col-lg-3"
+                  style={{ textDecoration: 'none', color: '#666565' }}
                 >
-                  <div className="service-item rounded p-3">
-                    <ImageWithFallback
-                      src={item.urlImage}
-                      alt={`img-program-${idx}`}
-                      imageHeight="250px"
-                    />
-                    <h2>{item.title}</h2>
-                    <p>{item.desc}</p>
+                  <div
+                    key={String(idx)}
+                    class="text-center m-2 wow fadeInUp"
+                    data-wow-delay="0.1s"
+                  >
+                    <div className="service-item rounded p-3">
+                      <ImageWithFallback
+                        src={item.urlImage}
+                        alt={`img-program-${idx}`}
+                        imageHeight="250px"
+                      />
+                      <h2>{item.title}</h2>
+                      <p>{item.desc}</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               ))}
           </div>
         </div>
@@ -72,6 +78,7 @@ export default function Home() {
                           imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                           imageHeight="500px"
                           title={item.name}
+                          linkTo={`/news/${item.id}`}
                         />
                       ))}
                 </div>

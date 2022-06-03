@@ -4,13 +4,11 @@ import ImageWithFallback from '../../../components/image-with-fallback'
 
 export default function Carousel({ data }) {
   const settings = {
-    centerMode: true,
-    infinite: true,
-    dots: true,
+    autoplay: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
   }
 
   return (
@@ -25,25 +23,6 @@ export default function Carousel({ data }) {
                     <div className="col-lg-12 col-md-12">
                       <ImageWithFallback
                         src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
-                        // src="https://www.gotravelly.com/blog/wp-content/uploads/2019/10/Gunung-Fuji-Jepang-1024x640.jpg"
-                        alt={item.img}
-                        imageHeight="600px"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-          {data &&
-            data.map((item, idx) => (
-              <div key={String(idx)}>
-                <div className="col-md-12 container-carousel">
-                  <div className="row">
-                    <div className="col-lg-12 col-md-12">
-                      <ImageWithFallback
-                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
-                        // src="https://www.gotravelly.com/blog/wp-content/uploads/2019/10/Gunung-Fuji-Jepang-1024x640.jpg"
                         alt={item.img}
                         imageHeight="600px"
                       />
@@ -81,8 +60,54 @@ export default function Carousel({ data }) {
               padding: 0 0 0 10px;
             }
 
-            .carousel-program .slick-slider ul.slick-dots li button:before {
-              font-size: 14px;
+            .carousel-program .slick-slider button.slick-prev {
+              background: #fff !important;
+              box-shadow: 0px 3px 10px rgba(145, 158, 171, 0.1);
+              border: 1px solid #f2f2f2;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              z-index: 1;
+              left: -20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .carousel-program .slick-slider button.slick-prev:before {
+              content: "";
+              border: solid #00569c;
+              border-width: 0 2px 2px 0;
+              display: inline-block;
+              padding: 5px;
+              margin-left: 6px;
+              transform: rotate(135deg);
+              -webkit-transform: rotate(135deg);
+            }
+
+            .carousel-program .slick-slider button.slick-next {
+              background: #fff !important;
+              box-shadow: 0px 3px 10px rgba(145, 158, 171, 0.1);
+              border: 1px solid #f2f2f2;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              z-index: 1;
+              right: -20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .carousel-program .slick-slider button.slick-next:before {
+              content: "";
+              border: solid #00569c;
+              border-width: 0 2px 2px 0;
+              display: inline-block;
+              padding: 5px;
+              margin-right: 6px;
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
             }
           `}
       </style>

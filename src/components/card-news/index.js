@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const CardNewsContainer = styled.div`
   width: 100%;
   height: auto;
-  border: 1px solid #E0E0E0;
+  border: 1px solid #e0e0e0;
   &:hover {
     cursor: pointer;
   }
@@ -56,7 +56,7 @@ export default function CardNews({
           imageHeight={imageHeight}
         />
         <CardNewsTitle>{title}</CardNewsTitle>
-        <CardNewsDate>{desc}</CardNewsDate>
+        <CardNewsDate>{new Date(desc).toDateString()}</CardNewsDate>
       </CardNewsContainer>
     </Link>
   )

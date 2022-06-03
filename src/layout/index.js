@@ -42,8 +42,8 @@ export default function Layout({ children }) {
           <span className="sr-only">Loading...</span>
         </div>
       </div> */}
-      <div className="position-relative p-0">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+      <div class="position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
           <a href="/" className="navbar-brand p-0">
             {/* <h1 className="text-primary m-0">
               <i className="fa fa-hand-holding me-3"></i>YBM Brillian
@@ -62,8 +62,8 @@ export default function Layout({ children }) {
           >
             <span className="fa fa-bars"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarCollapse">
-            <div className="navbar-nav ms-auto py-0 pe-4">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 pe-4">
               <NavLink
                 to="/"
                 className={`nav-item nav-link ${
@@ -80,14 +80,14 @@ export default function Layout({ children }) {
               >
                 About Us
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 to="/contact-us"
                 className={`nav-item nav-link ${
                   url?.pathname === '/contact-us' ? 'active' : ''
                 }`}
               >
                 Contact Us
-              </NavLink>
+              </NavLink> */}
               {/* <NavLink
                 to="/program"
                 className={`nav-item nav-link ${
@@ -98,9 +98,10 @@ export default function Layout({ children }) {
               </NavLink> */}
               <div class="nav-item dropdown">
                 <a
-                  href="#a"
+                  href="/program"
                   class={`nav-link dropdown-toggle ${
                     [
+                      '/program',
                       '/program/ekonomi',
                       '/program/sosial',
                       '/program/pendidikan',
@@ -113,6 +114,14 @@ export default function Layout({ children }) {
                   Program
                 </a>
                 <div class="dropdown-menu m-0">
+                  <a
+                    href="/program"
+                    class={`dropdown-item ${
+                      url?.pathname === '/program' ? 'active' : ''
+                    }`}
+                  >
+                    Index Program
+                  </a>
                   <a
                     href="/program/ekonomi"
                     class={`dropdown-item ${
@@ -140,13 +149,50 @@ export default function Layout({ children }) {
                 </div>
               </div>
               <NavLink
-                to="/news"
+                to="/blog"
                 className={`nav-item nav-link ${
                   url?.pathname === '/news' ? 'active' : ''
                 }`}
               >
-                News
+                Blog
               </NavLink>
+              <div class="nav-item dropdown">
+                <a
+                  href="/lainnya"
+                  class={`nav-link dropdown-toggle ${
+                    ['/news', '/contact-us'].includes(url?.pathname)
+                      ? 'active'
+                      : ''
+                  }`}
+                  data-bs-toggle="dropdown"
+                >
+                  Lainnya
+                </a>
+                <div class="dropdown-menu m-0">
+                  <a
+                    href="/news"
+                    class={`dropdown-item ${
+                      url?.pathname === '/news' ? 'active' : ''
+                    }`}
+                  >
+                    News
+                  </a>
+                  <a
+                    href={process.env.REACT_APP_BRILIAN_TV}
+                    class="dropdown-item"
+                  >
+                    Brilian TV <i class="fa fa-tv"></i>
+                  </a>
+                  <a
+                    href="/contact-us"
+                    class={`dropdown-item ${
+                      url?.pathname === '/contact-us' ? 'active' : ''
+                    }`}
+                  >
+                    Contact Us
+                  </a>
+                </div>
+              </div>
               {/* <NavLink
                 to="/blog"
                 className={`nav-item nav-link ${
@@ -156,8 +202,11 @@ export default function Layout({ children }) {
                 Blog
               </NavLink> */}
             </div>
-            <a href={process.env.REACT_APP_CMS_URL} className="btn btn-primary">
-              CMS LOGIN <i class="fa fa-lock"></i>
+            <a
+              href={process.env.REACT_APP_DONASI_URL}
+              className="btn btn-primary"
+            >
+              DONASI
             </a>
           </div>
         </nav>
@@ -225,7 +274,9 @@ export default function Layout({ children }) {
                       pemberdayaan ekonomi, serta program sosial kemanusiaan
                       sehingga terwujud masyarakat berdaya.
                     </p>
-                    <button class="btn btn-primary">Lihat lebih lanjut</button>
+                    <a href="/about-us" class="btn btn-primary">
+                      Lihat lebih lanjut
+                    </a>
                   </div>
                 </div>
               </div>

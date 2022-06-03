@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ImageWithFallback from '../image-with-fallback'
+import { Link } from 'react-router-dom'
 
 const ThumbnailNewsContainer = styled.div`
   width: 100%;
@@ -28,7 +29,7 @@ const ThumbnailNewsTitle = styled.p`
   font-weight: 600;
   word-break: break-word;
   text-align: center;
-  color: #F2994A;
+  color: #f2994a;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -36,13 +37,24 @@ const ThumbnailNewsTitle = styled.p`
   -webkit-box-orient: vertical;
 `
 
-export default function CardNews({ imageSrc, imageHeight, title, desc }) {
+export default function CardNews({
+  imageSrc,
+  imageHeight,
+  title,
+  linkTo,
+}) {
   return (
-    <ThumbnailNewsContainer>
-      <ImageWithFallback src={imageSrc} alt="card-img" imageHeight={imageHeight	}/>
-      <ThumbnailNewsTitleContainer>
-        <ThumbnailNewsTitle>{title}</ThumbnailNewsTitle>
-      </ThumbnailNewsTitleContainer>
-    </ThumbnailNewsContainer>
+    <Link to={linkTo}>
+      <ThumbnailNewsContainer>
+        <ImageWithFallback
+          src={imageSrc}
+          alt="card-img"
+          imageHeight={imageHeight}
+        />
+        <ThumbnailNewsTitleContainer>
+          <ThumbnailNewsTitle>{title}</ThumbnailNewsTitle>
+        </ThumbnailNewsTitleContainer>
+      </ThumbnailNewsContainer>
+    </Link>
   )
 }
