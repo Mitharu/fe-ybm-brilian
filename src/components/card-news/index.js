@@ -15,17 +15,18 @@ const CardNewsContainer = styled.div`
 
 const CardNewsTitle = styled.p`
   font-size: 18px;
+  line-height: 1.2;
   margin: 5px 0;
   padding: 10px;
-  font-weight: 400;
-  color: #000;
+  font-weight: 500;
+  color: #333333;
   word-break: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  height: 60px;
+  height: 75px;
 `
 
 const CardNewsDate = styled.p`

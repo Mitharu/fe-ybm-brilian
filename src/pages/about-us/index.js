@@ -88,7 +88,7 @@ export default function AboutUs() {
       >
         <div class="container">
           <div class="row g-5" style={{ marginRight: 0, marginLeft: 0 }}>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <TitleVision
                 image={require('../../assets/image/crosshair.svg').default}
               >
@@ -99,29 +99,33 @@ export default function AboutUs() {
                 islam yang adaptif, inspiratif, dan berkarakter
               </p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <TitleVision
                 image={require('../../assets/image/rocket.svg').default}
               >
                 Misi
               </TitleVision>
-              <ul style={{ color: '#fff', margin: '15px 0' }}>
-                <li>
+              <ul style={{ color: '#fff', margin: '15px 0', padding: "0 0 0 5px" }}>
+                <li style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+                  <i class="fa fa-check-circle" style={{ marginRight: "5px" }}></i>
                   Mewujudkan transformasi organisasi melalui penguatan SDM dan
                   sistem yang unggul, agile, inovatif, dan berbasis teknologi
                   informasi.
                 </li>
-                <li>
+                <li style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+                  <i class="fa fa-check-circle" style={{ marginRight: "5px" }}></i>
                   Mewujudkan layanan prima dalam rangka intermediasi peran
                   muzaki dan mustahik melalui penghimpunan dan pemanfaatan
                   filantropi Islam di lingkungan BRI dan masyarakat pada umumnya
                 </li>
-                <li>
+                <li style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+                  <i class="fa fa-check-circle" style={{ marginRight: "5px" }}></i>
                   Menyelenggarakan program pemberdayaan yang sinergis,
                   berdampak, berorientasi pada kemandirian dan partisipasi guna
                   mewujudkan masyarakat berdaya
                 </li>
-                <li>
+                <li style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+                  <i class="fa fa-check-circle" style={{ marginRight: "5px" }}></i>
                   Memajukan kesejahteraan umum dan mencerdaskan kehidupan bangsa
                   melalui terwujudnya peradaban zakat
                 </li>
@@ -270,8 +274,8 @@ export default function AboutUs() {
               background-size: contain;
               content: '';
               position: absolute;
-              bottom: -120px;
-              left: 80px;
+              top: 0px;
+              right: 0px;
               width: 350px;
               height: 350px;
               z-index: 1;

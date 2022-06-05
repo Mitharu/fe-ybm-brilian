@@ -17,7 +17,6 @@ export default function Slug() {
         .then((res) => {
           if (res?.StatusCode === 200 && res?.Error === false)
             setBanner(res.Data)
-          setBanner(res.Data)
         })
         .catch((err) => {
           console.log('err ->', err)
