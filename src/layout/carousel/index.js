@@ -45,18 +45,9 @@ export default function Carousel({ data }) {
                 className="row"
                 style={{ marginRight: 0, marginLeft: 0, height: '700px' }}
               >
-                <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center list-group wow fadeInLeft">
-                  <h1
-                    style={{
-                      fontSize: '56px',
-                      margin: 0,
-                      textAlign: 'center',
-                      color: '#fff',
-                    }}
-                  >
-                    Tetaplah asik dalam berbuat baik
-                  </h1>
-                  <p style={{ color: '#fff', textAlign: 'center' }}>
+                <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center list-group wow fadeInLeft main-banner">
+                  <h1>Tetaplah asik dalam berbuat baik</h1>
+                  <p>
                     Yuk berbuat baik supaya kerjaan lancar dan hidup makin
                     berkah
                   </p>
@@ -70,7 +61,35 @@ export default function Carousel({ data }) {
                 <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center wow fadeInRight">
                   <img
                     className="img-carousel"
-                    src={require('../../assets/image/volunter.png').default}
+                    src={require('../../assets/image/volunter.svg').default}
+                    alt="volunter"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="col-md-12 col-lg-12">
+              <div
+                className="row"
+                style={{ marginRight: 0, marginLeft: 0, height: '700px' }}
+              >
+                <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center list-group wow fadeInLeft main-banner">
+                  <h1>
+                    Tiada rugi untuk berbagi ambil manfaat suatu saat nanti
+                  </h1>
+                  <p>Yuk, berbagi terhadap sesama sekarang juga!</p>
+                  <a
+                    className="btn-donation"
+                    href={process.env.REACT_APP_DONASI_URL}
+                  >
+                    Ayo Donasi!
+                  </a>
+                </div>
+                <div className="col-md-6 col-lg-6 d-flex align-items-center justify-content-center wow fadeInRight">
+                  <img
+                    className="img-carousel"
+                    src={require('../../assets/image/volunter2.svg').default}
                     alt="volunter"
                   />
                 </div>
@@ -118,6 +137,18 @@ export default function Carousel({ data }) {
         {`
             .container-carousel {
               background: #f2f2f2;
+            }
+
+            .main-banner h1 {
+              font-size: 30px;
+              margin: -40px 0 0 0;
+              text-align: center;
+              color: #fff;
+            }
+
+            .main-banner p {
+              color: #fff;
+              text-align: center;
             }
 
             .btn-donation {
@@ -208,6 +239,9 @@ export default function Carousel({ data }) {
               .img-carousel {
                 width: 350px;
                 margin-top: -250px;
+              }
+              .main-banner h1 {
+                font-size: 56px;
               }
             }
 

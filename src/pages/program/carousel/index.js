@@ -5,15 +5,16 @@ import ImageWithFallback from '../../../components/image-with-fallback'
 export default function Carousel({ data }) {
   const settings = {
     autoplay: true,
+    centerMode: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
   }
 
   return (
-    <div className="container-xxl py-0 bg-dark hero-header wow fadeInUp">
-      <div className="container my-5 py-5 carousel-program">
+    <div className="py-0 bg-dark hero-header wow fadeInUp">
+      <div className="carousel-program">
         <Slider {...settings}>
           {data &&
             data.map((item, idx) => (
@@ -22,9 +23,9 @@ export default function Carousel({ data }) {
                   <div className="row">
                     <div className="col-lg-12 col-md-12">
                       <ImageWithFallback
-                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
+                        src={item.urlImage}
                         alt={item.img}
-                        imageHeight="600px"
+                        imageHeight="300px"
                       />
                     </div>
                   </div>
@@ -68,7 +69,7 @@ export default function Carousel({ data }) {
               height: 40px;
               border-radius: 50%;
               z-index: 1;
-              left: -20px;
+              left: 10px;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -93,7 +94,7 @@ export default function Carousel({ data }) {
               height: 40px;
               border-radius: 50%;
               z-index: 1;
-              right: -20px;
+              right: 10px;
               display: flex;
               align-items: center;
               justify-content: center;

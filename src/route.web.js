@@ -3,14 +3,16 @@ import Layout from './layout'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // pages
-import Home from './pages/home'
-import AboutUs from './pages/about-us'
-import ContactUs from './pages/contact-us'
+import Beranda from './pages/beranda'
+import TentangKami from './pages/tentang-kami'
+import KontakKami from './pages/kontak-kami'
 import Blog from './pages/blog'
+import BlogDetail from './pages/blog/detail'
 import Program from './pages/program'
 import ProgramSlug from './pages/program/slug'
-import News from './pages/news'
-import NewsDetail from './pages/news/detail'
+import ProgramSlugChild from './pages/program/slug-child'
+import Berita from './pages/berita'
+import BeritaDetail from './pages/berita/detail'
 
 export default function RouterApp() {
   return (
@@ -19,22 +21,27 @@ export default function RouterApp() {
         <Switch>
           <Route path="/" exact>
             <Layout>
-              <Home />
+              <Beranda />
             </Layout>
           </Route>
-          <Route path="/about-us" exact>
+          <Route path="/tentang-kami" exact>
             <Layout>
-              <AboutUs />
+              <TentangKami />
             </Layout>
           </Route>
-          <Route path="/contact-us" exact>
+          <Route path="/kontak-kami" exact>
             <Layout>
-              <ContactUs />
+              <KontakKami />
             </Layout>
           </Route>
           <Route path="/blog" exact>
             <Layout>
               <Blog />
+            </Layout>
+          </Route>
+          <Route path="/blog/:slug" exact>
+            <Layout>
+              <BlogDetail />
             </Layout>
           </Route>
           <Route path="/program" exact>
@@ -47,14 +54,19 @@ export default function RouterApp() {
               <ProgramSlug />
             </Layout>
           </Route>
-          <Route path="/news" exact>
+          <Route path="/program/:slug/:slugChild" exact>
             <Layout>
-              <News />
+              <ProgramSlugChild />
             </Layout>
           </Route>
-          <Route path="/news/:slug" exact>
+          <Route path="/berita" exact>
             <Layout>
-              <NewsDetail />
+              <Berita />
+            </Layout>
+          </Route>
+          <Route path="/berita/:slug" exact>
+            <Layout>
+              <BeritaDetail />
             </Layout>
           </Route>
         </Switch>

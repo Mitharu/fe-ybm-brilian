@@ -67,18 +67,18 @@ export default function Layout({ children }) {
               <NavLink
                 to="/"
                 className={`nav-item nav-link ${
-                  url?.pathname === '/' ? '' : ''
+                  url?.pathname === '/' ? 'active' : ''
                 }`}
               >
-                Home
+                Beranda
               </NavLink>
               <NavLink
-                to="/about-us"
+                to="/tentang-kami"
                 className={`nav-item nav-link ${
-                  url?.pathname === '/about-us' ? 'active' : ''
+                  url?.pathname === '/tentang-kami' ? 'active' : ''
                 }`}
               >
-                About Us
+                Tentang Kami
               </NavLink>
               {/* <NavLink
                 to="/contact-us"
@@ -141,7 +141,7 @@ export default function Layout({ children }) {
                   <a
                     href="/program/pendidikan"
                     class={`dropdown-item ${
-                      url?.pathname === 'program/pendidikan' ? 'active' : ''
+                      url?.pathname === '/program/pendidikan' ? 'active' : ''
                     }`}
                   >
                     Pendidikan
@@ -151,7 +151,7 @@ export default function Layout({ children }) {
               <NavLink
                 to="/blog"
                 className={`nav-item nav-link ${
-                  url?.pathname === '/news' ? 'active' : ''
+                  url?.pathname === '/blog' ? 'active' : ''
                 }`}
               >
                 Blog
@@ -160,7 +160,7 @@ export default function Layout({ children }) {
                 <a
                   href="/lainnya"
                   class={`nav-link dropdown-toggle ${
-                    ['/news', '/contact-us'].includes(url?.pathname)
+                    ['/berita', '/kontak-kami'].includes(url?.pathname)
                       ? 'active'
                       : ''
                   }`}
@@ -170,12 +170,12 @@ export default function Layout({ children }) {
                 </a>
                 <div class="dropdown-menu m-0">
                   <a
-                    href="/news"
+                    href="/berita"
                     class={`dropdown-item ${
-                      url?.pathname === '/news' ? 'active' : ''
+                      url?.pathname === '/berita' ? 'active' : ''
                     }`}
                   >
-                    News
+                    Berita terkini
                   </a>
                   <a
                     href={process.env.REACT_APP_BRILIAN_TV}
@@ -184,12 +184,12 @@ export default function Layout({ children }) {
                     Brilian TV <i class="fa fa-tv"></i>
                   </a>
                   <a
-                    href="/contact-us"
+                    href="/kontak-kami"
                     class={`dropdown-item ${
-                      url?.pathname === '/contact-us' ? 'active' : ''
+                      url?.pathname === '/kontak-kami' ? 'active' : ''
                     }`}
                   >
-                    Contact Us
+                    Kontak Kami
                   </a>
                 </div>
               </div>
@@ -217,14 +217,14 @@ export default function Layout({ children }) {
                 className="display-3 text-white mb-3 animated slideInDown"
                 style={{ textTransform: 'capitalize' }}
               >
-                {params?.slug === undefined
-                  ? url?.pathname.replace(/[/-]/g, ' ')
-                  : params?.slug}
+                {params?.slug !== undefined && params?.slugChild !== undefined && params?.slugChild.replace(/[/-]/g, ' ')}
+                {params?.slug !== undefined && params?.slugChild === undefined && params?.slug.replace(/[/-]/g, ' ')}
+                {params?.slug === undefined && params?.slugChild === undefined && url?.pathname.replace(/[/-]/g, ' ')}
               </h1>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center text-uppercase">
                   <li className="breadcrumb-item">
-                    <a href={process.env.REACT_APP_BASE_URL}>Home</a>
+                    <a href={process.env.REACT_APP_BASE_URL}>Beranda</a>
                   </li>
                   {levelBreadcrumb(url?.pathname).map((item, idx) => (
                     <li
@@ -253,7 +253,7 @@ export default function Layout({ children }) {
                   className="row align-items-center g-5"
                   style={{ marginRight: 0, marginLeft: 0 }}
                 >
-                  <div className="col-lg-6 text-center text-lg-end overflow-hidden">
+                  <div className="col-lg-6 d-flex align-items-center justify-content-center">
                     <img
                       className="img-fluid"
                       src={require('../assets/image/sumbangan.png').default}
@@ -262,7 +262,7 @@ export default function Layout({ children }) {
                   </div>
                   <div className="col-lg-6 text-center text-lg-start">
                     <h1 className="display-3" style={{ color: '#00569C' }}>
-                      Highlight About Us tentang YBM Brillian
+                      Apasih YBM Brilian ?
                     </h1>
                     <p className="animated slideInLeft mb-4 pb-2">
                       YBM BRILiaN merupakan Lembaga Filantropi Islam pengelola
@@ -314,10 +314,12 @@ export default function Layout({ children }) {
               Islam.
             </p>
             <p style={{ color: '#000' }}>
-              Gedung Olahraga BRI Lt.2 Jl. Jenderal Sudirman Kav 44-46 Jakarta
-              Pusat 10210
+              <i class="fa fa-building"></i> Gedung Olahraga BRI Lt.2 Jl.
+              Jenderal Sudirman Kav 44-46 Jakarta Pusat 10210
             </p>
-            <p style={{ color: '#000' }}>customer care 0811 808 412</p>
+            <p style={{ color: '#000' }}>
+              <i class="fa fa-phone"></i> Customer Care 0811 808 412
+            </p>
           </div>
           <div class="col-lg-8">
             <div className="row py-2">

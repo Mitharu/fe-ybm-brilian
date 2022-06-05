@@ -1,56 +1,101 @@
 import React, { useEffect, useState } from 'react'
-import Carousel from './carousel'
-import ImageWithFallback from '../../components/image-with-fallback'
-import { get } from '../../api'
+import { useParams } from 'react-router-dom'
+import styled from 'styled-components'
+import CollapsibleMenu from './collapsible'
+import CardProgram from '../../components/card-program'
 import { program } from '../../__json__'
 
+const TitleAbout = styled.h2`
+  color: #00569c;
+  padding: 0 5px;
+  border-radius: 5px;
+  span {
+    color: #f26624;
+  }
+  text-align: ${(props) => props.align || 'left'};
+`
+
 export default function Slug() {
-  const [banner, setBanner] = useState([])
+  const { slug } = useParams()
+  const [detail, setDetail] = useState()
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    async function fetchData() {
-      //get banner
-      get({
-        endpoint: 'banner',
-      })
-        .then((res) => {
-          if (res?.StatusCode === 200 && res?.Error === false)
-            setBanner(res.Data)
-        })
-        .catch((err) => {
-          console.log('err ->', err)
-        })
-    }
-    fetchData()
   }, [])
+
+  useEffect(() => {
+    if (slug) {
+      setDetail(program.filter((item) => item.slug === slug)[0])
+    }
+  }, [slug])
+
+  console.log(detail)
 
   return (
     <React.Fragment>
-      <Carousel data={banner} />
+      <div class="container-xxl py-5 wow fadeInUp">
+        <div class="container">
+          <div
+            class="row align-items-center g-5"
+            style={{ marginRight: 0, marginLeft: 0 }}
+          >
+            <div class="col-lg-6 text-center text-lg-start animated slideInRight">
+              <TitleAbout>
+                Program <span>{detail?.title}</span>
+              </TitleAbout>
+              <p class="mb-4 pb-2 mt-4">{detail?.desc_long}</p>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end overflow-hidden animated fadeIn">
+              <img className="img-about-desc" src={detail?.urlImage} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-xxl py-5 wow fadeInUp">
+        <div class="container">
+          <div class="row">
+            {detail &&
+              detail.items.map((item, idx) => (
+                <div
+                  key={String(idx)}
+                  class="col-lg-3 col-md-3 m-1"
+                  data-wow-delay="0.1s"
+                >
+                  <CardProgram
+                    imageSrc={item.urlImage}
+                    imageHeight="150px"
+                    title={item.title}
+                    desc={item.desc}
+                    linkTo={`/program/${slug}/${item.slug}`}
+                  />
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
       <div class="container-xxl py-5 wow fadeInUp">
         <div class="container">
           <div class="row align-items-start justify-content-center">
-            {program &&
-              program.map((item, idx) => (
-                <div class="col-lg-3 col-md-3 m-1" data-wow-delay="0.1s">
-                  <div className="service-item rounded p-3">
-                    <div class="row">
-                      <div class="col-lg-5 col-md-5">
-                        <ImageWithFallback
-                          src={item.urlImage}
-                          alt={item.urlImage}
-                          imageHeight="200px"
-                        />
-                      </div>
-                      <div class="col-lg-7 col-md-7">
-                        <h4>{item.title}</h4>
-                        <p>{item.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <CollapsibleMenu title="Faq 1">
+              <p>
+                Faq 1 Excepteur sint aute velit sint id mollit exercitation
+                exercitation nulla officia amet in laborum fugiat. Elit cillum
+                sint id reprehenderit reprehenderit quis laboris eu. Consectetur
+                nulla cillum dolor id culpa enim occaecat laboris amet sint
+                exercitation cupidatat Lorem. Lorem ex duis do aliqua pariatur
+                dolore nulla excepteur cupidatat laborum eu magna deserunt.
+              </p>
+            </CollapsibleMenu>
+            <CollapsibleMenu title="Faq 2">
+              <p>
+                Faq 2 Excepteur sint aute velit sint id mollit exercitation
+                exercitation nulla officia amet in laborum fugiat. Elit cillum
+                sint id reprehenderit reprehenderit quis laboris eu. Consectetur
+                nulla cillum dolor id culpa enim occaecat laboris amet sint
+                exercitation cupidatat Lorem. Lorem ex duis do aliqua pariatur
+                dolore nulla excepteur cupidatat laborum eu magna deserunt.
+              </p>
+            </CollapsibleMenu>
           </div>
         </div>
       </div>

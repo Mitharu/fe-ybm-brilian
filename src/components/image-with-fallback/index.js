@@ -6,10 +6,16 @@ const ImageFb = styled.img`
   width: 100%;
   height: ${(props) => props.imageHeight || '200px'};
   margin: ${(props) => props.margin || '0'};
-  object-fit: cover;
+  object-fit: ${(props) => props.fit || 'cover'};
 `
 
-export default function ImageWithFallback({ margin, src, alt, imageHeight }) {
+export default function ImageWithFallback({
+  margin,
+  src,
+  alt,
+  imageHeight,
+  fit,
+}) {
   const fallBackSrc = require('../../assets/image/image_not_found.png').default
   const [state, setState] = useState({
     imgUrl: null,
@@ -38,6 +44,7 @@ export default function ImageWithFallback({ margin, src, alt, imageHeight }) {
       onLoad={() => setState((prevState) => ({ ...prevState, isLoaded: true }))}
       onError={() => changeImage()}
       imageHeight={imageHeight}
+      fit={fit}
     />
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Achievement() {
   return (
-    <div className="container-xxl py-5 wow fadeInUp">
+    <div className="container-xxl py-5 wow fadeInUp container-achieve">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-3 text-center box-achieve">
@@ -27,8 +27,7 @@ export default function Achievement() {
             <div>
               <img
                 src={
-                  require('../../assets/image/angkapenting/uang.svg')
-                    .default
+                  require('../../assets/image/angkapenting/uang.svg').default
                 }
                 alt="penerima-manfaat"
               />
@@ -45,8 +44,7 @@ export default function Achievement() {
             <div>
               <img
                 src={
-                  require('../../assets/image/angkapenting/donatur.svg')
-                    .default
+                  require('../../assets/image/angkapenting/donatur.svg').default
                 }
                 alt="penerima-manfaat"
               />
@@ -63,6 +61,36 @@ export default function Achievement() {
       </div>
       <style>
         {`
+          .container-achieve {
+            position: relative;
+          }
+
+          .container-achieve::before {
+            position: absolute;
+            background-image: url(${require("../../assets/image/rectangle-1.svg").default});
+            background-size: contain;
+            background-repeat: no-repeat;
+            content: "";
+            top: 50px;
+            left: 15%;
+            width: 150px;
+            height: 150px;
+            z-index: 1;
+          }
+
+          .container-achieve::after {
+            position: absolute;
+            background-image: url(${require("../../assets/image/rectangle-1.svg").default});
+            background-size: contain;
+            background-repeat: no-repeat;
+            content: "";
+            bottom: 80px;
+            right: 15%;
+            width: 150px;
+            height: 150px;
+            z-index: 1;
+          }
+
           .box-achieve {
             display: flex;
             align-items: center;

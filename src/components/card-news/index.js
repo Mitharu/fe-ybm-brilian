@@ -27,6 +27,10 @@ const CardNewsTitle = styled.p`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   height: 75px;
+  transition: all 0.2s ease;
+  &:hover {
+    color: #f2994a;
+  }
 `
 
 const CardNewsDate = styled.p`
