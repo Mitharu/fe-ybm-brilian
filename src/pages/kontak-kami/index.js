@@ -1,5 +1,16 @@
 import React, { useEffect } from 'react'
+import styled from 'styled-components'
 import { mobileVersion } from '../../utils/helpers'
+
+const Title = styled.h2`
+  color: #00569c;
+  padding: 0 5px;
+  border-radius: 5px;
+  span {
+    color: #f26624;
+  }
+  text-align: ${(props) => props.align || 'left'};
+`
 
 export default function ContactUs() {
   const { dynamicWidth } = mobileVersion()
@@ -11,6 +22,29 @@ export default function ContactUs() {
 
   return (
     <React.Fragment>
+      {/* <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row wow fadeInUp">
+            <div class="col-lg-6 col-md-6">
+              <ul style={{ listStyle: "none"}}>
+                <li><i class="fa fa-instagram"></i> https://www.instagram.com/ybmbrilian/</li>
+                <li><i class="fas fa-youtube"></i> https://www.instagram.com/ybmbrilian/</li>
+                <li><i class="fa fa-envelope"></i> https://www.instagram.com/ybmbrilian/</li>
+                <li><i class="fa fa-envelope"></i> https://www.instagram.com/ybmbrilian/</li>
+              </ul>
+            </div>
+            {!isMobile && (
+              <div class="col-lg-6 col-md-6">
+                <img
+                  className="img-surat"
+                  src={require('../../assets/image/gedung-2.svg').default}
+                  alt="gedung-2"
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div> */}
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row wow fadeInUp">
@@ -64,6 +98,25 @@ export default function ContactUs() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-xxl py-5">
+        <Title>
+          Kantor Wilayah <span>YBM BRILiaN</span>
+        </Title>
+        <a href="/kontak-kami/kantor-wilayah" class="btn btn-primary">
+          Daftar kantor wilayah
+        </a>
+        <div class="container">
+          <div class="row wow fadeInUp">
+            <picture>
+              <img
+                src={require('../../assets/image/peta.webp').default}
+                alt="peta-wilayah"
+                width="100%"
+              />
+            </picture>
           </div>
         </div>
       </div>

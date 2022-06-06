@@ -121,6 +121,8 @@ export default function Home() {
         {`
           .container-program {
             position: relative;
+            width: 100%;
+            box-sizing: border-box;
           }
 
           .container-program::before {
@@ -143,9 +145,10 @@ export default function Home() {
             background-repeat: no-repeat;
             content: "";
             bottom: 0;
-            right: -60px;
-            width: 150px;
-            height: 150px;
+            right: 50px;
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
             z-index: 1;
           }
         `}

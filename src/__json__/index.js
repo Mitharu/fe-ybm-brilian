@@ -183,6 +183,8 @@ module.exports = {
       items: [
         {
           urlImage: require('../assets/image/program/IMG_1673.webp').default,
+          banner: require('../assets/image/program/banner-program-2.svg')
+            .default,
           title: 'Income Generating',
           slug: 'income-generating',
           desc: 'Berfokus pada peningkatan keterampilan bekerja dengan cara memanfatkan potensi setempat',
@@ -272,6 +274,8 @@ module.exports = {
       items: [
         {
           urlImage: require('../assets/image/program/IMG_9606.webp').default,
+          banner: require('../assets/image/program/banner-program-5.svg')
+            .default,
           title: 'Family Strengthen',
           slug: 'family-strengthen',
           desc: 'program pemberdayaan berbasis keluarga dalam rangka menguatkan aspek ekonomi, pendidikan, kesehatan, dan mental spiritual keluarga mustahik.',
@@ -334,6 +338,8 @@ module.exports = {
         },
         {
           urlImage: require('../assets/image/program/478A4678.webp').default,
+          banner: require('../assets/image/program/banner-program-3.svg')
+            .default,
           title: 'Wash Program',
           slug: 'wash-program',
           desc: 'program yang berfokus untuk pembangun infrastruktur sumber air bersih di kawasan terdapak kekeringan ataupun wilayah yang belum memiliki sumber air bersih.',
@@ -397,6 +403,8 @@ module.exports = {
           urlImage:
             require('../assets/image/program/Logo-Bright-Scholarship.webp')
               .default,
+          banner: require('../assets/image/program/banner-program-1.svg')
+            .default,
           title: 'Bright Scholarship',
           slug: 'bright-scholarship',
           desc: 'Beasiswa yang diperuntukan bagi mahasiswa jenjang sarjana (S1) di PTN terpilih berupa bantuan biaya kuliah dan uang bulanan.',
@@ -462,6 +470,8 @@ module.exports = {
         {
           urlImage: require('../assets/image/program/logo-my-scholarship.webp')
             .default,
+          banner: require('../assets/image/program/banner-program-6.svg')
+            .default,
           title: 'My Scholarship',
           slug: 'my-scholarship',
           desc: 'Beasiswa yang diperuntukan bagi siswa dan mahasiswa tingkat SD hingga sarjana (S1) berupa tunjangan prestasi selama 1 tahun.',
@@ -494,6 +504,8 @@ module.exports = {
         },
         {
           urlImage: require('../assets/image/program/logo-smart.webp').default,
+          banner: require('../assets/image/program/banner-program-4.svg')
+            .default,
           title: 'Smart Scholarship',
           slug: 'smart-scholarship',
           desc: 'Beasiswa yang diberikan kepada mahasiswa S1 dari perguruan tinggi negeri mitra berupa tunjangan prestasi selama 1 tahun.',
@@ -549,27 +561,27 @@ module.exports = {
   ],
   program_banner: [
     {
-      path: '/program/ekonomi',
+      path: '/program/pendidikan/bright-scholarship',
       urlImage: require('../assets/image/program/banner-program-1.svg').default,
     },
     {
-      path: '/program/ekonomi',
+      path: '/program/ekonomi/income-generating',
       urlImage: require('../assets/image/program/banner-program-2.svg').default,
     },
     {
-      path: '/program/ekonomi',
+      path: '/program/sosial/wash-program',
       urlImage: require('../assets/image/program/banner-program-3.svg').default,
     },
     {
-      path: '/program/ekonomi',
+      path: '/program/pendidikan/smart-scholarship',
       urlImage: require('../assets/image/program/banner-program-4.svg').default,
     },
     {
-      path: '/program/ekonomi',
+      path: '/program/sosial/family-strengthen',
       urlImage: require('../assets/image/program/banner-program-5.svg').default,
     },
     {
-      path: '/program/ekonomi',
+      path: '/program/pendidikan/my-scholarship',
       urlImage: require('../assets/image/program/banner-program-6.svg').default,
     },
   ],
@@ -597,6 +609,107 @@ module.exports = {
       title: "IPB's Award",
       year: '2021',
       desc: "YBM BRILiaN meraih penghargaan Tribute to IPB's Scholarship Contributors: A Caring Support for Developing Agile Learners.",
+    },
+  ],
+  kantor_wilayah: [
+    {
+      class: 'fa fa-building',
+      city: 'Banda Aceh',
+      address: 'jl. cut meutia no 17, banda aceh',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Medan',
+      address: 'Gedung Uniland Plaza Jl. MT Haryono No 1, Medan Timur',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Padang',
+      address: 'Jl. Bagindo Azis Chan no. 30, Padang timur, Sumatra Barat',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Pekanbaru',
+      address:
+        'Gedung menara BRI kanwil pekanbaru, LT 4, Jl. Jend Sudirman, Marpoyan Damai Pekanbaru',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Palembang',
+      address: 'Jl. Kapten A. Rivai No. 15, Palembang, Sumatra Selatan',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Bandar Lampung',
+      address: 'Jl. Raden Intan No. 51, Tanjung Karang, Bandar Lampung',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Jakarta 1',
+      address: 'Jl. Venteran II no. 8, Gambir, Jakarta Pusat',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Jakarta 2',
+      address:
+        'Gedung Menara Mulia LT 2, Jl Gatot Subroto kav 9 - 11 Jakarta Selatan',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Jakarta 3',
+      address:
+        'Jl. Kapten Soebijanto Djojohadikusumo no. 1, tanggerang selatan, banten',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Bandung',
+      address: 'Gedung Menara BRI LT 3, Jl. Asia afrika no.57 - 59, Bandung',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Semarang',
+      address: 'Jl. Teuku Umar No. 24, Semarang',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Yogyakarta',
+      address: 'Jl. Cik Ditiro No. 3, Yogyakarta',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Surabaya',
+      address: 'Jl. Basuki Rahmat No. 122 - 138 Gedung BRI Tower Lt 20',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Malang',
+      address: 'Jl. Laksamana Martadinata No. 80, Malang, Jawa tengah',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Denpasar',
+      address: 'Jl. Dr. Kusumaatmaja No.1, Denpasar, Bali',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Banjarmasin',
+      address: 'Jl. Jenderal A. Yani No. 151, Banjarmasin',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Makassar',
+      address: 'Jl. Ahmad Yani No. 8, Makassar',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Manado',
+      address: 'Jl. Sarapung, No. 4 - 6, Manado',
+    },
+    {
+      class: 'fa fa-building',
+      city: 'Jayapura',
+      address:
+        'Gedung BRI Lt 3 - 5 kanwil jayapura, Jl. Pasifik Permai Komplek Ruko II',
     },
   ],
 }

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Beranda from './pages/beranda'
 import TentangKami from './pages/tentang-kami'
 import KontakKami from './pages/kontak-kami'
+import KantorWilayah from './pages/kontak-kami/list-kantor-wilayah'
 import Blog from './pages/blog'
 import BlogDetail from './pages/blog/detail'
 import Program from './pages/program'
@@ -32,6 +33,11 @@ export default function RouterApp() {
           <Route path="/kontak-kami" exact>
             <Layout>
               <KontakKami />
+            </Layout>
+          </Route>
+          <Route path="/kontak-kami/:slug" exact>
+            <Layout>
+              <KantorWilayah />
             </Layout>
           </Route>
           <Route path="/blog" exact>

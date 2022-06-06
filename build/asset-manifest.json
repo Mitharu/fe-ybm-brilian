@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.9d1aa6de.chunk.js",
-    "main.js.map": "/static/js/main.9d1aa6de.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d13c3aee.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d13c3aee.js.map",
-    "static/js/2.42f1faaf.chunk.js": "/static/js/2.42f1faaf.chunk.js",
-    "static/js/2.42f1faaf.chunk.js.map": "/static/js/2.42f1faaf.chunk.js.map",
+    "main.js": "/static/js/main.3280f5a4.chunk.js",
+    "main.js.map": "/static/js/main.3280f5a4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
+    "static/js/2.5cb2026e.chunk.js": "/static/js/2.5cb2026e.chunk.js",
+    "static/js/2.5cb2026e.chunk.js.map": "/static/js/2.5cb2026e.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.42f1faaf.chunk.js.LICENSE.txt": "/static/js/2.42f1faaf.chunk.js.LICENSE.txt",
+    "static/js/2.5cb2026e.chunk.js.LICENSE.txt": "/static/js/2.5cb2026e.chunk.js.LICENSE.txt",
     "static/media/1.webp": "/static/media/1.5f074318.webp",
     "static/media/2.webp": "/static/media/2.1b0f9e8e.webp",
     "static/media/2001.png": "/static/media/2001.96670c90.png",
@@ -45,6 +45,7 @@
     "static/media/ekonomi.png": "/static/media/ekonomi.e6f122fb.png",
     "static/media/filosofi-logo.svg": "/static/media/filosofi-logo.46c0d0de.svg",
     "static/media/forkomasi.webp": "/static/media/forkomasi.a8ce75f1.webp",
+    "static/media/heading-kantor-wilayah.png": "/static/media/heading-kantor-wilayah.ef41068f.png",
     "static/media/hidroponik-kita.webp": "/static/media/hidroponik-kita.25a1152d.webp",
     "static/media/human-inisiative.webp": "/static/media/human-inisiative.f6994df0.webp",
     "static/media/ipay88.webp": "/static/media/ipay88.96466a40.webp",
@@ -65,6 +66,7 @@
     "static/media/overtune.webp": "/static/media/overtune.cc07afd8.webp",
     "static/media/pendidikan.png": "/static/media/pendidikan.a9f4c472.png",
     "static/media/penerima.svg": "/static/media/penerima.b9239ed2.svg",
+    "static/media/peta.webp": "/static/media/peta.60ca2c85.webp",
     "static/media/pkf.webp": "/static/media/pkf.d075ee77.webp",
     "static/media/rectangle-1.svg": "/static/media/rectangle-1.c2851d66.svg",
     "static/media/rectangle-3.svg": "/static/media/rectangle-3.c7def094.svg",
@@ -83,8 +85,8 @@
     "static/media/volunter2.svg": "/static/media/volunter2.a0f56683.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d13c3aee.js",
-    "static/js/2.42f1faaf.chunk.js",
-    "static/js/main.9d1aa6de.chunk.js"
+    "static/js/runtime-main.c3e6af48.js",
+    "static/js/2.5cb2026e.chunk.js",
+    "static/js/main.3280f5a4.chunk.js"
   ]
 }

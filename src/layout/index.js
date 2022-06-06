@@ -292,97 +292,87 @@ export default function Layout({ children }) {
         class="text-primary footer wow fadeIn"
         data-wow-delay="0.1s"
         style={{
-          background: '#f2f2f2',
+          background: '#023056',
         }}
       >
         <div class="row" style={{ marginRight: 0, marginLeft: 0 }}>
           <div
             class="col-lg-4 text-center"
-            style={{
-              background: '#E0E0E0',
-            }}
           >
             <img
               src={require('../assets/image/logo.png').default}
               alt="logo-ybm"
               width={150}
             />
-            <p style={{ color: '#000' }}>
+            <p style={{ color: '#fff' }}>
               YBM BRI yang kini bertransformasi menjadi YBM BRILiaN merupakan
               Lembaga Filantropi Islam yang mengelola dana zakat, infak dan
               sedekah secara profesional dan sesuai dengan ketentuan syariat
               Islam.
             </p>
-            <p style={{ color: '#000' }}>
+            <p style={{ color: '#fff' }}>
               <i class="fa fa-building"></i> Gedung Olahraga BRI Lt.2 Jl.
               Jenderal Sudirman Kav 44-46 Jakarta Pusat 10210
             </p>
-            <p style={{ color: '#000' }}>
+            <p style={{ color: '#fff' }}>
               <i class="fa fa-phone"></i> Customer Care 0811 808 412
             </p>
           </div>
           <div class="col-lg-8">
             <div className="row py-2">
               <div className="col-md-3 col-lg-3">
-                <p style={{ color: '#000' }}>
+                <p style={{ color: '#fff' }}>
                   <strong>Program</strong>
                 </p>
                 <a
                   href="/program/pendidikan"
                   className="btn btn-link"
-                  style={{ color: '#828282' }}
                 >
                   Pendidikan
                 </a>
                 <a
                   href="/program/social"
                   className="btn btn-link"
-                  style={{ color: '#828282' }}
                 >
                   Sosial
                 </a>
                 <a
                   href="/program/ekonomi"
                   className="btn btn-link"
-                  style={{ color: '#828282' }}
                 >
                   Ekonomi
                 </a>
               </div>
               <div className="col-md-3 col-lg-3">
-                <p style={{ color: '#000' }}>
+                <p style={{ color: '#fff' }}>
                   <strong>Program</strong>
                 </p>
                 <a
                   href="#a"
                   className="btn btn-link"
-                  style={{ color: '#828282' }}
                 >
                   Jadilah Fundraiser
                 </a>
               </div>
               <div className="col-md-3 col-lg-3">
-                <p style={{ color: '#000' }}>
+                <p style={{ color: '#fff' }}>
                   <strong>Tentang Kami</strong>
                 </p>
                 <a
                   href="#a"
                   className="btn btn-link"
-                  style={{ color: '#828282' }}
                 >
                   Lembaga
                 </a>
                 <a
                   href="#a"
                   className="btn btn-link"
-                  style={{ color: '#828282' }}
                 >
                   Berita
                 </a>
                 <a
                   href="#a"
                   className="btn btn-link"
-                  style={{ color: '#828282' }}
                 >
                   Artikel
                 </a>

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CarouselTestimoni from './carousel-testimoni'
+import ImageWithFallback from '../../components/image-with-fallback'
 import styled from 'styled-components'
+import { mobileVersion } from '../../utils/helpers'
 import { program } from '../../__json__'
 
 const TitleAbout = styled.h2`
@@ -17,6 +19,8 @@ const TitleAbout = styled.h2`
 
 export default function Slug() {
   const { slug, slugChild } = useParams()
+  const { dynamicWidth } = mobileVersion()
+  const isMobile = dynamicWidth <= 425 ? true : false
   const [detail, setDetail] = useState()
   const [subDetail, setSubDetail] = useState()
 
@@ -37,12 +41,17 @@ export default function Slug() {
     }
   }, [detail, slugChild])
 
-  console.log('eta ==>', subDetail)
-
   if (!subDetail) return null
 
   return (
     <React.Fragment>
+      <div class="py-5 wow fadeInUp" style={{ marginTop: '-100px' }}>
+        <ImageWithFallback
+          src={subDetail?.banner}
+          alt="banner-program-detail"
+          imageHeight={isMobile ? '150px' : '500px'}
+        />
+      </div>
       <div class="container-xxl py-5 wow fadeInUp">
         <div class="container">
           <div
@@ -51,11 +60,17 @@ export default function Slug() {
           >
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
               <picture>
-                <img src={subDetail?.urlImage} alt="" height="350px" />
+                <img
+                  src={subDetail?.urlImage}
+                  alt=""
+                  height={isMobile ? '150px' : '350px'}
+                />
               </picture>
             </div>
             <div class="col-lg-6 text-center text-lg-start animated slideInRight">
-              <TitleAbout>{subDetail?.title}</TitleAbout>
+              <TitleAbout align={isMobile ? 'center' : 'left'}>
+                {subDetail?.title}
+              </TitleAbout>
               <p>{subDetail?.desc_short}</p>
               <p class="mb-4 pb-2 mt-4">{subDetail?.desc_long}</p>
             </div>
