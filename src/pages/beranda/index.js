@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import CardNews from '../../components/card-news'
+import CardNewsSidebar from '../../components/card-news-sidebar'
 import ImageWithFallback from '../../components/image-with-fallback'
-import ThumbnailNews from '../../components/thumbnail-news'
+import CarouselThumbnail from './carousel-thumbnail'
+import CarouselNews from './carousel-news'
+import { transformNews } from '../../utils/helpers'
 import { get } from '../../api'
 import { program } from '../../__json__'
 
 export default function Home() {
-  const [news, setNews] = useState([])
+  const [news, setNews] = useState()
+  const [video, setVideo] = useState([])
 
   useEffect(() => {
     async function fetchData() {
@@ -16,7 +19,19 @@ export default function Home() {
       })
         .then((res) => {
           if (res?.StatusCode === 200 && res?.Error === false)
-            setNews(res.Data[0]?.berita)
+            setNews(transformNews(res.Data[0].berita))
+        })
+        .catch((err) => {
+          console.log('err ->', err)
+        })
+
+      // get data video
+      get({
+        endpoint: 'video',
+      })
+        .then((res) => {
+          if (res?.StatusCode === 200 && res?.Error === false)
+            setVideo(res.Data)
         })
         .catch((err) => {
           console.log('err ->', err)
@@ -69,46 +84,26 @@ export default function Home() {
             <div class="col-lg-8 col-md-8">
               <div class="row mb-4">
                 <div class="col-lg-12 col-md-12">
-                  {news &&
-                    news
-                      .slice(0, 1)
-                      .map((item, idx) => (
-                        <ThumbnailNews
-                          key={String(idx)}
-                          imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
-                          imageHeight="500px"
-                          title={item.name}
-                          linkTo={`/news/${item.id}`}
-                        />
-                      ))}
+                  <CarouselThumbnail data={news && news.main} video={video} />
                 </div>
               </div>
-              <div class="row">
-                {news &&
-                  news.slice(0, 4).map((item, idx) => (
-                    <div class="col-lg-3" key={String(idx)}>
-                      <CardNews
-                        imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
-                        imageHeight="180px"
-                        title={item.name}
-                        desc={`8 April 2022`}
-                        linkTo={`/news/${item.id}`}
-                      />
-                    </div>
-                  ))}
+              <div class="row slider-news-hp">
+                <CarouselNews data={news && news.list} />
               </div>
             </div>
             <div class="col-lg-4 col-md-4">
               <div class="row">
                 {news &&
-                  news.slice(0, 2).map((item, idx) => (
+                  news.sidebar &&
+                  news.sidebar.slice(0, 2).map((item, idx) => (
                     <div class="col-lg-12 col-md-12 mb-4" key={String(idx)}>
-                      <CardNews
+                      <CardNewsSidebar
                         imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                         imageHeight="300px"
                         title={item.name}
-                        desc={`8 April 2022`}
-                        linkTo={`/news/${item.id}`}
+                        desc={item.created_at}
+                        linkTo={`/berita/${item.id}`}
+                        type="sidebar"
                       />
                     </div>
                   ))}
@@ -127,7 +122,9 @@ export default function Home() {
 
           .container-program::before {
             position: absolute;
-            background-image: url(${require("../../assets/image/rectangle-3.svg").default});
+            background-image: url(${
+              require('../../assets/image/rectangle-3.svg').default
+            });
             background-size: contain;
             background-repeat: no-repeat;
             content: "";
@@ -140,7 +137,9 @@ export default function Home() {
 
           .container-program::after {
             position: absolute;
-            background-image: url(${require("../../assets/image/rectangle-4.svg").default});
+            background-image: url(${
+              require('../../assets/image/rectangle-4.svg').default
+            });
             background-size: contain;
             background-repeat: no-repeat;
             content: "";

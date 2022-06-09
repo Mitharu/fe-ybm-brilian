@@ -3,24 +3,26 @@ import styled from 'styled-components'
 import Slider from 'react-slick'
 import ImageWithFallback from '../../../components/image-with-fallback'
 
-const TitleCarousel = styled.p`
+const TitleCarousel = styled.div`
   display: inline-block;
-  font-size: 22px;
-  font-weight: 500;
-  background: #00569c;
-  color: #fff;
-  margin: 20px 0 0 0;
-  padding: 5px 10px;
-  border-radius: 5px;
+  font-size: 35px;
+  font-weight: 700;
+  color: #00569c;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  margin-top: 50px 0 0 0;
+  padding: 0;
 `
 
-const LabelCarousel = styled.p`
-  font-size: 16px;
-  color: #fff;
-  span {
-    margin-right: 10px;
-  }
-`
+// const DescCarousel = styled.div`
+//   display: inline-block;
+//   font-size: 30px;
+//   font-weight: 600;
+//   color: #000;
+//   padding: 10px;
+//   width: 100%;
+// `
 
 export default function Carousel({ data }) {
   const settings = {
@@ -28,7 +30,7 @@ export default function Carousel({ data }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     dots: true,
   }
 
@@ -40,14 +42,17 @@ export default function Carousel({ data }) {
             data.map((item, idx) => (
               <div key={String(idx)}>
                 <div className="col-md-12">
-                  <div className="row" style={{ marginRight: 0, marginLeft: 0 }}>
-                    <div className="col-lg-12 col-md-12 box-carousel">
+                  <div
+                    className="row box-carousel"
+                    style={{ background: '#f2f2f2' }}
+                  >
+                    <div className="col-lg-6 col-md-6">
                       <ImageWithFallback
                         src={`${process.env.REACT_APP_IMAGE_BLOG}/${item.image}`}
                         alt={item.image}
                         imageHeight="500px"
                       />
-                      <div className="box-label">
+                      {/* <div className="box-label">
                         <TitleCarousel>{item.name}</TitleCarousel>
                         <LabelCarousel>
                           <span>
@@ -58,7 +63,17 @@ export default function Carousel({ data }) {
                             {item?.blog_type?.name}
                           </span>
                         </LabelCarousel>
-                      </div>
+                      </div> */}
+                    </div>
+                    <div className="col-lg-6 col-md-6">
+                      <TitleCarousel>{item.name}</TitleCarousel>
+                      {/* <DescCarousel dangerouslySetInnerHTML={{ __html: item.isi_konten }} /> */}
+                      <a
+                        href={`/blog/${item.id}`}
+                        className="btn btn-primary mt-5"
+                      >
+                        baca selengkapnya ...
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -68,35 +83,35 @@ export default function Carousel({ data }) {
       </div>
       <style>
         {`
-            .carousel-blog .slick-slider ul.slick-dots {
-              text-align: left;
-              margin: 0 0 0 -10px;
-              bottom: -20px;
-            }
+          .carousel-blog .slick-slider ul.slick-dots {
+            text-align: left;
+            margin: 0 0 0 -10px;
+            bottom: -20px;
+          }
 
-            .carousel-blog .slick-slider ul.slick-dots li {
-              width: 10px;
-              height: 10px;
-            }
+          .carousel-blog .slick-slider ul.slick-dots li {
+            width: 10px;
+            height: 10px;
+          }
 
-            .carousel-blog .slick-slider ul.slick-dots li button:before {
-              font-size: 12px;
-            }
+          .carousel-blog .slick-slider ul.slick-dots li button:before {
+            font-size: 12px;
+          }
 
-            .box-carousel {
-              position: relative;
-              padding: 0;
-            }
+          .box-carousel {
+            position: relative;
+            padding: 0;
+          }
 
-            .box-carousel .box-label {
-              background-color: rgba(0,0,0,0.2);
-              position: absolute;
-              z-index: 1;
-              bottom: 0;
-              width: 100%;
-              box-sizing: border-box;
-              padding: 0 15px;
-            }
+          .box-carousel .box-label {
+            background-color: rgba(0,0,0,0.2);
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 15px;
+          }
         `}
       </style>
     </div>

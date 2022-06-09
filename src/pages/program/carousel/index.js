@@ -7,7 +7,7 @@ export default function Carousel({ data }) {
     autoplay: true,
     centerMode: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
   }
@@ -18,19 +18,21 @@ export default function Carousel({ data }) {
         <Slider {...settings}>
           {data &&
             data.map((item, idx) => (
-              <div key={String(idx)}>
-                <div className="col-md-12 container-carousel">
-                  <div className="row">
-                    <div className="col-lg-12 col-md-12">
-                      <ImageWithFallback
-                        src={item.urlImage}
-                        alt={item.img}
-                        imageHeight="300px"
-                      />
+              <a href={item.path}>
+                <div key={String(idx)}>
+                  <div className="col-md-12 container-carousel">
+                    <div className="row">
+                      <div className="col-lg-12 col-md-12">
+                        <ImageWithFallback
+                          src={item.urlImage}
+                          alt={item.img}
+                          imageHeight="300px"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
         </Slider>
       </div>

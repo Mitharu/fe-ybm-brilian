@@ -61,3 +61,20 @@ export const mobileVersion = () => {
 
   return { ...screenSize }
 }
+
+export const transformNews = (data) => {
+  const mainSidebar = data && data.slice(0, 4)
+  const list = data && data.slice(4, data.length)
+  return {
+    main: mainSidebar.slice(0, 2),
+    sidebar: mainSidebar.slice(2, mainSidebar.length),
+    list,
+  }
+}
+
+export const transformBlog = (data) => {
+  return {
+    main: data && data.slice(0, 5),
+    list: data && data.slice(5, data.length),
+  }
+}

@@ -19,9 +19,8 @@ const CardNewsTitle = styled.p`
   line-height: 1.2;
   margin: 5px;
   padding: 5px;
-  font-weight: 500;
-  background: #00569c;
-  color: #fff;
+  font-weight: 700;
+  color: #000;
   border-radius: 4px;
 `
 

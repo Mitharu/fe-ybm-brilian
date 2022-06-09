@@ -16,7 +16,7 @@ export default function CarouselTestimoni({ data }) {
   const settings = {
     autoplay: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
     dots: true,

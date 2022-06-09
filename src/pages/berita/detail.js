@@ -74,6 +74,12 @@ function NewsDetail() {
           <div class="row g-5">
             <div class="col-lg-9 col-md-9 text-center text-lg-start animated slideInRight">
               <TitleNews>{dataDetail.name}</TitleNews>
+              <p>
+                <i class="fa fa-user"></i> Admin |{' '}
+                {dataDetail?.created_at
+                  ? new Date(dataDetail.created_at).toDateString()
+                  : null}
+              </p>
               <ImageWithFallback
                 margin="20px 0 10px 0"
                 src={`${process.env.REACT_APP_IMAGE_BERITA}/${dataDetail.img}`}

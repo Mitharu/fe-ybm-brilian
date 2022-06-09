@@ -10,8 +10,8 @@ export default function Program() {
   useEffect(() => {
     window.scrollTo(0, 0)
     program.forEach((item) => {
-      setDetailProgram(old => [...old, ...item.items])
-    });
+      setDetailProgram((old) => [...old, ...item.items])
+    })
   }, [])
 
   return (
@@ -25,7 +25,7 @@ export default function Program() {
                 <a
                   key={String(idx)}
                   href={item.path}
-                  class="col-lg-3 col-md-3"
+                  class="col-lg-4 col-md-4"
                   style={{ textDecoration: 'none', color: '#666565' }}
                 >
                   <div class="m-1" data-wow-delay="0.1s">

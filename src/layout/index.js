@@ -64,14 +64,14 @@ export default function Layout({ children }) {
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
-              <NavLink
-                to="/"
+              <a
+                href="/"
                 className={`nav-item nav-link ${
-                  url?.pathname === '/' ? 'active' : ''
+                  url?.pathname.length <=1 && url?.pathname === '/' ? 'active' : ''
                 }`}
               >
                 Beranda
-              </NavLink>
+              </a>
               <NavLink
                 to="/tentang-kami"
                 className={`nav-item nav-link ${
@@ -149,18 +149,18 @@ export default function Layout({ children }) {
                 </div>
               </div>
               <NavLink
-                to="/blog"
+                to="/berita"
                 className={`nav-item nav-link ${
-                  url?.pathname === '/blog' ? 'active' : ''
+                  url?.pathname === '/berita' ? 'active' : ''
                 }`}
               >
-                Blog
+                Berita Terkini
               </NavLink>
               <div class="nav-item dropdown">
                 <a
                   href="/lainnya"
                   class={`nav-link dropdown-toggle ${
-                    ['/berita', '/kontak-kami'].includes(url?.pathname)
+                    ['/blog', '/kontak-kami'].includes(url?.pathname)
                       ? 'active'
                       : ''
                   }`}
@@ -170,12 +170,12 @@ export default function Layout({ children }) {
                 </a>
                 <div class="dropdown-menu m-0">
                   <a
-                    href="/berita"
+                    href="/blog"
                     class={`dropdown-item ${
-                      url?.pathname === '/berita' ? 'active' : ''
+                      url?.pathname === '/blog' ? 'active' : ''
                     }`}
                   >
-                    Berita terkini
+                    Blog
                   </a>
                   <a
                     href={process.env.REACT_APP_BRILIAN_TV}
@@ -217,9 +217,15 @@ export default function Layout({ children }) {
                 className="display-3 text-white mb-3 animated slideInDown"
                 style={{ textTransform: 'capitalize' }}
               >
-                {params?.slug !== undefined && params?.slugChild !== undefined && params?.slugChild.replace(/[/-]/g, ' ')}
-                {params?.slug !== undefined && params?.slugChild === undefined && params?.slug.replace(/[/-]/g, ' ')}
-                {params?.slug === undefined && params?.slugChild === undefined && url?.pathname.replace(/[/-]/g, ' ')}
+                {params?.slug !== undefined &&
+                  params?.slugChild !== undefined &&
+                  params?.slugChild.replace(/[/-]/g, ' ')}
+                {params?.slug !== undefined &&
+                  params?.slugChild === undefined &&
+                  params?.slug.replace(/[/-]/g, ' ')}
+                {params?.slug === undefined &&
+                  params?.slugChild === undefined &&
+                  url?.pathname.replace(/[/-]/g, ' ')}
               </h1>
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb justify-content-center text-uppercase">
@@ -296,9 +302,7 @@ export default function Layout({ children }) {
         }}
       >
         <div class="row" style={{ marginRight: 0, marginLeft: 0 }}>
-          <div
-            class="col-lg-4 text-center"
-          >
+          <div class="col-lg-4 text-center">
             <img
               src={require('../assets/image/logo.png').default}
               alt="logo-ybm"
@@ -324,22 +328,13 @@ export default function Layout({ children }) {
                 <p style={{ color: '#fff' }}>
                   <strong>Program</strong>
                 </p>
-                <a
-                  href="/program/pendidikan"
-                  className="btn btn-link"
-                >
+                <a href="/program/pendidikan" className="btn btn-link">
                   Pendidikan
                 </a>
-                <a
-                  href="/program/social"
-                  className="btn btn-link"
-                >
+                <a href="/program/social" className="btn btn-link">
                   Sosial
                 </a>
-                <a
-                  href="/program/ekonomi"
-                  className="btn btn-link"
-                >
+                <a href="/program/ekonomi" className="btn btn-link">
                   Ekonomi
                 </a>
               </div>
@@ -347,10 +342,7 @@ export default function Layout({ children }) {
                 <p style={{ color: '#fff' }}>
                   <strong>Program</strong>
                 </p>
-                <a
-                  href="#a"
-                  className="btn btn-link"
-                >
+                <a href="#a" className="btn btn-link">
                   Jadilah Fundraiser
                 </a>
               </div>
@@ -358,22 +350,13 @@ export default function Layout({ children }) {
                 <p style={{ color: '#fff' }}>
                   <strong>Tentang Kami</strong>
                 </p>
-                <a
-                  href="#a"
-                  className="btn btn-link"
-                >
+                <a href="#a" className="btn btn-link">
                   Lembaga
                 </a>
-                <a
-                  href="#a"
-                  className="btn btn-link"
-                >
+                <a href="#a" className="btn btn-link">
                   Berita
                 </a>
-                <a
-                  href="#a"
-                  className="btn btn-link"
-                >
+                <a href="#a" className="btn btn-link">
                   Artikel
                 </a>
               </div>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ImageWithFallback from '../image-with-fallback'
 
 const CardNewsContainer = styled.div`
-  width: 350px;
+  width: 500px;
   height: auto;
   color: #828282;
   border-radius: 4px;
