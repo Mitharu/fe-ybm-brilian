@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.8540ef2e.chunk.js",
-    "main.js.map": "/static/js/main.8540ef2e.chunk.js.map",
+    "main.js": "/static/js/main.8ca959fe.chunk.js",
+    "main.js.map": "/static/js/main.8ca959fe.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
     "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
-    "static/js/2.368ef701.chunk.js": "/static/js/2.368ef701.chunk.js",
-    "static/js/2.368ef701.chunk.js.map": "/static/js/2.368ef701.chunk.js.map",
+    "static/js/2.f41f80bf.chunk.js": "/static/js/2.f41f80bf.chunk.js",
+    "static/js/2.f41f80bf.chunk.js.map": "/static/js/2.f41f80bf.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.368ef701.chunk.js.LICENSE.txt": "/static/js/2.368ef701.chunk.js.LICENSE.txt",
+    "static/js/2.f41f80bf.chunk.js.LICENSE.txt": "/static/js/2.f41f80bf.chunk.js.LICENSE.txt",
     "static/media/1.webp": "/static/media/1.5f074318.webp",
     "static/media/2.webp": "/static/media/2.1b0f9e8e.webp",
     "static/media/2001.png": "/static/media/2001.96670c90.png",
@@ -45,6 +45,7 @@
     "static/media/ekonomi.png": "/static/media/ekonomi.e6f122fb.png",
     "static/media/filosofi-logo.svg": "/static/media/filosofi-logo.46c0d0de.svg",
     "static/media/forkomasi.webp": "/static/media/forkomasi.a8ce75f1.webp",
+    "static/media/gedung-2.svg": "/static/media/gedung-2.6df148f6.svg",
     "static/media/heading-kantor-wilayah.png": "/static/media/heading-kantor-wilayah.ef41068f.png",
     "static/media/hidroponik-kita.webp": "/static/media/hidroponik-kita.25a1152d.webp",
     "static/media/human-inisiative.webp": "/static/media/human-inisiative.f6994df0.webp",
@@ -86,7 +87,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c3e6af48.js",
-    "static/js/2.368ef701.chunk.js",
-    "static/js/main.8540ef2e.chunk.js"
+    "static/js/2.f41f80bf.chunk.js",
+    "static/js/main.8ca959fe.chunk.js"
   ]
 }

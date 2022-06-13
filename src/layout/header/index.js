@@ -20,6 +20,7 @@ export default function Header() {
           {data &&
             data.map((_, idx) => (
               <li
+                key={String(idx)}
                 data-target="#header-carousel"
                 data-slide-to={`${idx}`}
                 className={`${idx === 0 ? "active" : ""}`}
@@ -31,7 +32,7 @@ export default function Header() {
         <div className="carousel-inner" role="listbox">
           {data &&
             data.map((item, idx) => (
-              <div className={`item ${idx === 0 ? "active" : ""}`}>
+              <div key={String(idx)} className={`item ${idx === 0 ? "active" : ""}`}>
                 <div className={`single-slide-item slide${idx}`}>
                   <div className="container">
                     <div className="welcome-hero-content">

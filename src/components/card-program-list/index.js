@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ImageWithFallback from '../image-with-fallback'
 
 const CardNewsContainer = styled.div`
-  width: 500px;
+  width: ${props => props.isMobile ? "300px" : "500px"};
   height: auto;
   color: #828282;
   border-radius: 4px;
@@ -27,9 +27,9 @@ const CardNewsDesc = styled.p`
   color: #000;
 `
 
-export default function CardProgram({ imageSrc, imageHeight, title, desc }) {
+export default function CardProgram({ imageSrc, imageHeight, title, desc, isMobile }) {
   return (
-    <CardNewsContainer>
+    <CardNewsContainer isMobile={isMobile}>
       <div className="row">
         <div className="col-lg-6 col-md-6">
           <ImageWithFallback
@@ -39,9 +39,9 @@ export default function CardProgram({ imageSrc, imageHeight, title, desc }) {
             fit="contain"
           />
         </div>
-        <div className="col-lg-6 col-md-6">
-          <CardNewsTitle>{title}</CardNewsTitle>
-          <CardNewsDesc>{desc}</CardNewsDesc>
+        <div className={`col-lg-6 col-md-6 ${isMobile ? "d-flex justity-content-center align-items-center list-group p-5" : ""}`}>
+          <CardNewsTitle isMobile={isMobile}>{title}</CardNewsTitle>
+          <CardNewsDesc isMobile={isMobile}>{desc}</CardNewsDesc>
         </div>
       </div>
     </CardNewsContainer>

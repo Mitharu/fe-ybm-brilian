@@ -2,10 +2,10 @@ import React from 'react'
 import Slider from 'react-slick'
 import ImageWithFallback from '../../../components/image-with-fallback'
 
-export default function Carousel({ data }) {
+export default function Carousel({ data, isMobile }) {
   const settings = {
     autoplay: true,
-    centerMode: true,
+    centerMode: isMobile ? false : true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -18,15 +18,15 @@ export default function Carousel({ data }) {
         <Slider {...settings}>
           {data &&
             data.map((item, idx) => (
-              <a href={item.path}>
-                <div key={String(idx)}>
+              <a key={String(idx)} href={item.path}>
+                <div>
                   <div className="col-md-12 container-carousel">
                     <div className="row">
                       <div className="col-lg-12 col-md-12">
                         <ImageWithFallback
                           src={item.urlImage}
                           alt={item.img}
-                          imageHeight="300px"
+                          imageHeight={isMobile ? "180px" : "300px"}
                         />
                       </div>
                     </div>

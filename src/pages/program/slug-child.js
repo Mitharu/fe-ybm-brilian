@@ -122,9 +122,9 @@ export default function Slug() {
                   <h3>{subDetail?.portofolio?.title}</h3>
                   <p>{subDetail?.portofolio?.desc}</p>
                 </div>
-                <div class="col-lg-6 col-md-6 d-flex align-items-start justify-content-center list-group">
+                <div class="col-lg-6 col-md-6 d-flex align-items-start justify-content-center">
                   <picture>
-                    <img src={subDetail?.portofolio?.images} alt="" />
+                    <img className="img-porto" src={subDetail?.portofolio?.images} alt="" />
                   </picture>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export default function Slug() {
           <div class="container">
             <div class="row">
               {subDetail?.portofolio?.items.map((item, idx) => (
-                <div class="col-lg-3 col-md-3 box-porto">
+                <div key={String(idx)} class="col-lg-3 col-md-3 box-porto">
                   <picture>
                     <img src={item?.imgUrl} alt="" height="180" />
                   </picture>
@@ -146,7 +146,7 @@ export default function Slug() {
           </div>
         </div>
       )}
-      <CarouselTestimoni data={subDetail?.testimoni} />
+      <CarouselTestimoni data={subDetail?.testimoni} isMobile={isMobile} />
       <style>
         {`
           .box-porto {
@@ -155,6 +155,15 @@ export default function Slug() {
           .box-porto picture img {
             width: 100%;
             object-fit: cover;
+          }
+          .img-porto {
+            height: 400px;
+          }
+
+          @media(max-width: 425px) {
+            .img-porto {
+              height: 200px;
+            }
           }
         `}
       </style>

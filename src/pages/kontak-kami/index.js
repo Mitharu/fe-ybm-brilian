@@ -22,16 +22,60 @@ export default function ContactUs() {
 
   return (
     <React.Fragment>
-      {/* <div class="container-xxl py-5">
+      <div class="container-xxl py-5">
+        <Title>
+          Media Sosial & Kontak <span>YBM BRILiaN</span>
+        </Title>
         <div class="container">
           <div class="row wow fadeInUp">
-            <div class="col-lg-6 col-md-6">
-              <ul style={{ listStyle: "none"}}>
-                <li><i class="fa fa-instagram"></i> https://www.instagram.com/ybmbrilian/</li>
-                <li><i class="fas fa-youtube"></i> https://www.instagram.com/ybmbrilian/</li>
-                <li><i class="fa fa-envelope"></i> https://www.instagram.com/ybmbrilian/</li>
-                <li><i class="fa fa-envelope"></i> https://www.instagram.com/ybmbrilian/</li>
-              </ul>
+            <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+              <div class="row">
+                <div class="col-md-6">
+                  <p className="text-link">
+                    <span className="fab fa-youtube ic-circle yt"></span>
+                    <a
+                      className="link-socmed"
+                      href="https://www.youtube.com/results?search_query=ybm+brilian+tv"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      YBM BRILiaN TV
+                    </a>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p className="text-link">
+                    <span className="fab fa-instagram ic-circle ig"></span>
+                    <a
+                      className="link-socmed"
+                      href="https://www.instagram.com/ybmbrilian/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      @ybmbrilian
+                    </a>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p className="text-link">
+                    <span className="fa fa-envelope ic-circle email"></span>
+                    <a
+                      className="link-socmed"
+                      href="mailto:donasibrilian@gmail.com"
+                    >
+                      donasibrilian@gmail.com
+                    </a>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p className="text-link">
+                    <span className="fa fa-phone ic-circle phone"></span>
+                    <a className="link-socmed" href="tel:+62811808412">
+                      +62811808412
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
             {!isMobile && (
               <div class="col-lg-6 col-md-6">
@@ -44,7 +88,7 @@ export default function ContactUs() {
             )}
           </div>
         </div>
-      </div> */}
+      </div>
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row wow fadeInUp">
@@ -125,6 +169,49 @@ export default function ContactUs() {
 
           .img-surat {
             height: 450px;
+          }
+
+          .ic-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            margin: 0 5px 0 0;
+          }
+
+          .ic-circle.yt {
+            background: red;
+          }
+
+          .ic-circle.ig {
+            background: #833AB4;
+          }
+
+          .ic-circle.email {
+            background: #FCAF45;
+          }
+
+          .ic-circle.phone {
+            background: #F56040;
+          }
+
+          .text-link {
+            display: flex;
+            align-items: center;
+          }
+
+          .text-link .link-socmed {
+            font-size: 18px;
+            color: #000;
+            font-weight: 700;
+          }
+
+          .text-link .link-socmed:hover {
+            color: #00569c;
           }
 
           @media(max-width: 425px) {

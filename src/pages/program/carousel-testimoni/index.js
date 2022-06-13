@@ -12,11 +12,11 @@ const TitleAbout = styled.h2`
   text-align: ${(props) => props.align || 'left'};
 `
 
-export default function CarouselTestimoni({ data }) {
+export default function CarouselTestimoni({ data, isMobile }) {
   const settings = {
-    autoplay: true,
+    // autoplay: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: isMobile ? 1 : 2,
     slidesToScroll: 1,
     arrows: false,
     dots: true,
@@ -33,7 +33,7 @@ export default function CarouselTestimoni({ data }) {
             data.map((item, idx) => (
               <div key={String(idx)}>
                 <div className="col-md-12">
-                  <div className="row box-testimoni">
+                  <div className="box-testimoni">
                     <p className="desc">{`"${item.desc}"`}</p>
                     <p className="name">{item.name}</p>
                     <p className="as">{item.as}</p>
@@ -46,16 +46,32 @@ export default function CarouselTestimoni({ data }) {
       <style>
         {`
           .box-testimoni {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
             background: #F1FCFF;
             margin: 15px;
             padding: 15px;
             border-radius: 5px;
+            height: ${isMobile ? '550px' : '300px'};
           }
 
           .box-testimoni p.name {
             color: #000;
             font-weight: 500;
+            margin: 15px 0;
+            padding: 0;
+          }
+
+          .box-testimoni p.desc {
             margin: 0;
+            padding: 0;
+          }
+
+          .box-testimoni p.as {
+            margin: 0;
+            padding: 0;
           }
         `}
       </style>

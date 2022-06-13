@@ -21,7 +21,7 @@ export default function Carousel({ data }) {
         className="bg-dark hero-header wow fadeIn carousel-homepage"
       >
         <div>
-          <div className="main-banner ">
+          <div className="main-banner">
             <div className="row" style={{ height: `${dynamicHeight}px` }}>
               <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center list-group wow fadeInLeft">
                 <p className="main-text">Tetaplah asik dalam berbuat baik</p>
@@ -37,6 +37,7 @@ export default function Carousel({ data }) {
               </div>
               <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center wow fadeInRight">
                 <img
+                  className="img-main-banner"
                   src={require('../../assets/image/volunter.svg').default}
                   alt="volunter"
                 />
@@ -63,6 +64,7 @@ export default function Carousel({ data }) {
               </div>
               <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center wow fadeInRight">
                 <img
+                  className="img-main-banner"
                   src={require('../../assets/image/volunter2.svg').default}
                   alt="volunter"
                 />
@@ -119,6 +121,10 @@ export default function Carousel({ data }) {
             background-size: cover;
             height: auto;
             width: 100%;
+          }
+
+          .img-main-banner {
+            height: 450px;
           }
 
           .main-text {
@@ -182,6 +188,39 @@ export default function Carousel({ data }) {
             height: 350px;
             border-radius: 20px;
             box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%);
+          }
+
+          @media(max-width: 426px) {
+            .img-main-banner {
+              height: 200px;
+            }
+
+            .main-text {
+              font-size: 20px;
+              font-weight: 700;
+            }
+  
+            .mid-text {
+              font-size: 14px;
+              text-align: center;
+            }
+
+            .img-banner-loop {
+              height: 200px;
+            }
+
+            .box-banner-loop .title {
+              font-size: 20px;
+            }
+  
+            .box-banner-loop .desc {
+              font-size: 14px;
+              text-align: center;
+            }
+
+            .box-banner-loop {
+              padding: 0 20px;
+            }
           }
 
           .carousel-homepage button.slick-prev {

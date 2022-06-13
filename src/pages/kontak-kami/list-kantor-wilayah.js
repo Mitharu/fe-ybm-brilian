@@ -31,7 +31,7 @@ export default function ContactUs() {
           <div className="row">
             {kantor_wilayah &&
               kantor_wilayah.map((item, idx) => (
-                <div className="col-md-4 col-lg-4 container-wilayah">
+                <div key={String(idx)} className="col-md-4 col-lg-4 container-wilayah">
                   <div className="box-wilayah d-flex align-items-center justify-content-start list-group">
                     <span className="bg-span">
                       <i className={`${item.class} fa-2x build`}></i>

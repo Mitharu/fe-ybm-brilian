@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ImageWithFallback from '../image-with-fallback'
 
 const CardNewsContainer = styled.div`
+  position: relative;
   width: 100%;
   height: auto;
   color: #828282;
@@ -23,6 +24,7 @@ const CardNewsDesc = styled.p`
   font-size: 16px;
   margin: 15px 0;
   color: #000;
+  height: 120px;
 `
 
 export default function CardProgram({ imageSrc, imageHeight, title, desc, linkTo }) {

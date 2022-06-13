@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import ImageWithFallback from '../../components/image-with-fallback'
 import Carousel from './carousel'
 import CarouselHighlights from './carousel-highlights'
+import { mobileVersion } from '../../utils/helpers'
 import { program, program_banner } from '../../__json__'
 
 export default function Program() {
   const [detailProgram, setDetailProgram] = useState([])
+  const { dynamicWidth } = mobileVersion()
+  const isMobile = dynamicWidth <= 425 ? true : false
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -16,7 +19,7 @@ export default function Program() {
 
   return (
     <React.Fragment>
-      <Carousel data={program_banner} />
+      <Carousel data={program_banner} isMobile={isMobile} />
       <div class="container-xxl py-5 wow fadeInUp">
         <div class="container">
           <div class="row align-items-start justify-content-center">
@@ -50,7 +53,7 @@ export default function Program() {
           </div>
         </div>
       </div>
-      <CarouselHighlights data={detailProgram} />
+      <CarouselHighlights data={detailProgram} isMobile={isMobile} />
     </React.Fragment>
   )
 }

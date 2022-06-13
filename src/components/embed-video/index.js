@@ -17,9 +17,9 @@ export default function EmbedVideo({ id }) {
         auto
         src={`https://www.youtube.com/embed/${id}?controls=1`}
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
         width="100%"
         height="100%"
       ></iframe>

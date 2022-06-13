@@ -51,6 +51,7 @@ export default function Home() {
             {program &&
               program.map((item, idx) => (
                 <a
+                  key={String(idx)}
                   href={item.path}
                   class="col-lg-3"
                   style={{ textDecoration: 'none', color: '#666565' }}

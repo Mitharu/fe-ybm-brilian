@@ -874,8 +874,8 @@ export default function Layout({ children }) {
                   class="embed-responsive-item"
                   src=""
                   id="video"
-                  allowfullscreen
-                  allowscriptaccess="always"
+                  allowFullScreen
+                  allowScriptAccess="always"
                   allow="autoplay"
                   title="video-1"
                 ></iframe>

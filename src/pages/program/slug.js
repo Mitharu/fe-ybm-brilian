@@ -39,7 +39,7 @@ export default function Slug() {
             class="row align-items-center g-5"
             style={{ marginRight: 0, marginLeft: 0 }}
           >
-            <div class="col-lg-6 text-center text-lg-start animated slideInRight">
+            <div class="col-lg-6 animated slideInRight">
               <TitleAbout>
                 Program <span>{detail?.title}</span>
               </TitleAbout>
@@ -99,6 +99,19 @@ export default function Slug() {
           </div>
         </div>
       </div>
+      <style>
+        {`
+          .img-about-desc {
+            height: 450px;
+          }
+          
+          @media(max-width: 425px) {
+            .img-about-desc {
+              height: 250px;
+            }
+          }
+        `}
+      </style>
     </React.Fragment>
   )
 }

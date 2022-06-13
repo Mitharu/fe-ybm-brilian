@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from 'react-slick'
 import CardProgram from '../../../components/card-program-list'
 
-export default function CarouselHighlights({ data }) {
+export default function CarouselHighlights({ data, isMobile }) {
   const settings = {
     // autoplay: true,
     speed: 500,
@@ -22,9 +22,10 @@ export default function CarouselHighlights({ data }) {
                   <div className="row">
                     <CardProgram
                       imageSrc={item.urlImage}
-                      imageHeight="200px"
+                      imageHeight={isMobile ? "150px" : "200px"}
                       title={item.title}
                       desc={item.desc}
+                      isMobile={isMobile}
                     />
                   </div>
                 </div>

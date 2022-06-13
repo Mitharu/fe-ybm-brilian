@@ -17,7 +17,7 @@ export default function CarouselNews({ data }) {
       <React.Fragment>
         {data &&
           data.map((item, idx) => (
-            <div className="col-lg-3 col-md-3">
+            <div key={String(idx)} className="col-lg-3 col-md-3">
               <CardNews
                 imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
                 imageHeight="180px"
