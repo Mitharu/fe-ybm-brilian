@@ -2,17 +2,19 @@ import React from 'react'
 import Slider from 'react-slick'
 import CardBlog from '../../../components/card-blog'
 
-export default function CarouselNews({ data }) {
+export default function CarouselNews({ data, isMobile }) {
   const settings = {
     // dots: true,
     autoplay: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: isMobile ? 1 : 4,
+    slidesToScroll: isMobile ? 1 : 4,
     arrows: true,
   }
 
-  if (data && data.length <= 3) {
+  if (data && data.length === 0) return null
+
+  if (data && data.length <= 3 && !isMobile) {
     return (
       <React.Fragment>
         {data &&
@@ -45,9 +47,7 @@ export default function CarouselNews({ data }) {
                   imageSrc={`${process.env.REACT_APP_IMAGE_BLOG}/${item.image}`}
                   imageHeight="250px"
                   title={item.name}
-                  label={`${new Date(item.created_at).toDateString()}, ${
-                    item?.blog_type?.name
-                  }`}
+                  label={item.blog_type?.name || 'blog'}
                 />
               </div>
             </div>

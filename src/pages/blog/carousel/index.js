@@ -3,26 +3,37 @@ import styled from 'styled-components'
 import Slider from 'react-slick'
 import ImageWithFallback from '../../../components/image-with-fallback'
 
-const TitleCarousel = styled.div`
+const TitleCarousel = styled.a`
   display: inline-block;
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 700;
-  color: #00569c;
+  color: #000;
   padding: 10px;
   text-align: left;
   width: 100%;
-  margin-top: 50px 0 0 0;
+  margin: 20px 0 0 0;
   padding: 0;
+  &:hover {
+    cursor: pointer;
+    color: #fea116;
+  }
 `
 
-// const DescCarousel = styled.div`
-//   display: inline-block;
-//   font-size: 30px;
-//   font-weight: 600;
-//   color: #000;
-//   padding: 10px;
-//   width: 100%;
-// `
+const DescCarousel = styled.p`
+  font-size: 18px;
+  margin: 5px 0;
+  // padding: 10px;
+  font-weight: 400;
+  color: #333333;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  height: 160px;
+  transition: all 0.2s ease;
+`
 
 export default function Carousel({ data }) {
   const settings = {
@@ -34,18 +45,17 @@ export default function Carousel({ data }) {
     dots: true,
   }
 
+  if (data && data.length === 0) return null
+
   return (
-    <div className="container-xxl py-0 bg-dark hero-header wow fadeInUp">
+    <div className="container-xxl py-0 hero-header wow fadeInUp">
       <div className="container my-5 py-5 carousel-blog">
         <Slider {...settings}>
           {data &&
             data.map((item, idx) => (
               <div key={String(idx)}>
                 <div className="col-md-12">
-                  <div
-                    className="row box-carousel"
-                    style={{ background: '#f2f2f2' }}
-                  >
+                  <div className="row box-carousel">
                     <div className="col-lg-6 col-md-6">
                       <ImageWithFallback
                         src={`${process.env.REACT_APP_IMAGE_BLOG}/${item.image}`}
@@ -66,14 +76,10 @@ export default function Carousel({ data }) {
                       </div> */}
                     </div>
                     <div className="col-lg-6 col-md-6">
-                      <TitleCarousel>{item.name}</TitleCarousel>
-                      {/* <DescCarousel dangerouslySetInnerHTML={{ __html: item.isi_konten }} /> */}
-                      <a
-                        href={`/blog/${item.id}`}
-                        className="btn btn-primary mt-5"
-                      >
-                        baca selengkapnya ...
-                      </a>
+                      <TitleCarousel href={`/blog/${item.id}`}>
+                        {item.name}
+                      </TitleCarousel>
+                      <DescCarousel>{item.deck}</DescCarousel>
                     </div>
                   </div>
                 </div>

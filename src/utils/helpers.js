@@ -104,7 +104,7 @@ export const transformNews = (data) => {
 
 export const transformBlog = (data) => {
   return {
-    main: data && data.slice(0, 5),
-    list: data && data.slice(5, data.length),
+    main: data && data.slice(0, 8),
+    list: data && data.slice(8, data.length),
   }
 }

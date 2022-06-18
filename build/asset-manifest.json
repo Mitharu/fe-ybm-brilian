@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.8ca959fe.chunk.js",
-    "main.js.map": "/static/js/main.8ca959fe.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c3e6af48.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c3e6af48.js.map",
-    "static/js/2.f41f80bf.chunk.js": "/static/js/2.f41f80bf.chunk.js",
-    "static/js/2.f41f80bf.chunk.js.map": "/static/js/2.f41f80bf.chunk.js.map",
+    "main.js": "/static/js/main.7fce637e.chunk.js",
+    "main.js.map": "/static/js/main.7fce637e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8d777ebf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8d777ebf.js.map",
+    "static/js/2.2ebfb0ff.chunk.js": "/static/js/2.2ebfb0ff.chunk.js",
+    "static/js/2.2ebfb0ff.chunk.js.map": "/static/js/2.2ebfb0ff.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.f41f80bf.chunk.js.LICENSE.txt": "/static/js/2.f41f80bf.chunk.js.LICENSE.txt",
+    "static/js/2.2ebfb0ff.chunk.js.LICENSE.txt": "/static/js/2.2ebfb0ff.chunk.js.LICENSE.txt",
     "static/media/1.webp": "/static/media/1.5f074318.webp",
     "static/media/2.webp": "/static/media/2.1b0f9e8e.webp",
     "static/media/2001.png": "/static/media/2001.96670c90.png",
@@ -86,8 +86,8 @@
     "static/media/volunter2.svg": "/static/media/volunter2.a0f56683.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c3e6af48.js",
-    "static/js/2.f41f80bf.chunk.js",
-    "static/js/main.8ca959fe.chunk.js"
+    "static/js/runtime-main.8d777ebf.js",
+    "static/js/2.2ebfb0ff.chunk.js",
+    "static/js/main.7fce637e.chunk.js"
   ]
 }

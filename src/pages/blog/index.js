@@ -3,12 +3,14 @@ import Carousel from './carousel'
 import ReactLoading from 'react-loading'
 // import CardBlog from '../../components/card-blog'
 import CarouselBlog from './carousel-blog'
-import { transformBlog } from '../../utils/helpers'
+import { transformBlog, mobileVersion } from '../../utils/helpers'
 import { get } from '../../api'
 
 export default function Blog() {
   const [banner, setBanner] = useState()
   const [loading, setIsLoading] = useState(false)
+  const { dynamicWidth } = mobileVersion()
+  const isMobile = dynamicWidth <= 425 ? true : false
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -46,8 +48,9 @@ export default function Blog() {
       <Carousel data={banner && banner.main} />
       <div className="container-xxl py-0 bg-dark hero-header wow fadeInUp">
         <div className="container my-5 py-5 carousel-blog">
+          <h2>Untuk Kamu</h2>
           <div className="row">
-            <CarouselBlog data={banner && banner.list} />
+            <CarouselBlog data={banner && banner.list} isMobile={isMobile} />
           </div>
         </div>
       </div>
