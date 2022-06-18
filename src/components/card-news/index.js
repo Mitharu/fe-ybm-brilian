@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ImageWithFallback from '../image-with-fallback'
+import { dateIndonesia } from '../../utils/helpers'
 import { Link } from 'react-router-dom'
 
 const CardNewsContainer = styled.div`
@@ -61,7 +62,7 @@ export default function CardNews({
           imageHeight={imageHeight}
         />
         <CardNewsTitle>{title}</CardNewsTitle>
-        <CardNewsDate>{new Date(desc).toDateString()}</CardNewsDate>
+        <CardNewsDate>{dateIndonesia(desc)}</CardNewsDate>
       </CardNewsContainer>
     </Link>
   )

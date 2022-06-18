@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ImageWithFallback from '../image-with-fallback'
+import { dateIndonesia } from '../../utils/helpers'
 import { Link } from 'react-router-dom'
 
 const CardNewsSidebarContainer = styled.div`
@@ -66,7 +67,7 @@ export default function CardNewsSidebar({
         />
         <CardNewsTitle>{title}</CardNewsTitle>
         <CardNewsDate>
-          <span>Admin</span> | {new Date(desc).toDateString()}
+          <span>Admin</span> | {dateIndonesia(desc)}
         </CardNewsDate>
       </CardNewsSidebarContainer>
     </Link>

@@ -16,6 +16,36 @@ export const shimmerImgLoader = (w, h) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`
 
+export const monthIndonesia = (params) => {
+  const val = Number(params)
+  const month = {
+    1: 'Januari',
+    2: 'Februari',
+    3: 'Maret',
+    4: 'April',
+    5: 'Mei',
+    6: 'Juni',
+    7: 'Juli',
+    8: 'Agustus',
+    9: 'September',
+    10: 'Oktober',
+    11: 'November',
+    12: 'Desember',
+  }
+
+  return month[val]
+}
+
+export const dateIndonesia = (params) => {
+  const first = new Date(params).toLocaleString();
+  const split = first.split(',');
+  const onlyDate = split[0];
+  const transform = onlyDate.split('/');
+
+  return `${transform[1]} ${monthIndonesia(transform[0])} ${transform[2]}`
+
+}
+
 export const toBase64 = (str) =>
   typeof window === 'undefined'
     ? Buffer.from(str).toString('base64')

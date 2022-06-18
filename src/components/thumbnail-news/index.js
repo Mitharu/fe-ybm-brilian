@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ImageWithFallback from '../image-with-fallback'
+import { dateIndonesia } from '../../utils/helpers'
 import { Link } from 'react-router-dom'
 
 const ThumbnailNewsContainer = styled.div`
@@ -52,7 +53,7 @@ export default function CardNews({ imageSrc, imageHeight, date, linkTo }) {
         />
         <ThumbnailNewsTitleContainer>
           <ThumbnailNewsTitle>
-            <span>Admin</span> | {new Date(date).toDateString()}
+            <span>Admin</span> | {dateIndonesia(date)}
           </ThumbnailNewsTitle>
         </ThumbnailNewsTitleContainer>
       </ThumbnailNewsContainer>
