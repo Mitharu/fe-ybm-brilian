@@ -10,7 +10,6 @@ import { transformNews, mobileVersion } from '../../utils/helpers'
 
 export default function News() {
   const [news, setNews] = useState()
-  const [allNews, setAllNews] = useState()
   const [blog, setBlog] = useState()
   const [video, setVideo] = useState([])
   const { dynamicWidth } = mobileVersion()
@@ -24,9 +23,8 @@ export default function News() {
         endpoint: 'berita',
       })
         .then((res) => {
-          if (res?.StatusCode === 200 && res?.Error === false)
-            setNews(transformNews(res.Data[0]?.berita))
-          setAllNews(res.Data[0]?.berita)
+          if (res && res.StatusCode === 200 && res.Error === false)
+            setNews(transformNews(res.Data))
         })
         .catch((err) => {
           console.log('err ->', err)
@@ -102,12 +100,12 @@ export default function News() {
           </div>
         </div>
       </div>
-      {allNews && allNews.length > 0 ? (
+      {news && news.all && news.all.length > 0 ? (
         <div className="container-xxl py-0 bg-dark hero-header wow fadeInUp">
           <div className="container my-5 py-5 carousel-blog">
             <h2 style={{ marginBottom: '20px' }}>Berita Lainnya</h2>
-            {allNews &&
-              allNews.map((item, idx) => (
+            {news.all &&
+              news.all.map((item, idx) => (
                 <div className="row" style={{ marginBottom: '30px' }}>
                   <div
                     key={String(idx)}

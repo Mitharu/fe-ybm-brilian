@@ -18,8 +18,8 @@ export default function Home() {
         endpoint: 'berita',
       })
         .then((res) => {
-          if (res?.StatusCode === 200 && res?.Error === false)
-            setNews(transformNews(res.Data[0].berita))
+          if (res && res.StatusCode === 200)
+          setNews(transformNews(res.Data))
         })
         .catch((err) => {
           console.log('err ->', err)
@@ -39,6 +39,8 @@ export default function Home() {
     }
     fetchData()
   }, [])
+
+  console.log("news =>", news)
 
   return (
     <React.Fragment>

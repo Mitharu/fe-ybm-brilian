@@ -93,12 +93,16 @@ export const mobileVersion = () => {
 }
 
 export const transformNews = (data) => {
-  const mainSidebar = data && data.slice(0, 4)
-  const list = data && data.slice(4, data.length)
+  const mainSidebar = data && data.filter((item) => item.name.toLowerCase() === "thumbnail")
+  let tmp = []
+  data && data.filter((item) => item.name.toLowerCase() !== "thumbnail").map((i) => {
+    tmp = tmp.concat(i.berita)
+  })
   return {
-    main: mainSidebar.slice(0, 2),
-    sidebar: mainSidebar.slice(2, mainSidebar.length),
-    list,
+    main: mainSidebar.berita,
+    sidebar: tmp.slice(0, 2),
+    list: tmp.slice(2, 6),
+    all: tmp,
   }
 }
 
