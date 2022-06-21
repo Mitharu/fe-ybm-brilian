@@ -45,14 +45,21 @@ export default function Blog() {
 
   return (
     <React.Fragment>
-      <Carousel data={banner && banner.main} />
+      <Carousel data={banner && banner.slider} />
       <div className="container-xxl py-0 bg-dark hero-header wow fadeInUp">
-        <div className="container my-5 py-5 carousel-blog">
-          <h2>Untuk Kamu</h2>
-          <div className="row">
-            <CarouselBlog data={banner && banner.list} isMobile={isMobile} />
-          </div>
-        </div>
+        {banner && banner.list
+          ? banner.list.map((item, idx) => (
+              <div key={String(idx)} className="container my-5 py-5 carousel-blog">
+                <h2 style={{ textTransform: "capitalize" }}>{item.label}</h2>
+                <div className="row">
+                  <CarouselBlog
+                    data={item.data}
+                    isMobile={isMobile}
+                  />
+                </div>
+              </div>
+            ))
+          : null}
       </div>
     </React.Fragment>
   )

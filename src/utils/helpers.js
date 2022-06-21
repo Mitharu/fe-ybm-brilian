@@ -37,13 +37,12 @@ export const monthIndonesia = (params) => {
 }
 
 export const dateIndonesia = (params) => {
-  const first = new Date(params).toLocaleString();
-  const split = first.split(',');
-  const onlyDate = split[0];
-  const transform = onlyDate.split('/');
+  const first = new Date(params).toLocaleString()
+  const split = first.split(',')
+  const onlyDate = split[0]
+  const transform = onlyDate.split('/')
 
   return `${transform[1]} ${monthIndonesia(transform[0])} ${transform[2]}`
-
 }
 
 export const toBase64 = (str) =>
@@ -93,11 +92,15 @@ export const mobileVersion = () => {
 }
 
 export const transformNews = (data) => {
-  const mainSidebar = data && data.filter((item) => item.name.toLowerCase() === "thumbnail")
+  const mainSidebar =
+    data && data.filter((item) => item.name.toLowerCase() === 'thumbnail')
   let tmp = []
-  data && data.filter((item) => item.name.toLowerCase() !== "thumbnail").map((i) => {
-    tmp = tmp.concat(i.berita)
-  })
+  data &&
+    data
+      .filter((item) => item.name.toLowerCase() !== 'thumbnail')
+      .map((i) => {
+        tmp = tmp.concat(i.berita)
+      })
   return {
     main: mainSidebar.berita,
     sidebar: tmp.slice(0, 2),
@@ -107,8 +110,32 @@ export const transformNews = (data) => {
 }
 
 export const transformBlog = (data) => {
+  let tmp = []
+  data &&
+    data.map((item) => {
+      tmp = tmp.concat({
+        label: item.blog_type?.name,
+        data: [item],
+      })
+    })
+
+  let output = []
+
+  tmp.forEach(function (item) {
+    var existing = output.filter(function (v, i) {
+      return v.label === item.label
+    })
+    if (existing.length) {
+      var existingIndex = output.indexOf(existing[0])
+      output[existingIndex].data = output[existingIndex].data.concat(
+        item.data,
+      )
+    } else {
+      output.push(item)
+    }
+  })
   return {
-    main: data && data.slice(0, 8),
-    list: data && data.slice(8, data.length),
+    slider: data && data.slice(0, 8),
+    list: output
   }
 }
