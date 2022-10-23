@@ -101,8 +101,13 @@ export default function Carousel({ data }) {
                   <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
                     <picture>
                       <img
-                        className="img-banner-loop"
+                        className="img-banner-loop d-none d-lg-block"
                         src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
+                        alt={`img-banner-${idx}`}
+                      />
+                      <img
+                        className="img-banner-loop d-lg-none d-block"
+                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img_mobile}`}
                         alt={`img-banner-${idx}`}
                       />
                     </picture>
