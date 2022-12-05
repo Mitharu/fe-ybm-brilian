@@ -20,7 +20,7 @@ export default function Carousel({ data }) {
         style={{ width: '100%', boxSizing: 'border-box' }}
         className="bg-dark hero-header wow fadeIn carousel-homepage"
       >
-        <div>
+        {/* <div>
           <div className="main-banner">
             <div className="row" style={{ height: `${dynamicHeight}px` }}>
               <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center list-group wow fadeInLeft">
@@ -71,49 +71,60 @@ export default function Carousel({ data }) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {data &&
           data.map((item, idx) => (
             <div key={String(idx)}>
-              <div
-                className="main-banner-loop"
-                style={{
-                  backgroundImage: `url(${process.env.REACT_APP_IMAGE_BANNER}/${item.img})`,
-                  backgroundSize: 'cover',
-                  height: 'auto',
-                  width: '100%',
-                  position: 'relative',
-                }}
-              >
+              <a href={item.link} target="_blank">
                 <div
-                  className="row"
+                  className="main-banner-loop"
                   style={{
-                    height: `${dynamicHeight}px`,
-                    background: 'rgb(0, 86, 156, 0.9)',
+                    backgroundImage: `url(${process.env.REACT_APP_IMAGE_BANNER}/${item.img})`,
+                    backgroundSize: 'cover',
+                    height: 'auto',
+                    width: '100%',
+                    position: 'relative',
+                    marginTop: '5.78125rem',
                   }}
                 >
-                  <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center list-group">
+                  <div
+                    className="row"
+                    style={{
+                      height: `${dynamicHeight}px`,
+                      // background: 'rgb(0, 86, 156, 0.9)',
+                      // width: '100%',
+                    }}
+                  >
+                    {/* <div className="d-flex align-items-center justify-content-center wow fadeInRight">
+                      <img
+                        className="img-banner-loop"
+                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img_mobile}`}
+                        alt={`img-banner-${idx}`}
+                      />
+                    </div> */}
+                    {/* <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center list-group">
                     <div className="box-banner-loop">
                       <p className="title">{item.title}</p>
                       <p className="desc">{item.banner_desc}</p>
                     </div>
-                  </div>
-                  <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
-                    <picture>
-                      <img
+                  </div> */}
+                    {/* <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
+                      <picture>
+                        <img
                         className="img-banner-loop d-none d-lg-block"
                         src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
                         alt={`img-banner-${idx}`}
                       />
-                      <img
-                        className="img-banner-loop d-lg-none d-block"
-                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img_mobile}`}
-                        alt={`img-banner-${idx}`}
-                      />
-                    </picture>
+                        <img
+                          className="img-banner-loop d-lg-none d-block"
+                          src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img_mobile}`}
+                          alt={`img-banner-${idx}`}
+                        />
+                      </picture>
+                    </div> */}
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           ))}
       </Slider>

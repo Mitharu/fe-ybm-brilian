@@ -34,6 +34,21 @@ export default function CarouselTestimoni({ data, isMobile }) {
               <div key={String(idx)}>
                 <div className="col-md-12">
                   <div className="box-testimoni">
+                    <div class="row align-self-center justify-content-center">
+                      {!!item?.foto && (
+                        <div class="col-md-12 pb-4">
+                          <picture>
+                            <img
+                              src={item?.foto}
+                              alt=""
+                              height={'300px'}
+                              width={'300px'}
+                              style={{ objectFit: 'cover' }}
+                            />
+                          </picture>
+                        </div>
+                      )}
+                    </div>
                     <p className="desc">{`"${item.desc}"`}</p>
                     <p className="name">{item.name}</p>
                     <p className="as">{item.as}</p>
@@ -54,7 +69,7 @@ export default function CarouselTestimoni({ data, isMobile }) {
             margin: 15px;
             padding: 15px;
             border-radius: 5px;
-            height: ${isMobile ? '550px' : '300px'};
+            //height: ${isMobile ? '550px' : '300px'};
           }
 
           .box-testimoni p.name {

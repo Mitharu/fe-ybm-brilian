@@ -2,7 +2,6 @@
   "name": "frontend_ybm_brillian",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://localhost/HOP%20Project/YBM%20Brilian/Front%20End/fe-ybm-brilian/build/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

@@ -123,8 +123,17 @@ body::-webkit-scrollbar {
     transition: .5s;
 }
 
+.navbar-dark .navbar-brand #text-logo {
+    max-height: 40px;
+    transition: .5s;
+}
+
 .sticky-top.navbar-dark .navbar-brand img {
     max-height: 45px;
+}
+
+.sticky-top.navbar-dark .navbar-brand #text-logo {
+    max-height: 30px !important;
 }
 
 @media (max-width: 991.98px) {
@@ -155,7 +164,8 @@ body::-webkit-scrollbar {
         top: 0;
         left: 0;
         z-index: 999;
-        background: transparent !important;
+        /* background: transparent !important; */
+        background: var(--blue) !important;
     }
     
     .sticky-top.navbar-dark {

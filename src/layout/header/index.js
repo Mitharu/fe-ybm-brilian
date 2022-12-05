@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [data, setData] = useState()
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users")
+      const res = await fetch('https://jsonplaceholder.typicode.com/users')
       const datas = await res.json()
       setData(datas)
     }
@@ -15,7 +15,11 @@ export default function Header() {
 
   return (
     <header id="home" className="welcome-hero">
-      <div id="header-carousel" className="carousel slide carousel-fade" data-ride="carousel">
+      <div
+        id="header-carousel"
+        className="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
         <ol className="carousel-indicators">
           {data &&
             data.map((_, idx) => (
@@ -23,7 +27,7 @@ export default function Header() {
                 key={String(idx)}
                 data-target="#header-carousel"
                 data-slide-to={`${idx}`}
-                className={`${idx === 0 ? "active" : ""}`}
+                className={`${idx === 0 ? 'active' : ''}`}
               >
                 <span className="small-circle"></span>
               </li>
@@ -32,7 +36,10 @@ export default function Header() {
         <div className="carousel-inner" role="listbox">
           {data &&
             data.map((item, idx) => (
-              <div key={String(idx)} className={`item ${idx === 0 ? "active" : ""}`}>
+              <div
+                key={String(idx)}
+                className={`item ${idx === 0 ? 'active' : ''}`}
+              >
                 <div className={`single-slide-item slide${idx}`}>
                   <div className="container">
                     <div className="welcome-hero-content">
@@ -43,10 +50,11 @@ export default function Header() {
                               <h4>{item.name}</h4>
                               <h2>{item.username}</h2>
                               <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                eiuiana smod tempor ut labore et dolore magna aliqua. Ut enim ad
-                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip.
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit, sed do eiuiana smod tempor ut
+                                labore et dolore magna aliqua. Ut enim ad minim
+                                veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip.
                               </p>
                             </div>
                           </div>
@@ -54,7 +62,10 @@ export default function Header() {
                         <div className="col-sm-5">
                           <div className="single-welcome-hero">
                             <div className="welcome-hero-img">
-                              <img src={require("../../assets/image/photo-1.jpeg")} alt="slider" />
+                              <img
+                                src={require('../../assets/image/photo-1.jpeg')}
+                                alt="slider"
+                              />
                             </div>
                           </div>
                         </div>
@@ -69,10 +80,10 @@ export default function Header() {
       <div className="top-area">
         <div className="header-area">
           <nav
-            className="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"
-            data-minus-value-desktop="70"
-            data-minus-value-mobile="55"
-            data-speed="1000"
+            className="navbar"
+            // data-minus-value-desktop="70"
+            // data-minus-value-mobile="55"
+            // data-speed="1000"
           >
             <div className="top-search">
               <div className="container">
@@ -80,7 +91,11 @@ export default function Header() {
                   <span className="input-group-addon">
                     <i className="fa fa-search"></i>
                   </span>
-                  <input type="text" className="form-control" placeholder="Search" />
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search"
+                  />
                   <span className="input-group-addon close-search">
                     <i className="fa fa-times"></i>
                   </span>
@@ -101,14 +116,17 @@ export default function Header() {
                   Logo YBM Brillian
                 </a>
               </div>
-              <div className="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+              <div
+                className="collapse navbar-collapse menu-ui-design"
+                id="navbar-menu"
+              >
                 <ul
                   className="nav navbar-nav navbar-center"
                   data-in="fadeInDown"
                   data-out="fadeOutUp"
                 >
                   <li>
-                    <Link to="/">home</Link>
+                    <Link to="/">home 1</Link>
                   </li>
                   <li>
                     <Link to="/about-us">About Us</Link>

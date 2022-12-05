@@ -93,37 +93,37 @@ module.exports = {
   ],
   nilai_nilai: [
     {
-      img: require('../assets/image/nilai/verified.svg').default,
+      img: require('../assets/image/nilai/v1_integritas.png').default,
       title: 'Integritas',
       desc: 'Bertindak sesuai dengan koridor peraturan dan etika organisasi serta agama islam',
       bgColor: '#F2C94C',
     },
     {
-      img: require('../assets/image/nilai/salaman.svg').default,
+      img: require('../assets/image/nilai/v4_kolaborasi.png').default,
       title: 'Kolaborasi',
       desc: 'Membangun sinergi untuk mencapai tujuan bersama',
       bgColor: '#333333',
     },
     {
-      img: require('../assets/image/nilai/tie.svg').default,
+      img: require('../assets/image/nilai/v2_profesional.png').default,
       title: 'Profesional',
       desc: 'Menjalankan profesi secara benar dan melakukannya menurut etika',
       bgColor: '#2D9CDB',
     },
     {
-      img: require('../assets/image/nilai/medali.svg').default,
+      img: require('../assets/image/nilai/v5_inspiratif.png').default,
       title: 'Inspiratif',
       desc: 'Berupaya menjadi inspirasi dan memberi pengaruh untuk menjadi lebih baik',
       bgColor: '#EB5757',
     },
     {
-      img: require('../assets/image/nilai/balance.svg').default,
+      img: require('../assets/image/nilai/v3 _resiliensi.png').default,
       title: 'Resiliensi',
       desc: 'Kemampuan untuk beradaptasi dan tetap teguh dalam situasi sulit',
       bgColor: '#56CCF2',
     },
     {
-      img: require('../assets/image/nilai/leader.svg').default,
+      img: require('../assets/image/nilai/v6_kepemimpinan.png').default,
       title: 'Kepemimpinan',
       desc: 'Mempengaruhi, memotivasi, dan menggerakkan orang lain sehingga bersedia mengikuti arahannya untuk mencapai tujuan bersama',
       bgColor: '#F2994A',
@@ -174,12 +174,12 @@ module.exports = {
   program: [
     {
       path: '/program/ekonomi',
-      urlImage: require('../assets/image/program/ekonomi.png').default,
+      urlImage: require('../assets/image/program/prog_ekonomi.JPG').default,
       title: 'Ekonomi',
       slug: 'ekonomi',
       desc: 'Program pendayagunaan zakat berupa bantuan stimulus modal,pendampingan dan managemen keuangan',
       desc_long:
-        'YBM BRILiaN berkomitmen meningkatkan kualitas hidup dan mobilitas vertikal keluarga dhuafa melalui pembinaan berwiraswasta dengan memanfaatkan potensi lokal yang memiliki nilai jual dan senantiasa membantu dari sisi pendanaan dan juga pengelolaan keuangan. Dengan itu diharapkan para mustahik dapat meningkatkan taraf hidup dan dapat juga berkreasi dengan potensi sekitar.',
+        'YBM BRILiaN berupaya untuk meningkatkan harkat hidup para mustahik melalui program pemberdayaan ekonomi mutsahik income generating dengan pemberian stimulus modal serta pendampingan usaha baik yang berbasis individual maupun komunal.',
       items: [
         {
           urlImage: require('../assets/image/program/IMG_1673.webp').default,
@@ -265,12 +265,12 @@ module.exports = {
     },
     {
       path: '/program/sosial',
-      urlImage: require('../assets/image/program/sosial.png').default,
+      urlImage: require('../assets/image/program/program_sosial.JPG').default,
       title: 'Sosial',
       slug: 'sosial',
       desc: 'Program pendayagunaan zakat berupa pemenuhan kebutuhan dasar, spiritual, pembinaan keluarga dan kemanusiaan',
       desc_long:
-        'YBM BRILiaN terus berkontribusi dan cepat tanggap terhadap kondisi sosial yang membutuhkan rangkulan dan senantiasa menghubungkan para mustahik dengan muzakki sehingga menciptakan keharmonisan dan mendukung keberlangsungan hidup dan kualitas hidup masing masing individu.',
+        'YBM BRILiaN berupaya untuk memenuhi kebutuhan mendasar dengan menyediakan akses air bersih, santunan natura, dan penguatan keluarga dhuafa. ',
       items: [
         {
           urlImage: require('../assets/image/program/IMG_9606.webp').default,
@@ -337,14 +337,13 @@ module.exports = {
           },
         },
         {
-          urlImage: require('../assets/image/program/478A4678.webp').default,
+          urlImage: require('../assets/image/program/Wash_program.JPG').default,
           banner: require('../assets/image/program/banner-program-3.svg')
             .default,
           title: 'Wash Program',
           slug: 'wash-program',
           desc: 'program yang berfokus untuk pembangun infrastruktur sumber air bersih di kawasan terdapak kekeringan ataupun wilayah yang belum memiliki sumber air bersih.',
-          desc_long:
-            'program yang berfokus untuk pembangun infrastruktur sumber air bersih di kawasan terdapak kekeringan ataupun wilayah yang belum memiliki sumber air bersih.',
+          desc_long: `Wash program fokus pada pembangunan infrastruktur penyedia air bersih bagi masyarakat kurang mampu yang berada di wilayah potensi kekeringan. Burhanuddin Nogo, Ketua MUI Kec. Fatukopa Air merupakan sumber kehidupan bagi manusia, dengan mengalirnya air tersebut maka mengalir pula amal jariyah bagi para muzakki. Saya mewakili penerima manfaat mengucapkan terima kasih atas program yg dilaksanakan. Semoga Allah SWT membalas kebaikan Bapak/Ibu muzakki,".`,
           desc_short: 'Program Sosial YBM BRIlian',
           benefit: {
             title: 'Ruang Lingkup Program',
@@ -397,19 +396,17 @@ module.exports = {
       slug: 'pendidikan',
       desc: 'Program pendayagunaan zakat berupa bantuan beasiswa, pembinaan dan penunjang pendidikan',
       desc_long:
-        'YBM BRILiaN berkomitmen meningkatkan kualitas hidup dan mobilitas vertikal keluarga dhuafa melalui pendidikan inklusif, hal ini diwujudkan melalui tiga program program unggulan beasiswa yaitu Smart Scholarship (pendidikan menengah hingga tinggi), dan Bright Scholarship (pendidikan tinggi dengan pembinaan intensif).',
+        'Pendayagunaan zakat berupa bantuan beasiswa, pembinaan dan penunjang pendidikan.',
       items: [
         {
-          urlImage:
-            require('../assets/image/program/Logo-Bright-Scholarship.webp')
-              .default,
+          urlImage: require('../assets/image/program/bright.jpg').default,
           banner: require('../assets/image/program/banner-program-1.svg')
             .default,
           title: 'Bright Scholarship',
           slug: 'bright-scholarship',
           desc: 'Beasiswa yang diperuntukan bagi mahasiswa jenjang sarjana (S1) di PTN terpilih berupa bantuan biaya kuliah dan uang bulanan.',
           desc_long:
-            'Bright Scholarship, merupakan beasiswa yang diperuntukan bagi mahasiswa jenjang sarjana (S1) di PTN terpilih berupa bantuan biaya kuliah dan uang bulanan. Awardee juga dibekali pembinaan yang komprehensif secara berkala, terencana, dan terarah guna membentuk pemimpin masa depan yang berkarakter, berdaya saing, dan mengaplikasikan nilai Islam dalam kehidupan.',
+            'Merupakan beasiswa yang diperuntukan bagi mahasiswa jenjang sarjana (S1) di PTN terpilih berupa bantuan biaya kuliah dan uang bulanan. Awardee juga dibekali pembinaan yang komprehensif secara berkala, terencana, dan terarah guna membentuk pemimpin masa depan yang berkarakter, berdaya saing, dan mengaplikasikan nilai Islam dalam kehidupan.',
           desc_short: 'Beasiswa rumpun S1 PTN terpilih',
           benefit: {
             title: 'Benefit Program',
@@ -442,20 +439,40 @@ module.exports = {
             manfaat: '1,862 Jiwa',
           },
           testimoni: [
+            // {
+            //   desc: 'Aku percaya, hidup adalah perjuangan yang harus dimenangkan. Selalu ada tantangan yang harus dihadapi. Saat kesusahan menerpaku, saat itulah Allah mewariskan semangat. Mengalahkan rasa takut adalah kunci utama.',
+            //   name: 'Mardi Suaib Harahap',
+            //   as: 'Alumni Bright Scholarship USU',
+            // },
+            // {
+            //   desc: 'Di asrama, kami dibina. Kehidupan di asrama membuatku lebih mengenal diri dan terlatih untuk berbagi kepada sesama dan diarahkan untuk melaksanakan pemberdayaan masyarakat.',
+            //   name: 'Eli',
+            //   as: 'Alumni Bright Scholarship UNDIP',
+            // },
+            // {
+            //   desc: 'Di program Bright Scholarship banyak sekali hal baru yang kudapatkan. Mulai dari kegiatan bermasyarakat dengan lingkungan sekitar, mengajarkan adik-adik SMA untuk mampu lulus SBMPTN, dan banyak kegiatan bermanfaat lainnya.',
+            //   name: 'Zuffy Audhinna',
+            //   as: 'Alumni Bright Scholarship ITB',
+            // },
             {
-              desc: 'Aku percaya, hidup adalah perjuangan yang harus dimenangkan. Selalu ada tantangan yang harus dihadapi. Saat kesusahan menerpaku, saat itulah Allah mewariskan semangat. Mengalahkan rasa takut adalah kunci utama.',
-              name: 'Mardi Suaib Harahap',
-              as: 'Alumni Bright Scholarship USU',
+              foto: require('../assets/image/program/IlhamAwardeeIPB.jpg')
+                .default,
+              desc: 'Berkat bantuan materil maupun non-material dari beasiswa Bright Scholarship saya dapat mengeksplorasi berbagai kegiatan yang ada di kampus maupun luar kampus. Senang dan bangga sekali bisa jadi awardee Bright. Terima kasih sebesar-besarnya atas segala Amanah dan kesempatan yang diberikan YBM BRILiaN terutama para muzaki yang telah membantu dan mensupport program bantuan dana Pendidikan ini. Semoga kedepannya lebih banyak lagi program kebaikan yang mendatangkan banyak manfaat.',
+              name: 'Ilham Subandoro',
+              as: 'Mawapres ITB',
             },
             {
-              desc: 'Di asrama, kami dibina. Kehidupan di asrama membuatku lebih mengenal diri dan terlatih untuk berbagi kepada sesama dan diarahkan untuk melaksanakan pemberdayaan masyarakat.',
-              name: 'Eli',
-              as: 'Alumni Bright Scholarship UNDIP',
+              foto: require('../assets/image/program/Azka.jpeg').default,
+              desc: 'Program Beasiswa sangatlah membantu bukan hanya dari segi pembiayaan perkuliahan akan tetapi pembinaan, penguatan skill yang diberikan, lingkungan dan kawan, dan harapan baru setelah bergabung menjadi awardee. Terima kasih YBM BRILiaN dan muzzaki yang telah menjadi perantara kebaikan Allah pada para awardee. Semoga beasiswa ini bisa menjadi tempat bagi saya dan kawan-kawan untuk tidak berhenti pada label penerima manfaat, namun terus berkembang menjadi pemberi manfaat.',
+              name: 'Azka Khalishatur Rahmah',
+              as: 'Universitas Padjajaran',
             },
             {
-              desc: 'Di program Bright Scholarship banyak sekali hal baru yang kudapatkan. Mulai dari kegiatan bermasyarakat dengan lingkungan sekitar, mengajarkan adik-adik SMA untuk mampu lulus SBMPTN, dan banyak kegiatan bermanfaat lainnya.',
-              name: 'Zuffy Audhinna',
-              as: 'Alumni Bright Scholarship ITB',
+              foto: require('../assets/image/program/Siti Nuraeni_H34190046.jpeg')
+                .default,
+              desc: 'Bright scholarship adalah wadah untuk mengembangkan diri dan bertemu dengan teman-teman yang punya kesamaan visi misi sehingga dapat saling support. Saya sangat berterima kasih kepada YBM BRILiaN dan para muzzaki yang telah memberikan fasilitas luas biasa kepada para awardee. Ini sangat membantu saya dalam proses pengembangan diri. Bright Scholarship adalah keluar yang selalu memotivasi.',
+              name: 'Siti Nur’aeni',
+              as: 'IPB University',
             },
           ],
           portofolio: {
@@ -468,15 +485,14 @@ module.exports = {
           },
         },
         {
-          urlImage: require('../assets/image/program/logo-my-scholarship.webp')
-            .default,
+          urlImage: require('../assets/image/program/my_scho.jpg').default,
           banner: require('../assets/image/program/banner-program-6.svg')
             .default,
           title: 'My Scholarship',
           slug: 'my-scholarship',
           desc: 'Beasiswa yang diperuntukan bagi siswa dan mahasiswa tingkat SD hingga sarjana (S1) berupa tunjangan prestasi selama 1 tahun.',
           desc_long:
-            'My Scholarship merupakan program beasiswa yang diperuntukan untuk siswa/siswi mulai dari jenjang sekolah dasar (SD) hingga perguruan tinggi yang berasal dari keluarga mustahik. Beasiswa diberikan berupa uang tunai setiap bulannya dengan besaran sesuai jenjang pendidikan.',
+            'Merupakan program beasiswa yang diperuntukkan bagi siswa/siswi mulai dari jenjang Sekolah Dasar (SD) sampai Perguruan Tinggi yang berasal dari keluarga mustahik. Beasiswa diberikan dalam bentuk uang tunai setiap bulannya dengan besaran sesuai jenjang pendidikan.',
           desc_short: 'Beasiswa rumpun SD s.d Perguruan Tinggi',
           benefit: {
             title: 'Benefit Program',
@@ -503,14 +519,14 @@ module.exports = {
           },
         },
         {
-          urlImage: require('../assets/image/program/logo-smart.webp').default,
+          urlImage: require('../assets/image/program/smart.jpg').default,
           banner: require('../assets/image/program/banner-program-4.svg')
             .default,
           title: 'Smart Scholarship',
           slug: 'smart-scholarship',
           desc: 'Beasiswa yang diberikan kepada mahasiswa S1 dari perguruan tinggi negeri mitra berupa tunjangan prestasi selama 1 tahun.',
           desc_long:
-            'Smart Scholarship merupakan program beasiswa yang diberikan kepada siswa/i SMA sederajat kelas XI dan mahasiswa S1 dari PTN Mitra berupa tunjangan prestasi selama 1 tahun. Awardee juga dibekali pembinaan secara berkala, terencana, dan terarah guna menghasilkan SDM yang unggul, berkarakter, memiliki kompetensi, dan berdaya saing. Awardee beasiswa ini berkesempatan mengikuti seleksi Bright Scholarship melalui jalur afirmasi.',
+            'Merupakan program beasiswa yang diberikan kepada mahasiswa S1 dari PTN Mitra berupa tunjangan prestasi selama 1 tahun. Awardee juga dibekali pembinaan secara berkala, terencana, dan terarah guna menghasilkan SDM yang unggul, berkarakter, memiliki kompetensi, dan berdaya saing.',
           desc_short: 'Beasiswa rumpun S1 PTN mitra',
           benefit: {
             title: 'Ruang Lingkup Program',
@@ -531,20 +547,41 @@ module.exports = {
             manfaat: '2,363 Jiwa',
           },
           testimoni: [
+            // {
+            //   desc: 'Hal menarik yang saya dapatkan selama menjadi awardee Smart Scholarship selain menambah relasi pertemanan adalah saya mendapatkan banyak pengalaman baru dari pelatihan/pembinaan yang diberikan. Semoga kedepannya Smart Scholarship lebih berkembang dan semakin luas manfaat yang diberikan.',
+            //   name: 'Mukhlis Abdullatif',
+            //   as: 'Awardee Smart UNNES',
+            // },
+            // {
+            //   desc: 'Menjadi salah satu bagian dari Smarter YBM BRILiaN adalah hal yang amat saya syukuri, banyak ilmu dan juga manfaat yang bisa saya petik untuk menata lebih baik perilaku diri dalam menjalani kehidupan, mengajarkan diri untuk tidak lupa dengan kewajiban dan sunnah, memberikan kajian ilmu, serta menanamkan sebuah motivasi selayaknya Tut Wuri Handayani dorongan dari belakang agar para mahasiswa-mahasiswi Smarter bisa terus meningkatkan prestasi dan amalan shaleh-nya agar bisa meraih suksesnya dunia dan juga akhirat.',
+            //   name: 'Aninda Waskita Devi',
+            //   as: 'Awardee Smart UIN Malang',
+            // },
+            // {
+            //   desc: 'Yang menarik dalam SMART Scholarship ini, bukan hanya memberikan tunjangan, namun juga intensif dalam pembinaan dan amalan sehari-hari kita sebagai seorang muslim. Menjadi bagian dari penerima manfaat SMART Scholarship membuat saya juga terpacu untuk peduli kepada sesama. Karena dengan saya menjadi penerima manfaat, saya pun harus memberikan manfaat kepada orang lain. Semoga dengan bekal ilmu, wawasan, dan pembinaan dari SMART Scholarship ini dapat menambah kebermanfaatan saya di lingkungan sekitar serta sukses di dunia maupun akhirat.',
+            //   name: 'Eogenie Lakilaki',
+            //   as: 'Awardee Bright UNSRI Batch 6 (Awardee Afirmasi Smart UNSRI)',
+            // },
             {
-              desc: 'Hal menarik yang saya dapatkan selama menjadi awardee Smart Scholarship selain menambah relasi pertemanan adalah saya mendapatkan banyak pengalaman baru dari pelatihan/pembinaan yang diberikan. Semoga kedepannya Smart Scholarship lebih berkembang dan semakin luas manfaat yang diberikan.',
-              name: 'Mukhlis Abdullatif',
-              as: 'Awardee Smart UNNES',
+              foto: require('../assets/image/program/Moch_Fariz_Fauzi.jpg')
+                .default,
+              desc: 'Aktif, rajin, dan berprestasi adalah hal yang selalu dibina selama menjadi awardee SMART Scholarship. Saya bersyukur bisa mendapatkan banyak bantuan, doa, dukungan untuk berprestasi bahkan mendekatkan dari kepada Allah SWT. Mendapatkan banyak teman yang hebat dan memilki kerja sama yang kuat. Terima kasih SMART Scholarship.',
+              name: 'Moch Fariz Fauzi – Awardee Smart UNEJ',
+              as: 'Juara 3 Lomba Fotografi Nasional Edufest FKIP UKI',
             },
             {
-              desc: 'Menjadi salah satu bagian dari Smarter YBM BRILiaN adalah hal yang amat saya syukuri, banyak ilmu dan juga manfaat yang bisa saya petik untuk menata lebih baik perilaku diri dalam menjalani kehidupan, mengajarkan diri untuk tidak lupa dengan kewajiban dan sunnah, memberikan kajian ilmu, serta menanamkan sebuah motivasi selayaknya Tut Wuri Handayani dorongan dari belakang agar para mahasiswa-mahasiswi Smarter bisa terus meningkatkan prestasi dan amalan shaleh-nya agar bisa meraih suksesnya dunia dan juga akhirat.',
-              name: 'Aninda Waskita Devi',
-              as: 'Awardee Smart UIN Malang',
+              foto: require('../assets/image/program/Aninda_Waskita_Devi.jpg')
+                .default,
+              desc: 'Menjadi salah satu bagian dari Smarter YBM BRILiaN adalah hal yang amat saya syukuri, banyak ilmu dan juga manfaat yang bisa saya petik utuk menata lebih baik perilaku diri dalam menjalani kehidupan. Mengajarkan diri untuk tidak lupa dengan kewajiban dan Sunnah, memberikan kajian ilmu serta menanamkan sebuah motivasi selayaknya Tut Wuti Handayani dorongan dari belakang agar para mahasiswamahasiswi Smarter bisa terus meningkatkan prestasi dan alaman shalehnya agar bisa meraih suksesnya dunia dan akhirat.',
+              name: 'Aninda Waskita Dev',
+              as: 'Awardee Smart UIN Malang – Finalis BMC Business Plant Tingkat Nasional Unnes',
             },
             {
-              desc: 'Yang menarik dalam SMART Scholarship ini, bukan hanya memberikan tunjangan, namun juga intensif dalam pembinaan dan amalan sehari-hari kita sebagai seorang muslim. Menjadi bagian dari penerima manfaat SMART Scholarship membuat saya juga terpacu untuk peduli kepada sesama. Karena dengan saya menjadi penerima manfaat, saya pun harus memberikan manfaat kepada orang lain. Semoga dengan bekal ilmu, wawasan, dan pembinaan dari SMART Scholarship ini dapat menambah kebermanfaatan saya di lingkungan sekitar serta sukses di dunia maupun akhirat.',
-              name: 'Eogenie Lakilaki',
-              as: 'Awardee Bright UNSRI Batch 6 (Awardee Afirmasi Smart UNSRI)',
+              foto: require('../assets/image/program/Eogenie_Lakilaki.jpg')
+                .default,
+              desc: 'Yang menarik dalam Beasiswa Smart Scholarship ini bukan hanya memberikan tunjangan namun juga intensif dalam pembinaan dan alaman sehari-hari sebagai seorang muslim. Menjadi bagian dari penerima manfaat, saya pun harus memberikan manfaat kepada orang lain. Semoga dengan bekal ilmu, wawasan, dan pembinaan dapat menambah kebermanfaatan saya di lingkungan sekitar dan sukses dunia akhirat.',
+              name: 'Eogenie LakiLaki – Awardee Smart UNSRI',
+              as: 'Juara 3 Paper Writing Competition Tingkat Nasional Tahun 2021',
             },
           ],
           portofolio: {

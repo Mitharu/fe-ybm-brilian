@@ -53,6 +53,12 @@ export default function Layout({ children }) {
               alt="Logo"
               height="100px"
             />
+            <img
+              src={require('../assets/image/tulisan_ybmArtboard_2.png').default}
+              alt="Logo"
+              id="text-logo"
+              height="40px"
+            />
           </a>
           <button
             className="navbar-toggler"
@@ -67,7 +73,9 @@ export default function Layout({ children }) {
               <a
                 href="/"
                 className={`nav-item nav-link ${
-                  url?.pathname.length <=1 && url?.pathname === '/' ? 'active' : ''
+                  url?.pathname.length <= 1 && url?.pathname === '/'
+                    ? 'active'
+                    : ''
                 }`}
               >
                 Beranda
@@ -262,7 +270,10 @@ export default function Layout({ children }) {
                   <div className="col-lg-6 d-flex align-items-center justify-content-center">
                     <img
                       className="img-fluid"
-                      src={require('../assets/image/sumbangan.png').default}
+                      src={
+                        require('../assets/image/definisi_ybmbrilian.jpg')
+                          .default
+                      }
                       alt=""
                     />
                   </div>
@@ -271,16 +282,12 @@ export default function Layout({ children }) {
                       Apasih YBM Brilian ?
                     </h1>
                     <p className="animated slideInLeft mb-4 pb-2">
-                      YBM BRILiaN merupakan Lembaga Filantropi Islam pengelola
-                      Dana Zakat, Infak, Sedekah, dan Wakaf yang dilaksanakan
-                      secara professional, sesuai dengan aturan dan ketentuan
-                      dalam syariat islam. YBM BRILiaN berkomitmen meningkatkan
-                      kualitas hidup dan mobilitas vertikal keluarga dhuafa
-                      melalui serangkaian program Pendidikan inklusif,
-                      pemberdayaan ekonomi, serta program sosial kemanusiaan
-                      sehingga terwujud masyarakat berdaya.
+                      YBM BRILiaN (d/h YBM BRI) merupakan Lembaga Filantropi
+                      Islam yang mengelola dana zakat, infak dan sedekah yang
+                      dilaksanakan secara professional sesuai dengan UU No. 23
+                      tahun 2011, Keputusan Menteri Agama dan fatwa DSN MUI.
                     </p>
-                    <a href="/about-us" class="btn btn-primary">
+                    <a href="/tentang-kami" class="btn btn-primary">
                       Lihat lebih lanjut
                     </a>
                   </div>

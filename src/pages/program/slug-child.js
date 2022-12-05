@@ -64,6 +64,8 @@ export default function Slug() {
                   src={subDetail?.urlImage}
                   alt=""
                   height={isMobile ? '150px' : '350px'}
+                  width="500px"
+                  style={{ objectFit: 'cover' }}
                 />
               </picture>
             </div>
@@ -124,7 +126,11 @@ export default function Slug() {
                 </div>
                 <div class="col-lg-6 col-md-6 d-flex align-items-start justify-content-center">
                   <picture>
-                    <img className="img-porto" src={subDetail?.portofolio?.images} alt="" />
+                    <img
+                      className="img-porto"
+                      src={subDetail?.portofolio?.images}
+                      alt=""
+                    />
                   </picture>
                 </div>
               </div>

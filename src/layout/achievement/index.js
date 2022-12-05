@@ -5,7 +5,7 @@ export default function Achievement() {
     <div className="container-xxl py-5 wow fadeInUp container-achieve">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-3 text-center box-achieve">
+          <div class="col-lg-4 text-center box-achieve">
             <div>
               <img
                 src={
@@ -19,11 +19,11 @@ export default function Achievement() {
               class="animated slideInLeft mb-4 pb-2"
               style={{ fontSize: '20px', fontWeight: '400' }}
             >
-              <h2 style={{ color: '#F26624' }}>930.123</h2>
+              <h2 style={{ color: '#F26624' }}>2.299.842</h2>
               <span style={{ fontSize: '16px' }}>Penerima manfaat</span>
             </p>
           </div>
-          <div class="col-lg-3 text-center box-achieve">
+          <div class="col-lg-4 text-center box-achieve">
             <div>
               <img
                 src={
@@ -36,11 +36,11 @@ export default function Achievement() {
               class="animated slideInLeft mb-4 pb-2"
               style={{ fontSize: '20px', fontWeight: '400' }}
             >
-              <h2 style={{ color: '#F26624' }}>Rp 930.000.000</h2>
-              <span style={{ fontSize: '16px' }}>Total donasi</span>
+              <h2 style={{ color: '#F26624' }}>Rp 843.407.729.566</h2>
+              <span style={{ fontSize: '16px' }}>Total Pendayagunaan</span>
             </p>
           </div>
-          <div class="col-lg-3 text-center box-achieve">
+          {/* <div class="col-lg-3 text-center box-achieve">
             <div>
               <img
                 src={
@@ -56,7 +56,7 @@ export default function Achievement() {
               <h2 style={{ color: '#F26624' }}>122.982</h2>
               <span style={{ fontSize: '16px' }}>Jumlah donatur</span>
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
       <style>
@@ -67,7 +67,9 @@ export default function Achievement() {
 
           .container-achieve::before {
             position: absolute;
-            background-image: url(${require("../../assets/image/rectangle-1.svg").default});
+            background-image: url(${
+              require('../../assets/image/rectangle-1.svg').default
+            });
             background-size: contain;
             background-repeat: no-repeat;
             content: "";
@@ -80,7 +82,9 @@ export default function Achievement() {
 
           .container-achieve::after {
             position: absolute;
-            background-image: url(${require("../../assets/image/rectangle-1.svg").default});
+            background-image: url(${
+              require('../../assets/image/rectangle-1.svg').default
+            });
             background-size: contain;
             background-repeat: no-repeat;
             content: "";

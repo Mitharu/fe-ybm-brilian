@@ -63,12 +63,13 @@ export default function AboutUs() {
                 <span>BRILiaN</span>
               </TitleAbout>
               <p class="mb-4 pb-2 mt-4">
-                YBM BRILiaN merupakan Lembaga Filantropi Islam pengelola Dana
-                Zakat, Infak, Sedekah, dan Wakaf yang dilaksanakan secara
-                professional, sesuai dengan aturan dan ketentuan dalam syariat
-                islam. YBM BRILiaN berkomitmen meningkatkan kualitas hidup dan
-                mobilitas vertikal keluarga dhuafa melalui serangkaian program
-                Pendidikan inklusif, pemberdayaan ekonomi, serta program sosial
+                YBM BRILiaN (d/h YBM BRI) merupakan Lembaga Filantropi Islam
+                yang mengelola dana zakat, infak dan sedekah yang dilaksanakan
+                secara professional sesuai dengan UU No. 23 tahun 2011,
+                Keputusan Menteri Agama dan fatwa DSN MUI. YBM BRILiaN
+                berkomitmen meningkatkan kualitas hidup dan mobilitas vertikal
+                keluarga dhuafa melalui serangkaian intervensi berupa program
+                pendidikan inklusif, pemberdayaan ekonomi, serta program sosial
                 kemanusiaan sehingga terwujud masyarakat berdaya.
               </p>
             </div>
@@ -96,7 +97,7 @@ export default function AboutUs() {
               </TitleVision>
               <p class="mb-4 pb-2 mt-4 text-light">
                 Terwujudnya masyarakat berdaya melalui pengelolaan filantropi
-                islam yang adaptif, inspiratif, dan berkarakter
+                islam yang adaptif, inspiratif, dan berkarakter.
               </p>
             </div>
             <div class="col-lg-12">
@@ -118,14 +119,14 @@ export default function AboutUs() {
                     Mewujudkan layanan prima dalam rangka intermediasi peran
                     muzaki dan mustahik melalui penghimpunan dan pemanfaatan
                     filantropi Islam di lingkungan BRI dan masyarakat pada
-                    umumnya
+                    umumnya.
                   </p>
                 </li>
                 <li>
                   <p>
                     Menyelenggarakan program pemberdayaan yang sinergis,
                     berdampak, berorientasi pada kemandirian dan partisipasi
-                    guna mewujudkan masyarakat berdaya
+                    guna mewujudkan masyarakat berdaya.
                   </p>
                 </li>
                 <li>
@@ -153,11 +154,11 @@ export default function AboutUs() {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
+                    // justifyContent: 'center',
                     flexDirection: 'column',
                   }}
                 >
-                  <img src={item.img} alt={`img-nilai-${idx}`} />
+                  <img src={item.img} height="128" alt={`img-nilai-${idx}`} />
                   <h3 style={{ color: '#F26624' }}>{item.title}</h3>
                   <p style={{ margin: 0, padding: 0 }}>{item.desc}</p>
                 </div>
@@ -218,12 +219,12 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div class="container-xxl">
+      {/* <div class="container-xxl">
         <TitleAbout margin="0" align="center">
           Organization
         </TitleAbout>
         <Organization />
-      </div>
+      </div> */}
       <div class="container-xxl py-5 animated slideInRight">
         <div class="container">
           <TitleAbout margin="0" align="center">
@@ -276,7 +277,9 @@ export default function AboutUs() {
           ul.list-misi li p::before {
             position: absolute;
             content: "";
-            background-image: url(${require("../../assets/image/circle-check-solid.svg").default});
+            background-image: url(${
+              require('../../assets/image/circle-check-solid.svg').default
+            });
             background-repeat: no-repeat;
             background-size: contain;
             z-index: 1;
