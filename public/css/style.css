@@ -511,3 +511,16 @@ body::-webkit-scrollbar {
     padding-right: 0;
     border-right: none;
 }
+
+.dhn-wa-button {
+    background: #25d366;
+    width: 62px;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.dhn-wa-ves {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
