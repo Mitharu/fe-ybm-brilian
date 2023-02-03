@@ -20,108 +20,24 @@ export default function Carousel({ data }) {
         style={{ width: '100%', boxSizing: 'border-box' }}
         className="bg-dark hero-header wow fadeIn carousel-homepage"
       >
-        {/* <div>
-          <div className="main-banner">
-            <div className="row" style={{ height: `${dynamicHeight}px` }}>
-              <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center list-group wow fadeInLeft">
-                <p className="main-text">Tetaplah asik dalam berbuat baik</p>
-                <p className="mid-text">
-                  Yuk berbuat baik supaya kerjaan lancar dan hidup makin berkah
-                </p>
-                <a
-                  className="btn-donation"
-                  href={process.env.REACT_APP_DONASI_URL}
-                >
-                  Ayo Donasi!
-                </a>
-              </div>
-              <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center wow fadeInRight">
-                <img
-                  className="img-main-banner"
-                  src={require('../../assets/image/volunter.svg').default}
-                  alt="volunter"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="main-banner">
-            <div className="row" style={{ height: `${dynamicHeight}px` }}>
-              <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center list-group wow fadeInLeft">
-                <p className="main-text">
-                  Tiada rugi untuk berbagi ambil manfaat suatu saat nanti
-                </p>
-                <p className="mid-text">
-                  Yuk berbagi terhadap sesama sekarang juga!
-                </p>
-                <a
-                  className="btn-donation"
-                  href={process.env.REACT_APP_DONASI_URL}
-                >
-                  Ayo Donasi!
-                </a>
-              </div>
-              <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center wow fadeInRight">
-                <img
-                  className="img-main-banner"
-                  src={require('../../assets/image/volunter2.svg').default}
-                  alt="volunter"
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
         {data &&
           data.map((item, idx) => (
             <div key={String(idx)}>
               <a href={item.link} target="_blank">
-                <div
-                  className="main-banner-loop"
-                  style={{
-                    backgroundImage: `url(${process.env.REACT_APP_IMAGE_BANNER}/${item.img})`,
-                    backgroundSize: 'cover',
-                    height: 'auto',
-                    width: '100%',
-                    position: 'relative',
-                    marginTop: '5.78125rem',
-                  }}
-                >
+                <div className="main-banner-loop">
                   <div
                     className="row"
                     style={{
-                      height: `${dynamicHeight}px`,
-                      // background: 'rgb(0, 86, 156, 0.9)',
+                    //   height: `${dynamicHeight}px`,
+                    //   // background: 'rgb(0, 86, 156, 0.9)',
                       // width: '100%',
                     }}
                   >
-                    {/* <div className="d-flex align-items-center justify-content-center wow fadeInRight">
-                      <img
-                        className="img-banner-loop"
-                        src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img_mobile}`}
-                        alt={`img-banner-${idx}`}
-                      />
-                    </div> */}
-                    {/* <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center list-group">
-                    <div className="box-banner-loop">
-                      <p className="title">{item.title}</p>
-                      <p className="desc">{item.banner_desc}</p>
-                    </div>
-                  </div> */}
-                    {/* <div className="col-lg-6 col-md-6 d-flex align-items-center justify-content-center">
-                      <picture>
-                        <img
-                        className="img-banner-loop d-none d-lg-block"
+                    <img
+                        className="img-banner-loop w-100"
                         src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
                         alt={`img-banner-${idx}`}
                       />
-                        <img
-                          className="img-banner-loop d-lg-none d-block"
-                          src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img_mobile}`}
-                          alt={`img-banner-${idx}`}
-                        />
-                      </picture>
-                    </div> */}
                   </div>
                 </div>
               </a>
@@ -201,9 +117,9 @@ export default function Carousel({ data }) {
 
           .img-banner-loop {
             position: relative;
-            height: 350px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%);
+            width : 100%;
+            // border-radius: 20px;
+            // box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%);
           }
 
           @media(max-width: 426px) {

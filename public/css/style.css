@@ -524,3 +524,7 @@ body::-webkit-scrollbar {
     bottom: 20px;
     right: 20px;
 }
+
+.contaier-xl.container-cus-1366 {
+    max-width: 1366px;
+}
