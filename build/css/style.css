@@ -137,6 +137,10 @@ body::-webkit-scrollbar {
 }
 
 @media (max-width: 991.98px) {
+    .img-ybm {
+        width: 23px;
+    }
+
     .sticky-top.navbar-dark {
         position: relative;
     }
@@ -158,6 +162,10 @@ body::-webkit-scrollbar {
 }
 
 @media (min-width: 992px) {
+    .img-ybm {
+        width: 40px;
+    }
+
     .navbar-dark {
         position: absolute;
         width: 100%;

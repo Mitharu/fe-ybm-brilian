@@ -74,8 +74,7 @@ export default function Layout({ children }) {
                 src={require('../assets/image/tulisan_ybmArtboard_2.png').default}
                 alt="Logo"
                 id="text-logo"
-                height="40px"
-                class="d-none d-lg-block"
+                class="my-auto img-ybm"
               />
             </a>
             <button
