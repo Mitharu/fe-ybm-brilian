@@ -117,6 +117,7 @@ export default function News() {
                       title={item.name}
                       desc={item.deck}
                       date={item.created_at}
+                      linkTo={`berita/${item.id}`}
                     />
                   </div>
                 </div>

@@ -140,6 +140,11 @@ body::-webkit-scrollbar {
     .img-ybm {
         width: 210px;
     }
+    
+    .carousel-banner-home {
+        padding-top: 900px;
+        height: 8800px;
+    }
 
     .sticky-top.navbar-dark {
         position: relative;
@@ -179,6 +184,19 @@ body::-webkit-scrollbar {
     .sticky-top.navbar-dark {
         position: fixed;
         background: var(--blue) !important;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1154px) {
+    .carousel-banner-home {
+        padding-top: 115px!important;
+    }
+}
+
+@media (min-width: 1155px) {
+    .carousel-banner-home {
+        padding-top: 93px;
     }
 }
 

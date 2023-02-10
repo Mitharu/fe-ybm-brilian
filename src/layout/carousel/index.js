@@ -33,11 +33,13 @@ export default function Carousel({ data }) {
                       // width: '100%',
                     }}
                   >
-                    <img
+                    <a href={item.link} target="_blank">
+                      <img
                         className="img-banner-loop w-100"
                         src={`${process.env.REACT_APP_IMAGE_BANNER}/${item.img}`}
                         alt={`img-banner-${idx}`}
                       />
+                    </a>
                   </div>
                 </div>
               </a>

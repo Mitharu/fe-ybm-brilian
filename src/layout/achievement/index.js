@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Achievement() {
+export default function Achievement({manfaat, pemberdayaan}) {
   return (
     <div className="container-xxl py-5 wow fadeInUp container-achieve">
       <div class="container">
@@ -19,7 +19,7 @@ export default function Achievement() {
               class="animated slideInLeft mb-4 pb-2"
               style={{ fontSize: '20px', fontWeight: '400' }}
             >
-              <h2 style={{ color: '#F26624' }}>2.299.842</h2>
+              <h2 style={{ color: '#F26624' }}>{manfaat}</h2>
               <span style={{ fontSize: '16px' }}>Penerima manfaat</span>
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function Achievement() {
               class="animated slideInLeft mb-4 pb-2"
               style={{ fontSize: '20px', fontWeight: '400' }}
             >
-              <h2 style={{ color: '#F26624' }}>Rp 843.407.729.566</h2>
+              <h2 style={{ color: '#F26624' }}>{pemberdayaan}</h2>
               <span style={{ fontSize: '16px' }}>Total Pendayagunaan</span>
             </p>
           </div>

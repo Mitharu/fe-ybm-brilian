@@ -59,7 +59,7 @@ export default function Layout({ children }) {
           <span className="sr-only">Loading...</span>
         </div>
       </div> */}
-      <div className="position-relative p-0">
+      <div className="position-relative px-0 pb-0 carousel-banner-home">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
         <a href="/" className="navbar-brand p-0">
               {/* <h1 className="text-primary m-0">
@@ -277,9 +277,7 @@ export default function Layout({ children }) {
             </div>
           ) : (
             <React.Fragment>
-              <div style={{ 
-                // paddingTop: "93px" 
-              }}>
+              <div >
                 <Carousel data={banner} />
               </div>
               {
