@@ -4,9 +4,7 @@ import { toBase64, shimmerImgLoader } from '../../utils/helpers'
 
 const ImageFb = styled.img`
   width: 100%;
-  height: ${(props) => props.imageHeight || '200px'};
   margin: ${(props) => props.margin || '0'};
-  object-fit: ${(props) => props.fit || 'cover'};
 `
 
 export default function ImageWithFallback({

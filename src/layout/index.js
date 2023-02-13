@@ -66,12 +66,14 @@ export default function Layout({ children }) {
                 <i className="fa fa-hand-holding me-3"></i>YBM Brillian
               </h1> */}
               <img
-                src={require('../assets/image/logo.png').default}
+                // src={require('../assets/image/logo.png').default}
+                src="/img/logo.png"
                 alt="Logo"
                 height="100px"
               />
               <img
-                src={require('../assets/image/tulisan_ybmArtboard_2.png').default}
+                // src={require('../assets/image/tulisan_ybmArtboard_2.png').default}
+                src="/img/tulisan_ybmArtboard_2.png"
                 alt="Logo"
                 id="text-logo"
                 class="my-auto img-ybm"
@@ -194,6 +196,14 @@ export default function Layout({ children }) {
                     Lainnya
                   </a>
                   <div className="dropdown-menu m-0">
+                    {/* <a
+                      href="/blog"
+                      className={`dropdown-item ${
+                        url?.pathname === '/blog' ? 'active' : ''
+                      }`}
+                    >
+                      Blog
+                    </a> */}
                     <a
                       href={process.env.REACT_APP_BRILIAN_TV}
                       className="dropdown-item"
@@ -330,7 +340,8 @@ export default function Layout({ children }) {
           <div className="row" style={{ marginRight: 0, marginLeft: 0 }}>
             <div className="col-lg-4 text-center">
               <img
-                src={require('../assets/image/logo.png').default}
+                // src={require('../assets/image/logo.png').default}
+                src="/img/logo.png"
                 alt="logo-ybm"
                 width={150}
               />
