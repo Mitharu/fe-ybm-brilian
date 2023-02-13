@@ -142,8 +142,7 @@ body::-webkit-scrollbar {
     }
     
     .carousel-banner-home {
-        padding-top: 900px;
-        height: 8800px;
+        padding-top: none;
     }
 
     .sticky-top.navbar-dark {

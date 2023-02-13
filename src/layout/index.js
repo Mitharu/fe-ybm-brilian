@@ -195,14 +195,6 @@ export default function Layout({ children }) {
                   </a>
                   <div className="dropdown-menu m-0">
                     <a
-                      href="/blog"
-                      className={`dropdown-item ${
-                        url?.pathname === '/blog' ? 'active' : ''
-                      }`}
-                    >
-                      Blog
-                    </a>
-                    <a
                       href={process.env.REACT_APP_BRILIAN_TV}
                       className="dropdown-item"
                     >
