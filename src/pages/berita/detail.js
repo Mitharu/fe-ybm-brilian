@@ -42,7 +42,7 @@ function NewsDetail() {
       })
         .then((res) => {
           if (res?.StatusCode === 200 && res?.Error === false)
-            setNews(res.Data[0]?.berita)
+            setNews(res.Data);
         })
         .catch((err) => {
           console.log('err ->', err)
@@ -69,13 +69,13 @@ function NewsDetail() {
 
   return (
     <React.Fragment>
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-5">
-            <div class="col-lg-9 col-md-9 text-center text-lg-start animated slideInRight">
+      <div className="container-xxl py-5">
+        <div className="container">
+          <div className="row g-5">
+            <div className="col-lg-9 col-md-9 text-center text-lg-start animated slideInRight">
               <TitleNews>{dataDetail.name}</TitleNews>
               <p>
-                <i class="fa fa-user"></i> Admin |{' '}
+                <i className="fa fa-user"></i> Admin |{' '}
                 {dataDetail?.created_at
                   ? new Date(dataDetail.created_at).toDateString()
                   : null}
@@ -90,30 +90,41 @@ function NewsDetail() {
                 className="mb-4 pb-2 mt-4 text-berita"
               />
             </div>
-            <div class="col-lg-3 col-md-3 animated fadeIn">
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
+            <div className="col-lg-3 col-md-3 animated fadeIn">
+              <div className="row">
+                <div className="col-lg-12 col-md-12">
                   <TitleSidebar>
                     Popular News{' '}
                     <span>
-                      <i class="fa fa-chevron-right"></i>
+                      <i className="fa fa-chevron-right"></i>
                     </span>
                   </TitleSidebar>
                 </div>
               </div>
-              <div class="row">
+              <div className="row">
                 {news &&
-                  news.map((item, idx) => (
-                    <div class="col-lg-12 col-md-12 mb-4" key={String(idx)}>
-                      <CardNews
-                        imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${item.img}`}
-                        imageHeight="240px"
-                        title={item.name}
-                        desc={`8 April 2022`}
-                        linkTo={`/news/${item.id}`}
-                      />
-                    </div>
-                  ))}
+                  news.map(function(item){
+                    return(
+                      <>
+                      {
+                        item.berita.map(function(items, idx_2){
+                          return(
+                            <div className="col-lg-12 col-md-12 mb-4" >
+                              <CardNews
+                                imageSrc={`${process.env.REACT_APP_IMAGE_BERITA}/${items.img}`}
+                                imageHeight="240px"
+                                title={items.name}
+                                desc={`8 April 2022`}
+                                linkTo={`/news/${item.id}`}
+                              />
+                            </div>
+                          )
+                        })
+                      }
+                      </>
+                    )
+                  }
+                )}
               </div>
             </div>
           </div>
