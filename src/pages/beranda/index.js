@@ -69,7 +69,7 @@ export default function Home() {
                         alt={`img-program-${idx}`}
                         imageHeight="250px"
                       />
-                      <h2>{item.title}</h2>
+                      <h2 className='mt-3'>{item.title}</h2>
                       <p>{item.desc}</p>
                     </div>
                   </div>

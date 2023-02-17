@@ -130,41 +130,41 @@ module.exports = {
     },
   ],
   milestone: [
-    {
-      year: 1992,
-      url: require('../assets/image/milestone/1992.png').default,
-      desc: 'Direktur BRI, Bapak Winarto Soemarto melakukan langkah-langkah dasar dengan memasukkan zakat sebagai bagian program kerja Bapekis BRI',
-    },
+    // {
+    //   year: 1992,
+    //   url: require('../assets/image/milestone/1992.png').default,
+    //   desc: 'Direktur BRI, Bapak Winarto Soemarto melakukan langkah-langkah dasar dengan memasukkan zakat sebagai bagian program kerja Bapekis BRI',
+    // },
     {
       year: 2001,
       url: require('../assets/image/milestone/2001.png').default,
       desc: 'BOD BRI terdiri dari H. Rudjito, H. Ahmad Askandar, H. Akhmad Amien Mastur, Hendrawan Tranggana, Krisna Wijaya, Hj. Gayanti Rawit Angreni, Bapekis BRI, dan Pinwil sepakat mendirikan Yayasan Baitul Maal Bank Rakyat Indonesia, dengan Purwanto sebagai Ketua Yayasan',
     },
-    {
-      year: 2002,
-      url: require('../assets/image/milestone/2002.png').default,
-      desc: 'Direktur BRI, Bapak Winarto Soemarto melakukan langkah-langkah dasar dengan memasukan zakat sebagai bagian program kerja Bapekis BRI (pengukuhan lembaga)',
-    },
+    // {
+    //   year: 2002,
+    //   url: require('../assets/image/milestone/2002.png').default,
+    //   desc: 'Direktur BRI, Bapak Winarto Soemarto melakukan langkah-langkah dasar dengan memasukan zakat sebagai bagian program kerja Bapekis BRI (pengukuhan lembaga)',
+    // },
     {
       year: 2011,
       url: require('../assets/image/milestone/2011.png').default,
       desc: 'Dengan dikukuhkannya lembaga Yayasan Baitul Maal BRI, maka terbitlah SK (Surat Keputusan) pemotongan gaji pekerja BRI untuk zakat sesuai ketentuan batas nishab',
     },
-    {
-      year: 2015,
-      url: require('../assets/image/milestone/2015.png').default,
-      desc: 'Sebagai rejuvenate lembaga untuk mengikuti dinamika lembaga, maka dilakukan penyesuaian akta yayasan',
-    },
-    {
-      year: 2016,
-      url: require('../assets/image/milestone/2016.png').default,
-      desc: 'Sebagai rejuvenate lembaga untuk mengikuti dinamika lembaga, maka dilakukan penyesuaian akta yayasan',
-    },
-    {
-      year: 2017,
-      url: require('../assets/image/milestone/2017.png').default,
-      desc: 'Mulai tahun 2017 seluruh pengelolaan zakat dari BRI Syariah diserahkan kepada Yayasan Baitul Maal BRI',
-    },
+    // {
+    //   year: 2015,
+    //   url: require('../assets/image/milestone/2015.png').default,
+    //   desc: 'Sebagai rejuvenate lembaga untuk mengikuti dinamika lembaga, maka dilakukan penyesuaian akta yayasan',
+    // },
+    // {
+    //   year: 2016,
+    //   url: require('../assets/image/milestone/2016.png').default,
+    //   desc: 'Sebagai rejuvenate lembaga untuk mengikuti dinamika lembaga, maka dilakukan penyesuaian akta yayasan',
+    // },
+    // {
+    //   year: 2017,
+    //   url: require('../assets/image/milestone/2017.png').default,
+    //   desc: 'Mulai tahun 2017 seluruh pengelolaan zakat dari BRI Syariah diserahkan kepada Yayasan Baitul Maal BRI',
+    // },
     {
       year: 2021,
       url: require('../assets/image/milestone/2021.png').default,
@@ -174,7 +174,7 @@ module.exports = {
   program: [
     {
       path: '/program/ekonomi',
-      urlImage: require('../assets/image/program/prog_ekonomi.JPG').default,
+      urlImage: require('../assets/image/program/Homepage Ekonomi.png').default,
       title: 'Ekonomi',
       slug: 'ekonomi',
       desc: 'Program pendayagunaan zakat berupa bantuan stimulus modal,pendampingan dan managemen keuangan',
@@ -183,7 +183,8 @@ module.exports = {
       items: [
         {
           urlImage: require('../assets/image/program/IMG_1673.webp').default,
-          banner: require('../assets/image/program/banner-program-2.svg')
+          // banner: require('../assets/image/program/banner-program-2.svg')
+          banner: require('../assets/image/program/Bright Scholarship.png')
             .default,
           title: 'Income Generating',
           slug: 'income-generating',
@@ -265,7 +266,7 @@ module.exports = {
     },
     {
       path: '/program/sosial',
-      urlImage: require('../assets/image/program/program_sosial.JPG').default,
+      urlImage: require('../assets/image/program/Homepage Sosial.png').default,
       title: 'Sosial',
       slug: 'sosial',
       desc: 'Program pendayagunaan zakat berupa pemenuhan kebutuhan dasar, spiritual, pembinaan keluarga dan kemanusiaan',
@@ -273,8 +274,10 @@ module.exports = {
         'YBM BRILiaN berupaya untuk memenuhi kebutuhan mendasar dengan menyediakan akses air bersih, santunan natura, dan penguatan keluarga dhuafa. ',
       items: [
         {
-          urlImage: require('../assets/image/program/IMG_9606.webp').default,
-          banner: require('../assets/image/program/banner-program-5.svg')
+          // urlImage: require('../assets/image/program/IMG_9606.webp').default,
+          urlImage: require('../assets/image/program/Family Strengthen.png').default,
+          // banner: require('../assets/image/program/banner-program-5.svg')
+          banner: require('../assets/image/program/Family Strengthen.png')
             .default,
           title: 'Family Strengthen',
           slug: 'family-strengthen',
@@ -337,8 +340,10 @@ module.exports = {
           },
         },
         {
-          urlImage: require('../assets/image/program/Wash_program.JPG').default,
-          banner: require('../assets/image/program/banner-program-3.svg')
+          // urlImage: require('../assets/image/program/Wash_program.JPG').default,
+          urlImage: require('../assets/image/program/Wash Program.png').default,
+          // banner: require('../assets/image/program/banner-program-3.svg')
+          banner: require('../assets/image/program/Wash Program.png')
             .default,
           title: 'Wash Program',
           slug: 'wash-program',
@@ -391,7 +396,7 @@ module.exports = {
     },
     {
       path: '/program/pendidikan',
-      urlImage: require('../assets/image/program/pendidikan.png').default,
+      urlImage: require('../assets/image/program/Homepage Pendidikan.png').default,
       title: 'Pendidikan',
       slug: 'pendidikan',
       desc: 'Program pendayagunaan zakat berupa bantuan beasiswa, pembinaan dan penunjang pendidikan',
@@ -399,8 +404,10 @@ module.exports = {
         'Pendayagunaan zakat berupa bantuan beasiswa, pembinaan dan penunjang pendidikan.',
       items: [
         {
-          urlImage: require('../assets/image/program/bright.jpg').default,
-          banner: require('../assets/image/program/banner-program-1.svg')
+          // urlImage: require('../assets/image/program/bright.jpg').default,
+          urlImage: require('../assets/image/program/Bright Scholarship.png').default,
+          // banner: require('../assets/image/program/banner-program-1.svg')
+          banner: require('../assets/image/program/Bright Scholarship.png')
             .default,
           title: 'Bright Scholarship',
           slug: 'bright-scholarship',
@@ -485,8 +492,10 @@ module.exports = {
           },
         },
         {
-          urlImage: require('../assets/image/program/my_scho.jpg').default,
-          banner: require('../assets/image/program/banner-program-6.svg')
+          // urlImage: require('../assets/image/program/my_scho.jpg').default,
+          urlImage: require('../assets/image/program/My Scholarship.png').default,
+          // banner: require('../assets/image/program/banner-program-6.svg')
+          banner: require('../assets/image/program/My Scholarship.png')
             .default,
           title: 'My Scholarship',
           slug: 'my-scholarship',
@@ -519,8 +528,10 @@ module.exports = {
           },
         },
         {
-          urlImage: require('../assets/image/program/smart.jpg').default,
-          banner: require('../assets/image/program/banner-program-4.svg')
+          // urlImage: require('../assets/image/program/smart.jpg').default,
+          urlImage: require('../assets/image/program/SMART Scholarship.png').default,
+          // banner: require('../assets/image/program/banner-program-4.svg')
+          banner: require('../assets/image/program/SMART Scholarship.png')
             .default,
           title: 'Smart Scholarship',
           slug: 'smart-scholarship',
@@ -599,27 +610,33 @@ module.exports = {
   program_banner: [
     {
       path: '/program/pendidikan/bright-scholarship',
-      urlImage: require('../assets/image/program/banner-program-1.svg').default,
+      // urlImage: require('../assets/image/program/banner-program-1.svg').default,
+      urlImage: require('../assets/image/program/Bright Scholarship.png').default,
     },
     {
       path: '/program/ekonomi/income-generating',
-      urlImage: require('../assets/image/program/banner-program-2.svg').default,
+      // urlImage: require('../assets/image/program/banner-program-2.svg').default,
+      urlImage: require('../assets/image/program/Income Generating.png').default,
     },
     {
       path: '/program/sosial/wash-program',
-      urlImage: require('../assets/image/program/banner-program-3.svg').default,
+      // urlImage: require('../assets/image/program/banner-program-3.svg').default,
+      urlImage: require('../assets/image/program/Wash Program.png').default,
     },
     {
       path: '/program/pendidikan/smart-scholarship',
-      urlImage: require('../assets/image/program/banner-program-4.svg').default,
+      // urlImage: require('../assets/image/program/banner-program-4.svg').default,
+      urlImage: require('../assets/image/program/SMART Scholarship.png').default,
     },
     {
       path: '/program/sosial/family-strengthen',
-      urlImage: require('../assets/image/program/banner-program-5.svg').default,
+      // urlImage: require('../assets/image/program/banner-program-5.svg').default,
+      urlImage: require('../assets/image/program/Family Strengthen.png').default,
     },
     {
       path: '/program/pendidikan/my-scholarship',
-      urlImage: require('../assets/image/program/banner-program-6.svg').default,
+      // urlImage: require('../assets/image/program/banner-program-6.svg').default,
+      urlImage: require('../assets/image/program/My Scholarship.png').default,
     },
   ],
   penghargaan: [
