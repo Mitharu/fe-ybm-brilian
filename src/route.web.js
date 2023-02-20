@@ -30,14 +30,14 @@ export default function RouterApp() {
               <TentangKami />
             </Layout>
           </Route>
+          <Route path="/tentang-kami/:slug" exact>
+            <Layout>
+              <KantorWilayah />
+            </Layout>
+          </Route>
           <Route path="/kontak-kami" exact>
             <Layout>
               <KontakKami />
-            </Layout>
-          </Route>
-          <Route path="/kontak-kami/:slug" exact>
-            <Layout>
-              <KantorWilayah />
             </Layout>
           </Route>
           <Route path="/blog" exact>

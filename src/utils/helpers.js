@@ -1,5 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useState } from 'react'
+import moment from 'moment';
+import 'moment/locale/id';
 
 /* eslint-disable array-callback-return */
 export const shimmerImgLoader = (w, h) => `
@@ -37,12 +39,14 @@ export const monthIndonesia = (params) => {
 }
 
 export const dateIndonesia = (params) => {
-  const first = new Date(params).toLocaleString()
-  const split = first.split(',')
-  const onlyDate = split[0]
-  const transform = onlyDate.split('/')
+  // const first = new Date(params).toLocaleString()
+  // const split = first.split(',')
+  // const onlyDate = split[0]
+  // const transform = onlyDate.split('/')
+  // console.log(params);
 
-  return `${transform[1]} ${monthIndonesia(transform[0])} ${transform[2]}`
+  // return `${transform[1]} ${monthIndonesia(transform[0])} ${transform[2]}`
+  return moment(params).format("DD MMMM YYYY");
 }
 
 export const toBase64 = (str) =>

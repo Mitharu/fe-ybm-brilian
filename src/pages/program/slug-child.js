@@ -86,6 +86,7 @@ export default function Slug() {
             {subDetail?.benefit?.items.map((item, idx) => (
               <div
                 key={String(idx)}
+                // class="col-lg-3 col-md-3 m-2 service-item rounded p-3"
                 class="col-lg-3 col-md-3 m-2 service-item rounded p-3"
                 data-wow-delay="0.1s"
               >

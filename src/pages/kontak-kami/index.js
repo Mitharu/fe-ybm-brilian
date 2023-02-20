@@ -145,7 +145,7 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-      <div class="container-xxl py-5">
+      {/* <div class="container-xxl py-5">
         <Title>
           Kantor Wilayah <span>YBM BRILiaN</span>
         </Title>
@@ -163,7 +163,7 @@ export default function ContactUs() {
             </picture>
           </div>
         </div>
-      </div>
+      </div> */}
       <style>
         {`
 

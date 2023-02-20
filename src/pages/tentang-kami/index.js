@@ -10,6 +10,16 @@ import {
   penghargaan,
 } from '../../__json__'
 
+const Title = styled.h2`
+  color: #00569c;
+  padding: 0 5px;
+  border-radius: 5px;
+  span {
+    color: #f26624;
+  }
+  text-align: ${(props) => props.align || 'left'};
+`
+
 const TitleAbout = styled.h2`
   color: #00569c;
   // display: inline;
@@ -183,11 +193,12 @@ export default function AboutUs() {
           <TitleAbout margin="0" align="center">
             Milestone <span>YBM Brillian</span>
           </TitleAbout>
-          <div class="row g-5 mt-3" style={{ marginRight: 0, marginLeft: 0 }}>
+          <div class="row g-5 mt-3" style={{ marginRight: 0, marginLeft: 0, justifyContent: 'center' }}>
             {milestone &&
               milestone.map((item, idx) => (
                 <div
                   key={String(idx)}
+                  // class="col-lg-3 col-md-3"
                   class="col-lg-3 col-md-3"
                   style={{ display: 'flex', justifyContent: 'center' }}
                 >
@@ -245,6 +256,25 @@ export default function AboutUs() {
                   <img src={item.url} alt={item.alt} />
                 </div>
               ))}
+          </div>
+        </div>
+      </div>
+      <div class="container-xxl py-5">
+        <Title>
+          Kantor Wilayah <span>YBM BRILiaN</span>
+        </Title>
+        <a href="/tentang-kami/kantor-wilayah" class="btn btn-primary">
+          Daftar kantor wilayah
+        </a>
+        <div class="container">
+          <div class="row wow fadeInUp">
+            <picture>
+              <img
+                src={require('../../assets/image/peta.webp').default}
+                alt="peta-wilayah"
+                width="100%"
+              />
+            </picture>
           </div>
         </div>
       </div>
